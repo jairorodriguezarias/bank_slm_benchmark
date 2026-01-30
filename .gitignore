@@ -10,9 +10,13 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+# Models (Weights & Checkpoints)
+models/
+checkpoint-*/
+
 # Data & Results
-results/*.csv
-results/*.json
+results/
+!results/history.json
 !results/.gitkeep
 BENCHMARK_REPORT.md
 
