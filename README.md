@@ -5,48 +5,76 @@ A comprehensive benchmarking suite for testing and specialized fine-tuning of Sm
 ## Features
 
 - **Automated Benchmarking**: Measures latency, throughput (tokens/sec), and response quality (ROUGE-L, Semantic Similarity).
+- **Dual Dataset Support**: Focuses on a high-quality 195-query banking set (`bank_queries.json`) and supports the full 13,000+ query `Banking77` dataset for large-scale intent testing.
+- **Mac-Optimized Quantization**: Support for GGUF models via `llama-cpp-python` leveraging Metal acceleration on Apple Silicon.
+- **Visual Analysis**: Integrated plotting for Accuracy vs. Latency and Throughput comparisons.
 - **Supervised Fine-Tuning (SFT)**: Built-in support for LoRA-based fine-tuning to specialize models for banking domain knowledge.
-- **Result History**: Every run is timestamped and logged, allowing for comparison across different training iterations.
-- **Professional Reporting**: Automatically generates visualization charts and a detailed PDF report comparing model performance and quality trade-offs.
+- **Dataset Synthesis**: Tooling to convert technical PDFs into structured instruction-output datasets for specialized training.
 
 ## Project Structure
 
-- `src/benchmark.py`: Main execution script. Discovers and tests base models and local SFT adapters.
+- `src/benchmark.py`: Main execution script. Supports Hugging Face models, 4-bit quantization, and GGUF models.
+- `src/evaluate.py`: Unified evaluation script. Calculates metrics (ROUGE-L, Semantic Similarity), generates plots, and updates reports.
 - `src/train.py`: SFT training script using `peft` and `trl` for efficient LoRA adaptation.
-- `src/evaluate_models.py`: Computes quality metrics and generates a Markdown summary.
-- `src/generate_pdf_report.py`: Creates the final PDF report with charts and executive analysis.
-- `results/`: Contains timestamped directories for every benchmark run.
-- `models/tuned/`: Storage location for your fine-tuned SFT adapters.
+- `src/utils/`: Directory for utility scripts (downloading datasets/models and generating synthetic data).
 
 ## Getting Started
 
 ### 1. Installation
 ```bash
+# Install dependencies
 pip install -r requirements.txt
+
+# For Mac users (Metal support for GGUF)
+CMAKE_ARGS="-DLLAMA_METAL=on" pip install llama-cpp-python
 ```
 
 ### 2. Running a Benchmark
-Execute the benchmark on the default set of models. The script will automatically detect any models you have trained in `models/tuned/`.
+Execute the unified benchmark on 195 high-quality banking queries:
 ```bash
+# Standard benchmark (HF models)
 python src/benchmark.py
+
+# GGUF benchmark
+python src/benchmark.py --gguf-models models/tinyllama-1.1b-chat-v1.0.Q4_K_M.gguf
+
+# Using a specific dataset
+python src/benchmark.py --dataset data/banking77_full.json
 ```
 
-### 3. Fine-Tuning a Model (SFT)
+### 3. Evaluating and Visualizing Results
+Calculate metrics and generate comparison charts for the latest run:
+```bash
+python src/evaluate.py
+```
+This updates `BENCHMARK_REPORT.md` and saves plots in the results directory.
+
+### 4. Fine-Tuning a Model (SFT)
 Specialize a base model for the banking dataset:
 ```bash
 python src/train.py --base_model "TinyLlama/TinyLlama-1.1B-Chat-v1.0" --output_dir "models/tuned/TinyLlama-Banking"
 ```
 
-### 4. Generating Reports
-After a benchmark run, evaluate the quality and generate the PDF:
+### 5. Generating Synthetic Data (PDF to Instruction)
+Convert technical documents (PDFs) into SFT training datasets using a local SLM (e.g., Qwen2, Phi-3, TinyLlama):
+1. Place your PDFs in `data/raw_pdfs/`.
+2. Configure your desired model ID in `src/utils/generate_dataset.py` (defaults to `Qwen2-1.5B-Instruct`).
+3. Run the generator:
 ```bash
-python src/evaluate_models.py
-python src/generate_pdf_report.py
+python src/utils/generate_dataset.py
 ```
-Reports are saved in `results/latest/` (a symlink to the most recent run).
+This script leverages your local GPU/Metal acceleration to extract text and generate high-quality instruction-output pairs in `data/blockchain_sft_dataset.jsonl`.
+
+## Analysis & Reports
+
+The project produces a comprehensive PDF report (`benchmark_report.pdf`) and a markdown summary (`BENCHMARK_REPORT.md`) that include:
+- **Performance Tables**: Comprehensive metrics (Latency, TPS, ROUGE-L, Similarity) for all tested models.
+- **Visualizations**: Scatter plots for Accuracy vs. Latency and bar charts for Throughput and Quality scores.
+
+This automated reporting ensures that stakeholders can quickly interpret which Small Language Model is best suited for specific banking use cases.
 
 ## Hardware Support
 The project is optimized for:
-- **macOS**: Native acceleration via Metal (MPS).
+- **macOS**: Native acceleration via Metal (MPS) for HF models and GGUF.
 - **Linux/Windows**: Full CUDA support for NVIDIA GPUs.
 - **CPU**: Fallback mode for environment-agnostic execution.

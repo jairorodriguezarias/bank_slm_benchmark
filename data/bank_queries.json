@@ -9,564 +9,1164 @@
     "id": 2,
     "category": "Accounts",
     "query": "What is the difference between a savings account and a checking account?",
-    "reference_answer": "A checking account is for daily transactions, while a savings account is intended for storing money and earning interest."
+    "reference_answer": "A checking account is for frequent transactions like daily spending and bill payments, while a savings account is intended for long-term storage of money and typically earns interest."
   },
   {
     "id": 3,
     "category": "Loans",
     "query": "How can I apply for a mortgage?",
-    "reference_answer": "You can apply online through our website or visit a local branch to speak with a loan officer."
+    "reference_answer": "You can apply for a mortgage by providing financial documentation such as proof of income, employment history, and tax returns through our online portal or by visiting a branch."
   },
   {
     "id": 4,
     "category": "Digital Banking",
     "query": "I forgot my online banking password.",
-    "reference_answer": "Click the 'Forgot Password' link on the login page and follow the instructions to reset it via email or SMS."
+    "reference_answer": "You can reset your password using the 'Forgot Password' link on the login page, which will require identity verification via email or SMS."
   },
   {
     "id": 5,
     "category": "Fees",
     "query": "Why was I charged an overdraft fee?",
-    "reference_answer": "Overdraft fees are charged when a transaction exceeds your available balance and the bank covers the cost."
+    "reference_answer": "An overdraft fee is charged when a transaction exceeds the available balance in your account and the bank covers the difference."
   },
   {
+    "id": 6,
     "category": "Accounts",
     "query": "How do I open a joint account?",
-    "reference_answer": "You can open a joint account by visiting a branch with the co-owner or selecting the 'Joint Account' option during the online application process.",
-    "id": 6
+    "reference_answer": "To open a joint account, both applicants must provide identification and sign the account agreement at a branch or through our secure digital application process."
   },
   {
+    "id": 7,
     "category": "Accounts",
     "query": "Is there a minimum balance requirement for checking accounts?",
-    "reference_answer": "Some checking accounts have a minimum balance requirement to waive monthly fees, but we also offer no-minimum accounts.",
-    "id": 7
+    "reference_answer": "The minimum balance requirement varies by account type. Our Basic Checking has no minimum, but the Premium Checking requires $1,500 to waive the monthly fee."
   },
   {
+    "id": 8,
     "category": "Accounts",
     "query": "Can I have multiple savings accounts?",
-    "reference_answer": "Yes, you can open multiple savings accounts to manage different savings goals separately.",
-    "id": 8
+    "reference_answer": "Yes, you can open multiple savings accounts to help organize your goals, such as an emergency fund or a vacation fund."
   },
   {
+    "id": 9,
     "category": "Accounts",
     "query": "How do I close my account?",
-    "reference_answer": "To close your account, please visit a branch or contact customer support. Ensure your balance is zero before closing.",
-    "id": 9
+    "reference_answer": "To close your account, ensure the balance is zero and contact customer support or visit a branch to sign the necessary closure documents."
   },
   {
+    "id": 10,
     "category": "Accounts",
     "query": "What documents do I need to open a student account?",
-    "reference_answer": "You will need a valid student ID, proof of enrollment, and a government-issued ID like a passport or driver's license.",
-    "id": 10
+    "reference_answer": "You will need a government-issued ID, proof of enrollment in an accredited educational institution, and a minimum opening deposit."
   },
   {
+    "id": 11,
     "category": "Accounts",
     "query": "Do you offer business accounts for startups?",
-    "reference_answer": "Yes, we have specialized business accounts designed for startups with low fees and digital tools.",
-    "id": 11
+    "reference_answer": "Yes, we offer business checking and savings accounts tailored for startups, including features like low transaction fees and integration with accounting software."
   },
   {
+    "id": 12,
     "category": "Accounts",
     "query": "How can I add a beneficiary to my account?",
-    "reference_answer": "You can add a beneficiary by logging into online banking or visiting a branch to fill out a beneficiary designation form.",
-    "id": 12
+    "reference_answer": "You can add a beneficiary by logging into online banking and navigating to 'Account Settings' or by completing a designation form at a branch."
   },
   {
+    "id": 13,
     "category": "Accounts",
     "query": "What is a certificate of deposit (CD)?",
-    "reference_answer": "A CD is a savings account with a fixed interest rate and a fixed date of withdrawal, known as the maturity date.",
-    "id": 13
+    "reference_answer": "A CD is a savings product that earns a fixed interest rate for a specific term, usually with higher rates than a standard savings account in exchange for leaving the funds untouched."
   },
   {
+    "id": 14,
     "category": "Accounts",
     "query": "Can I convert my student account to a regular account?",
-    "reference_answer": "Yes, once you graduate, your student account can be converted to a standard checking or savings account.",
-    "id": 14
+    "reference_answer": "Yes, once you graduate or reach the age limit, your student account can be converted to a standard checking account upon request."
   },
   {
+    "id": 15,
     "category": "Accounts",
     "query": "How do I order new checks?",
-    "reference_answer": "You can order new checks through your online banking portal or by calling customer service.",
-    "id": 15
+    "reference_answer": "You can order new checks through the 'Services' menu in online banking or by contacting our check printing partner directly."
   },
   {
+    "id": 16,
     "category": "Security",
     "query": "How do I enable two-factor authentication?",
-    "reference_answer": "Go to 'Security Settings' in your online banking profile and toggle on Two-Factor Authentication (2FA).",
-    "id": 16
+    "reference_answer": "Go to 'Security Settings' in your online banking profile and select 'Two-Factor Authentication' to set up verification via app, SMS, or email."
   },
   {
+    "id": 17,
     "category": "Security",
     "query": "I see a transaction I didn't make. What now?",
-    "reference_answer": "Contact our fraud department immediately and freeze your card via the mobile app.",
-    "id": 17
+    "reference_answer": "Immediately lock your card through the app and file a dispute for the unauthorized transaction through the 'Transaction Details' page."
   },
   {
+    "id": 18,
     "category": "Security",
     "query": "Is mobile banking safe?",
-    "reference_answer": "Yes, our mobile app uses encryption and biometric login to ensure your data and transactions are secure.",
-    "id": 18
+    "reference_answer": "Yes, our mobile app uses advanced encryption, biometric login, and multi-factor authentication to ensure your data and funds are secure."
   },
   {
+    "id": 19,
     "category": "Security",
     "query": "How often should I change my banking password?",
-    "reference_answer": "We recommend changing your password every 3 to 6 months to maintain account security.",
-    "id": 19
+    "reference_answer": "We recommend changing your password every 3 to 6 months and using a unique, complex password for your banking account."
   },
   {
+    "id": 20,
     "category": "Security",
     "query": "What is a phishing scam?",
-    "reference_answer": "Phishing is a fraudulent attempt to obtain sensitive information by disguising as a trustworthy entity in an electronic communication.",
-    "id": 20
+    "reference_answer": "Phishing is a fraudulent attempt to obtain sensitive information by disguising as a trustworthy entity in an electronic communication, like email or SMS."
   },
   {
+    "id": 21,
     "category": "Security",
     "query": "How do I freeze my debit card?",
-    "reference_answer": "Log in to the mobile app, select your card, and tap 'Freeze Card' to temporarily block transactions.",
-    "id": 21
+    "reference_answer": "You can freeze your card instantly in the mobile app under 'Card Settings' or by calling our automated security line."
   },
   {
+    "id": 22,
     "category": "Security",
     "query": "Will the bank ever ask for my PIN?",
-    "reference_answer": "No, bank employees will never ask for your PIN or password over the phone or email.",
-    "id": 22
+    "reference_answer": "No, the bank will never ask for your PIN, password, or full card number over the phone, email, or text."
   },
   {
+    "id": 23,
     "category": "Security",
     "query": "How can I spot a card skimmer at an ATM?",
-    "reference_answer": "Check if the card slot feels loose or bulky and look for hidden cameras before entering your PIN.",
-    "id": 23
+    "reference_answer": "Check for loose or bulky parts on the card reader, pinhole cameras near the keypad, or a keypad that feels unusually thick or spongy."
   },
   {
+    "id": 24,
     "category": "Security",
     "query": "What do I do if my identity is stolen?",
-    "reference_answer": "Report it to the authorities, contact your bank to freeze accounts, and place a fraud alert on your credit reports.",
-    "id": 24
+    "reference_answer": "Report the theft to the police, notify the major credit bureaus to place a fraud alert, and contact your bank to secure your accounts."
   },
   {
+    "id": 25,
     "category": "Security",
     "query": "Can I set transaction limits on my card?",
-    "reference_answer": "Yes, you can manage daily spending and withdrawal limits in the 'Card Controls' section of the app.",
-    "id": 25
+    "reference_answer": "Yes, you can set daily spending and withdrawal limits for your debit and credit cards in the mobile app."
   },
   {
+    "id": 26,
     "category": "Loans",
     "query": "What is the current interest rate for personal loans?",
-    "reference_answer": "Interest rates vary based on your credit score and loan term. Check our 'Rates' page for the latest figures.",
-    "id": 26
+    "reference_answer": "Personal loan rates currently start at 7.99% APR, depending on your creditworthiness and the loan term."
   },
   {
+    "id": 27,
     "category": "Loans",
     "query": "Can I pay off my loan early?",
-    "reference_answer": "Yes, you can pay off your loan early. Check your loan agreement for any potential prepayment penalties.",
-    "id": 27
+    "reference_answer": "Yes, we do not charge prepayment penalties for our personal, auto, or home loans, so you can pay them off at any time."
   },
   {
+    "id": 28,
     "category": "Loans",
     "query": "What is the difference between a fixed and variable rate loan?",
-    "reference_answer": "A fixed rate stays the same for the life of the loan, while a variable rate can change based on market conditions.",
-    "id": 28
+    "reference_answer": "A fixed-rate loan has a constant interest rate throughout the term, while a variable-rate loan can change based on market fluctuations."
   },
   {
+    "id": 29,
     "category": "Loans",
     "query": "How do I check my loan balance?",
-    "reference_answer": "Your loan balance is displayed on your main dashboard in online and mobile banking.",
-    "id": 29
+    "reference_answer": "You can view your remaining balance and payment history in the 'Loans' section of your online banking dashboard."
   },
   {
+    "id": 30,
     "category": "Loans",
     "query": "Do you offer auto loans for used cars?",
-    "reference_answer": "Yes, we offer financing for both new and used vehicles.",
-    "id": 30
+    "reference_answer": "Yes, we offer financing for both new and used vehicles, with competitive rates for cars up to 10 years old."
   },
   {
+    "id": 31,
     "category": "Loans",
     "query": "What is a home equity line of credit (HELOC)?",
-    "reference_answer": "A HELOC is a revolving credit line secured by the equity in your home.",
-    "id": 31
+    "reference_answer": "A HELOC is a revolving line of credit that uses the equity in your home as collateral, similar to a credit card with lower interest rates."
   },
   {
+    "id": 32,
     "category": "Loans",
     "query": "How long does it take to get a loan approved?",
-    "reference_answer": "Approval times vary; personal loans can be approved in minutes, while mortgages may take several weeks.",
-    "id": 32
+    "reference_answer": "Personal loan approval can happen in minutes, while mortgages typically take 30 to 45 days to close after the initial application."
   },
   {
+    "id": 33,
     "category": "Loans",
     "query": "What factors affect my eligibility for a loan?",
-    "reference_answer": "Credit score, income, employment history, and debt-to-income ratio are key factors.",
-    "id": 33
+    "reference_answer": "Lenders consider your credit score, income, debt-to-income ratio, employment history, and the value of any collateral."
   },
   {
+    "id": 34,
     "category": "Loans",
     "query": "Can I refinance my student loans?",
-    "reference_answer": "Yes, refinancing is available and could help you lower your interest rate or monthly payment.",
-    "id": 34
+    "reference_answer": "We currently do not offer student loan refinancing directly, but we can provide personal loans that may be used for consolidation."
   },
   {
+    "id": 35,
     "category": "Loans",
     "query": "What is the minimum credit score for a mortgage?",
-    "reference_answer": "Typically, a credit score of 620 or higher is required for a conventional mortgage, though requirements vary by loan type.",
-    "id": 35
+    "reference_answer": "Generally, a credit score of 620 is required for a conventional mortgage, though FHA loans may be available with scores as low as 580."
   },
   {
+    "id": 36,
     "category": "Digital Banking",
     "query": "How do I deposit a check with my phone?",
-    "reference_answer": "Use the 'Mobile Deposit' feature in the app, take photos of the front and back of the endorsed check, and submit.",
-    "id": 36
+    "reference_answer": "Sign the back of the check, write 'For Mobile Deposit Only', and use the 'Mobile Deposit' feature in the app to photograph the front and back."
   },
   {
+    "id": 37,
     "category": "Digital Banking",
     "query": "Can I pay bills online?",
-    "reference_answer": "Yes, use our 'Bill Pay' service to schedule one-time or recurring payments to thousands of billers.",
-    "id": 37
+    "reference_answer": "Yes, our Bill Pay service allows you to schedule one-time or recurring payments to any company or individual in the country."
   },
   {
+    "id": 38,
     "category": "Digital Banking",
     "query": "The app is crashing on my phone.",
-    "reference_answer": "Please ensure your app and phone OS are updated. If the issue persists, reinstall the app.",
-    "id": 38
+    "reference_answer": "Please ensure you have the latest version of the app installed. If issues persist, try clearing the cache or reinstalling the app."
   },
   {
+    "id": 39,
     "category": "Digital Banking",
     "query": "How do I download my bank statements?",
-    "reference_answer": "Go to 'eStatements' in online banking, select the account and date range, and download the PDF.",
-    "id": 39
+    "reference_answer": "Log into online banking, go to the 'Statements' tab, and select the month you wish to download in PDF format."
   },
   {
+    "id": 40,
     "category": "Digital Banking",
     "query": "Can I sync my account with budgeting apps?",
-    "reference_answer": "Yes, our platform supports integration with popular budgeting tools like Mint and YNAB.",
-    "id": 40
+    "reference_answer": "Yes, we support integration with popular apps like Mint and YNAB through our secure API connections."
   },
   {
+    "id": 41,
     "category": "Digital Banking",
     "query": "How do I update my contact information?",
-    "reference_answer": "You can update your phone number and email in the 'Profile & Settings' section.",
-    "id": 41
+    "reference_answer": "You can update your email, phone number, and mailing address under the 'Profile Settings' menu in online or mobile banking."
   },
   {
+    "id": 42,
     "category": "Digital Banking",
     "query": "Where can I find my routing number?",
-    "reference_answer": "The routing number is located at the bottom of your checks or in the 'Account Details' tab online.",
-    "id": 42
+    "reference_answer": "Your 9-digit routing number is located at the bottom left of your checks or in the 'Account Details' section of the mobile app."
   },
   {
+    "id": 43,
     "category": "Digital Banking",
     "query": "Can I stop a payment online?",
-    "reference_answer": "Yes, you can request a stop payment on a check or ACH transfer through the 'Services' menu.",
-    "id": 43
+    "reference_answer": "Yes, you can initiate a stop payment for a check or pre-authorized debit under the 'Account Services' menu for a small fee."
   },
   {
+    "id": 44,
     "category": "Digital Banking",
     "query": "Is there a limit to mobile deposits?",
-    "reference_answer": "Yes, daily and monthly mobile deposit limits apply and are displayed within the app.",
-    "id": 44
+    "reference_answer": "Standard accounts have a daily limit of $5,000 and a monthly limit of $20,000 for mobile check deposits."
   },
   {
+    "id": 45,
     "category": "Digital Banking",
     "query": "How do I set up alerts for low balance?",
-    "reference_answer": "Configure 'Account Alerts' in settings to receive notifications via text or email when your balance drops below a set amount.",
-    "id": 45
+    "reference_answer": "Go to 'Manage Alerts' in the app and toggle on 'Low Balance Alert' to receive a notification when your balance falls below a threshold you set."
   },
   {
+    "id": 46,
     "category": "Fees",
     "query": "How can I avoid monthly maintenance fees?",
-    "reference_answer": "Maintain the required minimum daily balance or set up a qualifying direct deposit.",
-    "id": 46
+    "reference_answer": "You can waive the fee by maintaining a minimum balance, setting up a qualifying direct deposit, or being a student/senior."
   },
   {
+    "id": 47,
     "category": "Fees",
     "query": "What is the fee for using another bank's ATM?",
-    "reference_answer": "We charge a $2.50 fee for out-of-network ATM withdrawals, plus the ATM operator may charge their own fee.",
-    "id": 47
+    "reference_answer": "We charge $2.50 for using out-of-network ATMs, and the ATM owner may also charge a separate convenience fee."
   },
   {
+    "id": 48,
     "category": "Fees",
     "query": "Do you charge for wire transfers?",
-    "reference_answer": "Yes, fees apply for both domestic and international wire transfers. See our fee schedule for details.",
-    "id": 48
+    "reference_answer": "Incoming domestic wires are free; outgoing domestic wires are $25, and outgoing international wires are $45."
   },
   {
+    "id": 49,
     "category": "Fees",
     "query": "Is there a fee for replacement cards?",
-    "reference_answer": "Standard replacement cards are free, but expedited shipping may incur a fee.",
-    "id": 49
+    "reference_answer": "The first replacement card for a lost or damaged debit card is free; subsequent replacements are $10 each."
   },
   {
+    "id": 50,
     "category": "Fees",
     "query": "What is a foreign transaction fee?",
-    "reference_answer": "It is a percentage fee charged on purchases made outside the country or in a foreign currency.",
-    "id": 50
+    "reference_answer": "A foreign transaction fee is a charge (usually 1% to 3%) on purchases made outside of your home country or in a foreign currency."
   },
   {
+    "id": 51,
     "category": "Fees",
     "query": "How much does a cashier's check cost?",
-    "reference_answer": "Cashier's checks typically cost $10, but fees may be waived for certain premium account holders.",
-    "id": 51
+    "reference_answer": "Cashier's checks are available to account holders for a fee of $10 per check."
   },
   {
+    "id": 52,
     "category": "Fees",
     "query": "Are there fees for dormant accounts?",
-    "reference_answer": "Yes, accounts with no activity for 12 months may be charged a dormancy fee.",
-    "id": 52
+    "reference_answer": "Accounts with no activity for 12 months may be charged an inactivity fee of $5 per month until activity resumes or the balance reaches zero."
   },
   {
+    "id": 53,
     "category": "Fees",
     "query": "What is the returned item fee?",
-    "reference_answer": "This fee is charged if a check you deposited bounces or is returned unpaid.",
-    "id": 53
+    "reference_answer": "A fee of $35 is charged when a check or payment is returned unpaid due to non-sufficient funds (NSF)."
   },
   {
+    "id": 54,
     "category": "Fees",
     "query": "Do you charge for paper statements?",
-    "reference_answer": "Yes, a monthly fee applies for paper statements. eStatements are free.",
-    "id": 54
+    "reference_answer": "E-statements are free, but we charge $2 per month if you choose to receive physical paper statements by mail."
   },
   {
+    "id": 55,
     "category": "Fees",
     "query": "Can I get a fee refunded?",
-    "reference_answer": "Please contact customer service to discuss your specific situation; courtesy refunds are considered on a case-by-case basis.",
-    "id": 55
+    "reference_answer": "We consider fee refund requests on a case-by-case basis. Please contact customer support to discuss a specific charge."
   },
   {
+    "id": 56,
     "category": "Credit Cards",
     "query": "How do I increase my credit limit?",
-    "reference_answer": "You can request a credit limit increase through online banking or by calling the number on the back of your card.",
-    "id": 56
+    "reference_answer": "You can request a credit limit increase through the mobile app under 'Card Services', which may involve a review of your income and credit history."
   },
   {
+    "id": 57,
     "category": "Credit Cards",
     "query": "What is the APR on my credit card?",
-    "reference_answer": "Your Annual Percentage Rate (APR) is listed on your monthly statement and in your online account details.",
-    "id": 57
+    "reference_answer": "Your specific APR is listed on your monthly statement and depends on your creditworthiness; standard rates range from 16.99% to 24.99%."
   },
   {
+    "id": 58,
     "category": "Credit Cards",
     "query": "How do I redeem my rewards points?",
-    "reference_answer": "Log in to the rewards portal via online banking to redeem points for cash back, travel, or gift cards.",
-    "id": 58
+    "reference_answer": "Log into the rewards portal through online banking to redeem points for cash back, travel, gift cards, or merchandise."
   },
   {
+    "id": 59,
     "category": "Credit Cards",
     "query": "Can I add an authorized user?",
-    "reference_answer": "Yes, you can add an authorized user online. They will receive their own card linked to your account.",
-    "id": 59
+    "reference_answer": "Yes, you can add an authorized user in the 'Manage Cards' section by providing their name, date of birth, and social security number."
   },
   {
+    "id": 60,
     "category": "Credit Cards",
     "query": "What is a balance transfer?",
-    "reference_answer": "A balance transfer allows you to move high-interest debt from another card to one with a lower interest rate.",
-    "id": 60
+    "reference_answer": "A balance transfer allows you to move debt from one credit card to another, often to take advantage of a lower interest rate."
   },
   {
+    "id": 61,
     "category": "Credit Cards",
     "query": "Is there an annual fee for this card?",
-    "reference_answer": "It depends on the specific card product. Some of our premium rewards cards have annual fees, while others do not.",
-    "id": 61
+    "reference_answer": "Our Rewards Visa has no annual fee, while our Travel Elite card has a $95 annual fee that is waived for the first year."
   },
   {
+    "id": 62,
     "category": "Credit Cards",
     "query": "How do I dispute a credit card charge?",
-    "reference_answer": "Click on the transaction in your online history and select 'Dispute this transaction' to start the process.",
-    "id": 62
+    "reference_answer": "Select the transaction in your history and click 'Dispute Transaction' to begin the process. You'll need to provide a reason and any supporting evidence."
   },
   {
+    "id": 63,
     "category": "Credit Cards",
     "query": "When is my credit card payment due?",
-    "reference_answer": "Your due date is the same day each month. Check your statement or app dashboard for the specific date.",
-    "id": 63
+    "reference_answer": "Your payment due date is at least 21 days after the close of each billing cycle, typically on the same day every month."
   },
   {
+    "id": 64,
     "category": "Credit Cards",
     "query": "Does applying for a credit card hurt my score?",
-    "reference_answer": "Applying results in a hard inquiry, which may temporarily lower your credit score by a few points.",
-    "id": 64
+    "reference_answer": "The initial application triggers a hard inquiry, which may temporarily lower your score by a few points."
   },
   {
+    "id": 65,
     "category": "Credit Cards",
     "query": "What happens if I miss a payment?",
-    "reference_answer": "Missing a payment can result in a late fee and may negatively impact your credit score.",
-    "id": 65
+    "reference_answer": "You may be charged a late fee of up to $40, and your interest rate may increase to a penalty APR if payments are consistently late."
   },
   {
+    "id": 66,
     "category": "Transfers",
     "query": "How do I send money to a friend?",
-    "reference_answer": "You can use Zelle\u00ae within our app to send money to friends using just their email or phone number.",
-    "id": 66
+    "reference_answer": "You can use Zelle within our app to send money instantly using just your friend's email address or U.S. mobile number."
   },
   {
+    "id": 67,
     "category": "Transfers",
     "query": "What is the limit for Zelle transfers?",
-    "reference_answer": "Daily and rolling 30-day limits apply based on your account history and type.",
-    "id": 67
+    "reference_answer": "Our standard daily limit for Zelle transfers is $2,000, with a monthly rolling limit of $10,000."
   },
   {
+    "id": 68,
     "category": "Transfers",
     "query": "How long do wire transfers take?",
-    "reference_answer": "Domestic wires are usually same-day, while international wires can take 1-5 business days.",
-    "id": 68
+    "reference_answer": "Domestic wire transfers typically arrive within 24 hours if initiated before the 4:00 PM cutoff, while international wires take 3 to 5 days."
   },
   {
+    "id": 69,
     "category": "Transfers",
     "query": "Can I transfer money to another bank?",
-    "reference_answer": "Yes, you can link an external account to transfer funds between your accounts at different banks.",
-    "id": 69
+    "reference_answer": "Yes, you can link external bank accounts to perform ACH transfers, which usually take 1 to 3 business days."
   },
   {
+    "id": 70,
     "category": "Transfers",
     "query": "Is there a fee for internal transfers?",
-    "reference_answer": "No, transferring money between your accounts at our bank is free.",
-    "id": 70
+    "reference_answer": "No, transfers between your own accounts at our bank are free and happen instantly."
   },
   {
+    "id": 71,
     "category": "Transfers",
     "query": "How do I schedule a recurring transfer?",
-    "reference_answer": "Select 'Recurring' frequency when setting up a transfer in the 'Transfer Funds' menu.",
-    "id": 71
+    "reference_answer": "Under the 'Transfers' menu, select 'Scheduled Transfers' and choose the frequency (e.g., weekly or monthly) for the automated movement of funds."
   },
   {
+    "id": 72,
     "category": "Transfers",
     "query": "Can I cancel a pending transfer?",
-    "reference_answer": "You can cancel future-dated transfers, but immediate transfers typically cannot be stopped once sent.",
-    "id": 72
+    "reference_answer": "You can cancel a scheduled or pending ACH transfer before the processing cutoff time in the 'Transfer Activity' section."
   },
   {
+    "id": 73,
     "category": "Transfers",
     "query": "What is an ACH transfer?",
-    "reference_answer": "Automated Clearing House (ACH) transfers are electronic bank-to-bank money transfers.",
-    "id": 73
+    "reference_answer": "ACH stands for Automated Clearing House, a network used for electronic fund transfers between banks in the United States."
   },
   {
+    "id": 74,
     "category": "Transfers",
     "query": "Do you support international transfers?",
-    "reference_answer": "Yes, you can send international wires via online banking or at a branch.",
-    "id": 74
+    "reference_answer": "Yes, we support international wire transfers to most countries. You will need the recipient's SWIFT/BIC code and IBAN."
   },
   {
+    "id": 75,
     "category": "Transfers",
     "query": "Why is my transfer on hold?",
-    "reference_answer": "Transfers may be held for security reviews or verification. Contact support if it's held longer than expected.",
-    "id": 75
+    "reference_answer": "Transfers may be held for security review, verification of funds, or if there is a discrepancy in the recipient's information."
   },
   {
+    "id": 76,
     "category": "Investments",
     "query": "How do I start investing?",
-    "reference_answer": "You can open an investment account online and choose between self-managed trading or robo-advisory services.",
-    "id": 76
+    "reference_answer": "You can open a brokerage account or an IRA through our wealth management portal to start investing in stocks, bonds, and mutual funds."
   },
   {
+    "id": 77,
     "category": "Investments",
     "query": "What are the fees for trading stocks?",
-    "reference_answer": "We offer commission-free online stock and ETF trades.",
-    "id": 77
+    "reference_answer": "We offer $0 commission for online stock and ETF trades; other investment types may have associated fees or expense ratios."
   },
   {
+    "id": 78,
     "category": "Investments",
     "query": "Can I open an IRA?",
-    "reference_answer": "Yes, we offer Traditional, Roth, and Rollover IRAs for retirement savings.",
-    "id": 78
+    "reference_answer": "Yes, we offer Traditional, Roth, and SEP IRAs to help you save for retirement with various tax advantages."
   },
   {
+    "id": 79,
     "category": "Investments",
     "query": "Do you have financial advisors?",
-    "reference_answer": "Yes, you can schedule a consultation with a certified financial advisor at select branches.",
-    "id": 79
+    "reference_answer": "Yes, our certified financial advisors are available for consultations to help you develop a personalized investment strategy."
   },
   {
+    "id": 80,
     "category": "Investments",
     "query": "What is the minimum to open an investment account?",
-    "reference_answer": "You can start with as little as $0 for self-directed accounts.",
-    "id": 80
+    "reference_answer": "You can start a self-directed brokerage account with as little as $0, while managed portfolios require a minimum of $5,000."
   },
   {
+    "id": 81,
     "category": "Investments",
     "query": "Are my investments FDIC insured?",
-    "reference_answer": "No, investment products are not FDIC insured, are not bank guaranteed, and may lose value.",
-    "id": 81
+    "reference_answer": "No, investments in stocks and bonds are not FDIC insured and may lose value; FDIC insurance only applies to deposit accounts like checking and savings."
   },
   {
+    "id": 82,
     "category": "Investments",
     "query": "How do I transfer an existing portfolio here?",
-    "reference_answer": "Use our 'Account Transfer' tool to initiate a direct transfer of assets from another broker.",
-    "id": 82
+    "reference_answer": "Use the 'Account Transfer' tool in our investment portal to initiate an ACATS transfer from your current brokerage."
   },
   {
+    "id": 83,
     "category": "Investments",
     "query": "What are mutual funds?",
-    "reference_answer": "Mutual funds pool money from many investors to purchase a diversified portfolio of stocks or bonds.",
-    "id": 83
+    "reference_answer": "Mutual funds are investment vehicles that pool money from many investors to buy a diversified portfolio of stocks or bonds."
   },
   {
+    "id": 84,
     "category": "Investments",
     "query": "Can I buy crypto?",
-    "reference_answer": "We currently do not offer direct cryptocurrency trading on our platform.",
-    "id": 84
+    "reference_answer": "We currently do not offer direct cryptocurrency trading, but you can invest in crypto-related ETFs and stocks through our brokerage."
   },
   {
+    "id": 85,
     "category": "Investments",
     "query": "How do I access tax documents for my investments?",
-    "reference_answer": "Tax forms like 1099s are available in the 'Tax Center' of your online investment dashboard.",
-    "id": 85
+    "reference_answer": "Consolidated 1099 forms are available for download in the 'Tax Center' of your investment dashboard every February."
   },
   {
+    "id": 86,
     "category": "General",
     "query": "What are your branch hours?",
-    "reference_answer": "Most branches are open 9 AM - 5 PM Mon-Fri and 9 AM - 1 PM on Saturdays. Check the locator for specific hours.",
-    "id": 86
+    "reference_answer": "Most branches are open Monday through Friday from 9:00 AM to 5:00 PM and Saturday from 9:00 AM to 1:00 PM."
   },
   {
+    "id": 87,
     "category": "General",
     "query": "How do I find an ATM near me?",
-    "reference_answer": "Use the 'Find Us' feature in the mobile app to locate the nearest branch or fee-free ATM.",
-    "id": 87
+    "reference_answer": "Use the 'ATM Locator' feature in our mobile app to find the nearest fee-free ATM in our network."
   },
   {
+    "id": 88,
     "category": "General",
     "query": "How do I file a complaint?",
-    "reference_answer": "We value your feedback. You can file a complaint online, by phone, or in person at any branch.",
-    "id": 88
+    "reference_answer": "You can file a complaint by calling our customer service line, sending a secure message in the app, or mailing a letter to our corporate office."
   },
   {
+    "id": 89,
     "category": "General",
     "query": "Is the bank open on holidays?",
-    "reference_answer": "We observe all Federal Reserve holidays. Branches will be closed, but ATMs and digital banking remain available.",
-    "id": 89
+    "reference_answer": "We follow the Federal Reserve holiday schedule and are closed on major holidays like Christmas, New Year's Day, and Labor Day."
   },
   {
+    "id": 90,
     "category": "General",
     "query": "How do I update my mailing address?",
-    "reference_answer": "Update your address in the 'Profile' section of online banking to ensure you receive important mail.",
-    "id": 90
+    "reference_answer": "Log into your account and navigate to 'Settings' > 'Contact Info' to update your address, which will take effect within 24 hours."
   },
   {
+    "id": 91,
     "category": "General",
     "query": "Do you have a notary public?",
-    "reference_answer": "Yes, notary services are available at most branches free of charge for account holders.",
-    "id": 91
+    "reference_answer": "Yes, most branches provide notary services for free to our customers; it's recommended to call ahead and schedule an appointment."
   },
   {
+    "id": 92,
     "category": "General",
     "query": "Can I open an account for a minor?",
-    "reference_answer": "Yes, we offer custodial accounts and student checking options for minors with a parent or guardian co-owner.",
-    "id": 92
+    "reference_answer": "Yes, we offer custodial accounts and student checking for minors, which require a parent or guardian as a co-signer."
   },
   {
+    "id": 93,
     "category": "General",
     "query": "What is the bank's routing number for international wires?",
-    "reference_answer": "International wires require a SWIFT/BIC code, which differs from the domestic routing number. Please check our website.",
-    "id": 93
+    "reference_answer": "For international wires, you need our SWIFT code rather than a routing number. Please check the 'Wire Transfers' section for the specific code."
   },
   {
+    "id": 94,
     "category": "General",
     "query": "How do I contact customer support?",
-    "reference_answer": "You can call us 24/7 at 1-800-555-0199 or use the live chat feature on our website.",
-    "id": 94
+    "reference_answer": "You can reach us by phone at 1-800-BANK-HELP, through live chat in our app, or by visiting any branch."
   },
   {
+    "id": 95,
     "category": "General",
     "query": "Do you offer safe deposit boxes?",
-    "reference_answer": "Yes, safe deposit boxes are available in various sizes at select branch locations.",
-    "id": 95
+    "reference_answer": "Yes, safe deposit boxes are available at many of our branch locations in various sizes for an annual rental fee."
+  },
+  {
+    "id": 96,
+    "category": "Cards",
+    "query": "How do I activate my new debit card?",
+    "reference_answer": "You can activate your card by using it with your PIN at any ATM or by calling the activation number on the sticker."
+  },
+  {
+    "id": 97,
+    "category": "Cards",
+    "query": "My card was swallowed by an ATM. What should I do?",
+    "reference_answer": "Report it immediately to the bank that owns the ATM and then contact us to cancel the card and order a replacement."
+  },
+  {
+    "id": 98,
+    "category": "Cards",
+    "query": "Can I use my debit card abroad?",
+    "reference_answer": "Yes, but please set a travel notice in the app first to prevent your card from being blocked by our fraud detection systems."
+  },
+  {
+    "id": 99,
+    "category": "Cards",
+    "query": "What is the daily withdrawal limit at an ATM?",
+    "reference_answer": "The standard daily ATM withdrawal limit is $500, though this can be increased upon request for qualified accounts."
+  },
+  {
+    "id": 100,
+    "category": "Cards",
+    "query": "How do I change my debit card PIN?",
+    "reference_answer": "You can change your PIN at any of our bank's ATMs or by visiting a branch with your identification."
+  },
+  {
+    "id": 101,
+    "category": "Cards",
+    "query": "My card is about to expire. When will I get a new one?",
+    "reference_answer": "A replacement card is automatically mailed to your address on file during the month of expiration; it should arrive by the 15th."
+  },
+  {
+    "id": 102,
+    "category": "Cards",
+    "query": "Can I add my card to Apple Pay or Google Pay?",
+    "reference_answer": "Yes, you can add your debit or credit card to your digital wallet through the respective wallet app on your smartphone."
+  },
+  {
+    "id": 103,
+    "category": "Cards",
+    "query": "What is a virtual card?",
+    "reference_answer": "A virtual card is a digital version of your card with a unique number, used for safer online shopping without revealing your physical card details."
+  },
+  {
+    "id": 104,
+    "category": "Cards",
+    "query": "I entered my PIN wrong three times and my card is blocked.",
+    "reference_answer": "For security, your card is temporarily blocked. You can unblock it through the app or by calling customer service."
+  },
+  {
+    "id": 105,
+    "category": "Cards",
+    "query": "Does my debit card have fraud protection?",
+    "reference_answer": "Yes, you are protected by our Zero Liability policy, meaning you aren't held responsible for unauthorized transactions if reported promptly."
+  },
+  {
+    "id": 106,
+    "category": "Accounts",
+    "query": "How can I open a high-yield savings account?",
+    "reference_answer": "You can open a high-yield savings account online in minutes. You'll need your social security number and a way to fund the account."
+  },
+  {
+    "id": 107,
+    "category": "Accounts",
+    "query": "What is the interest rate on the high-yield savings account?",
+    "reference_answer": "Our high-yield savings account currently offers an APY of 4.50%, which is significantly higher than the national average."
+  },
+  {
+    "id": 108,
+    "category": "Accounts",
+    "query": "Is there a limit on the number of withdrawals from a savings account?",
+    "reference_answer": "Federal regulations previously limited savings withdrawals to 6 per month, but our bank currently allows unlimited withdrawals without penalty."
+  },
+  {
+    "id": 109,
+    "category": "Accounts",
+    "query": "How do I set up direct deposit?",
+    "reference_answer": "Provide your employer with your account and routing numbers, or download a pre-filled direct deposit form from our app."
+  },
+  {
+    "id": 110,
+    "category": "Accounts",
+    "query": "Can I open an account if I'm not a U.S. citizen?",
+    "reference_answer": "Yes, non-citizens can open accounts with a valid passport, proof of address, and either an SSN or an ITIN."
+  },
+  {
+    "id": 111,
+    "category": "Accounts",
+    "query": "What is the difference between a co-signer and a joint owner?",
+    "reference_answer": "A joint owner has full access to the funds, while a co-signer is primarily responsible for repayment and may not have withdrawal rights."
+  },
+  {
+    "id": 112,
+    "category": "Accounts",
+    "query": "How do I verify a micro-deposit?",
+    "reference_answer": "When linking an external account, we'll send two small deposits. Enter the exact amounts in our app to complete the link."
+  },
+  {
+    "id": 113,
+    "category": "Accounts",
+    "query": "Can I nickname my accounts in the app?",
+    "reference_answer": "Yes, you can rename your accounts (e.g., 'Vacation Fund') in the account settings to make tracking your goals easier."
+  },
+  {
+    "id": 114,
+    "category": "Accounts",
+    "query": "What is an UTMA account?",
+    "reference_answer": "A Uniform Transfers to Minors Act account is a custodial account used to hold and protect assets for a minor until they reach adulthood."
+  },
+  {
+    "id": 115,
+    "category": "Accounts",
+    "query": "Does the bank offer overdraft protection from a savings account?",
+    "reference_answer": "Yes, you can link your savings account to your checking account to automatically cover shortfalls and avoid declined transactions."
+  },
+  {
+    "id": 116,
+    "category": "Transfers",
+    "query": "How do I send money internationally via the app?",
+    "reference_answer": "Go to 'Transfers' > 'International Wire', enter the recipient's details and SWIFT code, and follow the prompts to send funds."
+  },
+  {
+    "id": 117,
+    "category": "Transfers",
+    "query": "What information is needed for a domestic wire transfer?",
+    "reference_answer": "You will need the recipient's name, their bank's name, the 9-digit ABA routing number, and the recipient's account number."
+  },
+  {
+    "id": 118,
+    "category": "Transfers",
+    "query": "Can I send money to someone who doesn't have Zelle?",
+    "reference_answer": "If their bank doesn't support Zelle, they can still receive money by downloading the Zelle app and registering their mobile number or email."
+  },
+  {
+    "id": 119,
+    "category": "Transfers",
+    "query": "How do I receive money via Zelle?",
+    "reference_answer": "Once you register your mobile number or email with us, any money sent to those details will be deposited directly into your account."
+  },
+  {
+    "id": 120,
+    "category": "Transfers",
+    "query": "Can I send a wire transfer on a Saturday?",
+    "reference_answer": "Wires can be submitted anytime, but they are only processed by the Federal Reserve on business days (Monday through Friday)."
+  },
+  {
+    "id": 121,
+    "category": "Transfers",
+    "query": "What is the difference between an ACH and a wire transfer?",
+    "reference_answer": "ACH is usually free but takes 1-3 days, while a wire transfer is much faster (usually same day) but carries a service fee."
+  },
+  {
+    "id": 122,
+    "category": "Transfers",
+    "query": "How do I link an external bank account for transfers?",
+    "reference_answer": "Go to 'Linked Accounts' in the app, enter the routing and account numbers of the other bank, and complete the verification process."
+  },
+  {
+    "id": 123,
+    "category": "Transfers",
+    "query": "Is there a limit on how much I can transfer between my own accounts?",
+    "reference_answer": "No, there are no limits on transfers between your own checking and savings accounts within our bank."
+  },
+  {
+    "id": 124,
+    "category": "Transfers",
+    "query": "Can I use Zelle for business payments?",
+    "reference_answer": "Zelle is primarily for personal use. For business payments, we recommend using ACH or our Small Business Bill Pay service."
+  },
+  {
+    "id": 125,
+    "category": "Transfers",
+    "query": "How can I track the status of my wire transfer?",
+    "reference_answer": "You can view the status and get a reference number in the 'Transfer Activity' section of your online banking dashboard."
+  },
+  {
+    "id": 126,
+    "category": "Security",
+    "query": "I received a suspicious text message from the bank. What should I do?",
+    "reference_answer": "Do not click any links. Forward the message to our fraud department at phishing@bank.com and then delete it."
+  },
+  {
+    "id": 127,
+    "category": "Security",
+    "query": "What is biometric login?",
+    "reference_answer": "Biometric login allows you to access the app using your fingerprint or facial recognition for a faster and more secure experience."
+  },
+  {
+    "id": 128,
+    "category": "Security",
+    "query": "How do I report a stolen checkbook?",
+    "reference_answer": "Contact us immediately to place a stop payment on the missing check range and we will likely need to close the account and open a new one."
+  },
+  {
+    "id": 129,
+    "category": "Security",
+    "query": "Can the bank see my password?",
+    "reference_answer": "No, your password is encrypted and stored securely; bank employees do not have access to your plain-text password."
+  },
+  {
+    "id": 130,
+    "category": "Security",
+    "query": "What is the 'Verified by Visa' or 'Mastercard ID Check'?",
+    "reference_answer": "It is an additional security layer for online shopping that may require you to enter a one-time code sent to your phone."
+  },
+  {
+    "id": 131,
+    "category": "Security",
+    "query": "How do I know if a website is secure for banking?",
+    "reference_answer": "Look for 'https://' at the beginning of the URL and a padlock icon in the address bar, indicating an encrypted connection."
+  },
+  {
+    "id": 132,
+    "category": "Security",
+    "query": "Should I use public Wi-Fi for banking?",
+    "reference_answer": "No, public Wi-Fi is insecure. Use your mobile data or a trusted VPN if you must access your account while away from home."
+  },
+  {
+    "id": 133,
+    "category": "Security",
+    "query": "What is a 'fraud alert' on a credit report?",
+    "reference_answer": "A fraud alert notifies creditors to take extra steps to verify your identity before issuing new credit in your name."
+  },
+  {
+    "id": 134,
+    "category": "Security",
+    "query": "Does the bank monitor my account for fraud?",
+    "reference_answer": "Yes, our systems monitor for unusual patterns 24/7 and will alert you via text or call if we detect suspicious activity."
+  },
+  {
+    "id": 135,
+    "category": "Security",
+    "query": "How do I set up a travel notice?",
+    "reference_answer": "In the app, go to 'Card Settings' > 'Travel Notices' and enter your destination and dates so your card works seamlessly while abroad."
+  },
+  {
+    "id": 136,
+    "category": "Loans",
+    "query": "What is a mortgage pre-approval?",
+    "reference_answer": "A pre-approval is a lender's commitment to lend you a specific amount based on a preliminary review of your financial information."
+  },
+  {
+    "id": 137,
+    "category": "Loans",
+    "query": "How does a credit score affect my loan interest rate?",
+    "reference_answer": "Generally, the higher your credit score, the lower the interest rate you'll be offered, as you're seen as a lower-risk borrower."
+  },
+  {
+    "id": 138,
+    "category": "Loans",
+    "query": "What is debt-to-income (DTI) ratio?",
+    "reference_answer": "DTI is the percentage of your gross monthly income that goes toward paying debts; it's used to evaluate your ability to manage monthly payments."
+  },
+  {
+    "id": 139,
+    "category": "Loans",
+    "query": "Can I use a personal loan to consolidate credit card debt?",
+    "reference_answer": "Yes, many customers use personal loans for consolidation to get a lower interest rate and a single fixed monthly payment."
+  },
+  {
+    "id": 140,
+    "category": "Loans",
+    "query": "What is an amortization schedule?",
+    "reference_answer": "It is a table showing each periodic payment on a loan, detailing how much goes toward principal versus interest over time."
+  },
+  {
+    "id": 141,
+    "category": "Loans",
+    "query": "Do I need a down payment for a car loan?",
+    "reference_answer": "While not always required, a down payment reduces the amount you need to borrow and can help you get a better interest rate."
+  },
+  {
+    "id": 142,
+    "category": "Loans",
+    "query": "What is private mortgage insurance (PMI)?",
+    "reference_answer": "PMI is insurance that protects the lender if you default, typically required if your down payment is less than 20% of the home's value."
+  },
+  {
+    "id": 143,
+    "category": "Loans",
+    "query": "How can I lower my monthly mortgage payment?",
+    "reference_answer": "You can lower your payment by refinancing to a lower interest rate, extending the loan term, or removing PMI once you have enough equity."
+  },
+  {
+    "id": 144,
+    "category": "Loans",
+    "query": "What is the difference between a secured and unsecured loan?",
+    "reference_answer": "A secured loan requires collateral (like a house or car), while an unsecured loan is based solely on your creditworthiness."
+  },
+  {
+    "id": 145,
+    "category": "Loans",
+    "query": "Can I get a loan if I'm self-employed?",
+    "reference_answer": "Yes, you'll typically need to provide at least two years of tax returns and a year-to-date profit and loss statement to verify your income."
+  },
+  {
+    "id": 146,
+    "category": "Fees",
+    "query": "What is the fee for a stopped payment?",
+    "reference_answer": "The fee for stopping a payment on a check or pre-authorized debit is $30."
+  },
+  {
+    "id": 147,
+    "category": "Fees",
+    "query": "Does the bank charge for incoming international wires?",
+    "reference_answer": "Yes, we charge a $15 fee for receiving international wire transfers."
+  },
+  {
+    "id": 148,
+    "category": "Fees",
+    "query": "Is there a fee for using the bill pay service?",
+    "reference_answer": "No, our online Bill Pay service is free for all personal checking account holders."
+  },
+  {
+    "id": 149,
+    "category": "Fees",
+    "query": "What is a late payment fee on a loan?",
+    "reference_answer": "If your loan payment is more than 15 days late, a fee of $25 or 5% of the overdue payment (whichever is greater) will be charged."
+  },
+  {
+    "id": 150,
+    "category": "Fees",
+    "query": "Are there fees for using an ATM outside of the U.S.?",
+    "reference_answer": "International ATM withdrawals carry a $5 fee plus a 3% currency conversion charge."
+  },
+  {
+    "id": 151,
+    "category": "Fees",
+    "query": "How much does it cost to send an domestic wire?",
+    "reference_answer": "The fee for sending a domestic wire transfer is $25 when initiated through online banking."
+  },
+  {
+    "id": 152,
+    "category": "Fees",
+    "query": "Is there a fee for a coin deposit?",
+    "reference_answer": "Customers can use our coin counting machines for free; non-customers are charged a 10% processing fee."
+  },
+  {
+    "id": 153,
+    "category": "Fees",
+    "query": "What is the fee for an official bank check?",
+    "reference_answer": "Official bank checks (also known as cashier's checks) are $10 for bank customers."
+  },
+  {
+    "id": 154,
+    "category": "Fees",
+    "query": "Do you charge for mobile banking?",
+    "reference_answer": "No, our mobile banking app is free to download and use, though message and data rates from your carrier may apply."
+  },
+  {
+    "id": 155,
+    "category": "Fees",
+    "query": "What is an escheatment fee?",
+    "reference_answer": "We do not charge an escheatment fee, but we are required by law to turn over abandoned property to the state after a period of inactivity."
+  },
+  {
+    "id": 156,
+    "category": "Investments",
+    "query": "What is a Roth IRA?",
+    "reference_answer": "A Roth IRA is a retirement account where you contribute after-tax money, and qualified withdrawals in retirement are tax-free."
+  },
+  {
+    "id": 157,
+    "category": "Investments",
+    "query": "Can I trade options in my brokerage account?",
+    "reference_answer": "Yes, options trading is available for qualified accounts after an additional application and approval process."
+  },
+  {
+    "id": 158,
+    "category": "Investments",
+    "query": "What is a robo-advisor?",
+    "reference_answer": "A robo-advisor is an automated investment service that uses algorithms to manage your portfolio based on your goals and risk tolerance."
+  },
+  {
+    "id": 159,
+    "category": "Investments",
+    "query": "How do I sell my stocks?",
+    "reference_answer": "In your brokerage dashboard, select the stock, click 'Sell', enter the quantity, and choose between a market or limit order."
+  },
+  {
+    "id": 160,
+    "category": "Investments",
+    "query": "What is the difference between a stock and a bond?",
+    "reference_answer": "A stock represents ownership in a company, while a bond is a loan you make to an entity (like a corporation or government) in exchange for interest."
+  },
+  {
+    "id": 161,
+    "category": "Investments",
+    "query": "Are there tax consequences for selling stocks?",
+    "reference_answer": "Yes, you may owe capital gains tax if you sell an investment for more than you paid for it. Consult a tax professional for details."
+  },
+  {
+    "id": 162,
+    "category": "Investments",
+    "query": "What is dividend reinvestment (DRIP)?",
+    "reference_answer": "DRIP is a feature that automatically uses your cash dividends to buy more shares of the same stock or fund, helping your investment grow."
+  },
+  {
+    "id": 163,
+    "category": "Investments",
+    "query": "Can I open a joint brokerage account?",
+    "reference_answer": "Yes, we offer joint brokerage accounts for two or more individuals with shared ownership of the assets."
+  },
+  {
+    "id": 164,
+    "category": "Investments",
+    "query": "What is a 401(k) rollover?",
+    "reference_answer": "A rollover is the process of moving funds from a former employer's retirement plan into an IRA or a new employer's 401(k)."
+  },
+  {
+    "id": 165,
+    "category": "Investments",
+    "query": "How can I view my portfolio performance?",
+    "reference_answer": "Your 'Portfolio Performance' tab shows your total return, daily change, and a breakdown of your holdings by asset class."
+  },
+  {
+    "id": 166,
+    "category": "General",
+    "query": "How do I reorder a lost debit card?",
+    "reference_answer": "You can order a new card in the 'Manage Cards' section of the app or by calling our 24/7 customer service line."
+  },
+  {
+    "id": 167,
+    "category": "General",
+    "query": "What should I do if my check is lost in the mail?",
+    "reference_answer": "Contact us immediately to place a stop payment on the check and then you can issue a new one."
+  },
+  {
+    "id": 168,
+    "category": "General",
+    "query": "Do you offer currency exchange services?",
+    "reference_answer": "Yes, we can order over 50 foreign currencies for you to pick up at your local branch within 1 to 2 business days."
+  },
+  {
+    "id": 169,
+    "category": "General",
+    "query": "How do I get a medallion signature guarantee?",
+    "reference_answer": "Medallion guarantees are available at select branches for large securities transfers; please call ahead to confirm availability."
+  },
+  {
+    "id": 170,
+    "category": "General",
+    "query": "Can I use my credit card at an ATM for cash?",
+    "reference_answer": "Yes, this is called a cash advance, but be aware it usually carries a high interest rate and an upfront fee."
+  },
+  {
+    "id": 171,
+    "category": "General",
+    "query": "How do I link my account to Venmo?",
+    "reference_answer": "In the Venmo app, go to 'Payment Methods', select 'Add Bank', and follow the prompts to log in via our secure portal."
+  },
+  {
+    "id": 172,
+    "category": "General",
+    "query": "What is the bank's mailing address for deposits?",
+    "reference_answer": "Please mail checks for deposit to: Bank Name, Attn: Deposit Processing, P.O. Box 12345, City, State, ZIP."
+  },
+  {
+    "id": 173,
+    "category": "General",
+    "query": "How do I get an account verification letter?",
+    "reference_answer": "You can download an official 'Account Verification' PDF under the 'Documents' tab in online banking."
+  },
+  {
+    "id": 174,
+    "category": "General",
+    "query": "Is there a limit on how many checks I can write?",
+    "reference_answer": "No, our standard checking accounts allow for unlimited check writing with no per-check fees."
+  },
+  {
+    "id": 175,
+    "category": "General",
+    "query": "How do I set up a power of attorney on my account?",
+    "reference_answer": "You will need to bring the original power of attorney document and the designated person to a branch for verification."
+  },
+  {
+    "id": 176,
+    "category": "Digital Banking",
+    "query": "Can I view my credit score in the app?",
+    "reference_answer": "Yes, we provide a free FICO Score update every month for all our credit card and checking account customers."
+  },
+  {
+    "id": 177,
+    "category": "Digital Banking",
+    "query": "How do I turn off paper statements?",
+    "reference_answer": "Go to 'Statement Preferences' and select 'Online Only' to stop receiving paper statements and save on monthly fees."
+  },
+  {
+    "id": 178,
+    "category": "Digital Banking",
+    "query": "Does the app support dark mode?",
+    "reference_answer": "Yes, the app will automatically match your phone's system settings for light or dark mode."
+  },
+  {
+    "id": 179,
+    "category": "Digital Banking",
+    "query": "Can I use the app on my tablet?",
+    "reference_answer": "Yes, our app is optimized for both smartphones and tablets on iOS and Android platforms."
+  },
+  {
+    "id": 180,
+    "category": "Digital Banking",
+    "query": "How do I share a transaction receipt?",
+    "reference_answer": "Tap on any transaction and use the 'Share' icon to send a PDF receipt via email, text, or other apps."
+  },
+  {
+    "id": 181,
+    "category": "Digital Banking",
+    "query": "Can I search my transaction history?",
+    "reference_answer": "Yes, use the search bar at the top of your transaction list to find specific merchants, dates, or amounts."
+  },
+  {
+    "id": 182,
+    "category": "Digital Banking",
+    "query": "How do I add a travel notice for my credit card?",
+    "reference_answer": "In the app, go to 'Card Settings' > 'Travel Notices' and add your trip details to ensure uninterrupted card use."
+  },
+  {
+    "id": 183,
+    "category": "Digital Banking",
+    "query": "Can I deposit a foreign check through the app?",
+    "reference_answer": "No, foreign checks must be brought to a branch for processing as they require special handling and currency conversion."
+  },
+  {
+    "id": 184,
+    "category": "Digital Banking",
+    "query": "How do I set up a 'Savings Goal'?",
+    "reference_answer": "Select your savings account and tap 'Create Goal' to set a target amount and track your progress automatically."
+  },
+  {
+    "id": 185,
+    "category": "Digital Banking",
+    "query": "Is my data stored on my phone by the app?",
+    "reference_answer": "For security, sensitive data like your full account number is not stored on your device; it's pulled securely from our servers as needed."
+  },
+  {
+    "id": 186,
+    "category": "Security",
+    "query": "What is a 'security key' for banking?",
+    "reference_answer": "A physical security key (like YubiKey) is a hardware device used for ultra-secure multi-factor authentication."
+  },
+  {
+    "id": 187,
+    "category": "Security",
+    "query": "How do I report a suspicious email?",
+    "reference_answer": "Forward any suspicious emails pretending to be from us to abuse@bank.com and do not click any links."
+  },
+  {
+    "id": 188,
+    "category": "Security",
+    "query": "What is an 'unauthorized transaction'?",
+    "reference_answer": "It is any transaction made without your permission. If you see one, you should report it as fraud immediately."
+  },
+  {
+    "id": 189,
+    "category": "Security",
+    "query": "Does the bank use encryption?",
+    "reference_answer": "Yes, we use industry-standard 256-bit AES encryption to protect your data both in transit and at rest."
+  },
+  {
+    "id": 190,
+    "category": "Security",
+    "query": "Can I lock my account temporarily?",
+    "reference_answer": "While you can't lock the whole account, you can instantly lock your debit and credit cards to prevent any new charges."
+  },
+  {
+    "id": 191,
+    "category": "Accounts",
+    "query": "How do I get a replacement for a worn-out checkbook?",
+    "reference_answer": "You can order a new set of checks through the 'Services' menu; standard designs are often free with certain account types."
+  },
+  {
+    "id": 192,
+    "category": "Accounts",
+    "query": "What is the difference between available balance and actual balance?",
+    "reference_answer": "Actual balance is the total money in your account, while available balance is what you can spend right now after pending transactions are subtracted."
+  },
+  {
+    "id": 193,
+    "category": "Accounts",
+    "query": "Can I open an account with a temporary ID?",
+    "reference_answer": "Most accounts require a permanent government-issued ID, but we may accept a temporary one if accompanied by other supporting documents."
+  },
+  {
+    "id": 194,
+    "category": "Accounts",
+    "query": "How do I set up an automatic transfer to savings?",
+    "reference_answer": "Go to 'Transfers' > 'Recurring', and set up a rule to move a specific amount from checking to savings on your payday."
+  },
+  {
+    "id": 195,
+    "category": "Accounts",
+    "query": "Do you offer accounts for non-profit organizations?",
+    "reference_answer": "Yes, we have specialized checking accounts for non-profits with low fees and tools to help manage donations."
   }
 ]

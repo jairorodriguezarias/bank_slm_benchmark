@@ -19,3 +19,6 @@ matplotlib
 peft
 trl
 datasets
+pymupdf
+openai
+fitz

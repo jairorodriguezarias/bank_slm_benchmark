@@ -1,14 +1,9 @@
 # Bank SLM Benchmark Report
 
-## Overview
-This report compares the performance of various Small Language Models (SLMs) on banking customer support queries.
+| Model                                |   Avg Latency (s) |   Avg Tokens/Sec |   Avg ROUGE-L |   Avg Semantic Similarity |   Total Tokens |
+|:-------------------------------------|------------------:|-----------------:|--------------:|--------------------------:|---------------:|
+| TinyLlama-1.1B-Chat-v1.0             |           7.93894 |          16.2998 |      0.148256 |                  0.659826 |          24439 |
+| tinyllama-1/1b-chat-v1/0/Q4/K/M/gguf |           1.94319 |          64.1966 |      0.142576 |                  0.655562 |          24337 |
+| Qwen1.5-0.5B-Chat                    |           4.17268 |          30.1424 |      0.131141 |                  0.642522 |          24465 |
 
-## Performance Metrics
-| Model                              |   Avg Latency (s) |   Avg Tokens/Sec |   Avg ROUGE-L |   Avg Semantic Similarity |   Total Tokens |
-|:-----------------------------------|------------------:|-----------------:|--------------:|--------------------------:|---------------:|
-| TinyLlama-1.1B-SFT                 |           3.12656 |           17.577 |      0.300237 |                  0.762597 |            539 |
-| TinyLlama/TinyLlama-1.1B-Chat-v1.0 |           8.08755 |           17.208 |      0.155975 |                  0.730498 |           1383 |
-
-## Key Findings
-- **Best Performing Model (Semantic):** TinyLlama-1.1B-SFT
-- **Fastest Model:** TinyLlama-1.1B-SFT
+![Benchmark Plots](results/latest/benchmark_plots.png)

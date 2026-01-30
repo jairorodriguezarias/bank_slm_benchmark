@@ -18,7 +18,7 @@ checkpoint-*/
 results/
 !results/history.json
 !results/.gitkeep
-BENCHMARK_REPORT.md
+# BENCHMARK_REPORT.md (Removed from ignore to track summary)
 
 # OS
 .DS_Store
