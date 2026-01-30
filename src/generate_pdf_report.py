@@ -107,8 +107,27 @@ def create_pdf(df, output_dir, charts):
     )
     pdf.chapter_body(summary)
 
+    # Detailed Analysis
+    pdf.chapter_title("2. Detailed Analysis")
+    
+    analysis_text = (
+        f"The benchmark results highlight a distinct trade-off between inference speed and response quality. "
+        f"'{best_perf['Model']}' leads in throughput, generating {best_perf['Avg Tokens/Sec']:.2f} tokens per second. "
+        f"This speed is advantageous for real-time chat interfaces where low latency improves user satisfaction. "
+        f"However, it achieves a semantic similarity score of {best_perf['Avg Semantic Similarity']:.2f}.\n\n"
+        
+        f"Conversely, '{best_qual['Model']}' demonstrates the highest understanding of banking context with a "
+        f"semantic similarity score of {best_qual['Avg Semantic Similarity']:.2f}. "
+        f"This higher accuracy ensures that responses align closely with verified banking protocols, which is critical for compliance and trust. "
+        f"The trade-off is a lower throughput of {best_qual['Avg Tokens/Sec']:.2f} tokens per second.\n\n"
+        
+        "Recommendation: For high-stakes queries (e.g., fraud reporting, fee disputes), prioritize the higher quality model. "
+        "For general FAQs where speed is essential, the faster model may be sufficient."
+    )
+    pdf.chapter_body(analysis_text)
+
     # Performance Table
-    pdf.chapter_title("2. Performance Data")
+    pdf.chapter_title("3. Performance Data")
     pdf.set_font('Arial', 'B', 10)
     
     # Table Header
@@ -136,7 +155,7 @@ def create_pdf(df, output_dir, charts):
 
     # Visualizations
     pdf.add_page()
-    pdf.chapter_title("3. Visual Analysis")
+    pdf.chapter_title("4. Visual Analysis")
     
     if os.path.exists(chart_throughput):
         pdf.image(chart_throughput, w=170)
