@@ -1,0 +1,42 @@
+model,query_id,category,query,response,inference_time_seconds,tokens_out,tokens_per_second,rouge_l,semantic_similarity
+Qwen/Qwen1.5-0.5B-Chat,1,Security,I lost my credit card. What should I do immediately?,"If you have lost your credit card, the first thing to do is to contact your bank and report it to them as stolen or lost. They will then process the matter and notify you of the recovery process.
+
+Here are some steps you can take:
+
+1. Call your bank: Call your bank's customer service number (e.g., 800-555-4777) and provide them with the following information:
+
+	* Your name and address
+	* The type of credit card you lost
+	* The date and time of loss
+	* Any other relevant details about the card
+
+2. Provide any additional information: If you believe that you may be able to help recover the card, provide any additional information",5.059,150,29.65,0.12030075187969924,0.6758195161819458
+Qwen/Qwen1.5-0.5B-Chat,2,Accounts,What is the difference between a savings account and a checking account?,"A savings account and a checking account are both types of financial accounts, but they differ in terms of how they store and use funds.
+
+A savings account is a type of deposit account that allows you to save money for future use. You can withdraw your money from your savings account at any time, typically within 30 days of making a withdrawal. If you do not make a withdrawal before the expiration date of your account, the balance will be reset to its initial amount.
+
+On the other hand, a checking account is a type of account that allows you to withdraw money from your account without having to pay fees. You can withdraw your money as often as you like, but there may be fees associated with each withdrawal. Additionally, if you have an",4.9766,150,30.14,0.11612903225806452,0.8111962080001831
+Qwen/Qwen1.5-0.5B-Chat,3,Loans,How can I apply for a mortgage?,"To apply for a mortgage, you will need to follow these steps:
+
+1. Determine your financial situation: Before applying for a mortgage, it's important to determine how much money you can afford to pay each month. This will help you determine the amount of贷款 you can get and the interest rate you can expect to receive.
+
+2. Research different lenders: There are many different types of lenders available, including traditional banks, online lenders, and mortgage brokerages. You should research each type of lender to see which one is best fit for your needs and budget.
+
+3. Review your credit score: Your credit score is an important factor in determining whether you qualify for a mortgage. A good credit score can help you get a lower interest rate and may even",5.2995,150,28.3,0.06711409395973154,0.551939845085144
+Qwen/Qwen1.5-0.5B-Chat,4,Digital Banking,I forgot my online banking password.,"If you forget your online banking password, there are several steps you can take to try and recover it:
+
+1. Check your account: Go back to the website of your bank's online banking service and check if there is an option to reset your password.
+
+2. Use找回 Your Password feature: Many banks offer a ""找回 your password"" feature that allows you to enter your login credentials again in order to regain access to your account.
+
+3. Contact Customer Support: If you still cannot remember your password, contact the bank's customer support team to ask them to help you recover it.
+
+4. Reset Your Card Number: You may also be able to reset your card number if your bank has a fraud protection program in place.
+
+5. Update Your Online",4.8197,150,31.12,0.08,0.6699910163879395
+Qwen/Qwen1.5-0.5B-Chat,5,Fees,Why was I charged an overdraft fee?,"If you were charged an overdraft fee, it is likely due to the fact that your account has been temporarily held over by another account or institution. This can happen if there is an outstanding balance on your account that you have not yet paid off, or if there is a transaction that has not yet been completed.
+There are several reasons why an overdraft fee may be charged:
+
+  1. Overdrafts: If you have made a purchase that has already been made but still has an outstanding balance on your account, your bank may charge you an overdraft fee.
+  2. Late payments: If you have made a payment that is later than expected, your bank may charge you an interest fee for the late payment.
+  3",4.8378,150,31.01,0.11188811188811189,0.829107940196991

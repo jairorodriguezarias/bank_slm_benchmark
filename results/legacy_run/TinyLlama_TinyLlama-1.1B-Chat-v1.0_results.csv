@@ -1,0 +1,27 @@
+model,query_id,category,query,response,inference_time_seconds,tokens_out,tokens_per_second,rouge_l,semantic_similarity
+TinyLlama/TinyLlama-1.1B-Chat-v1.0,1,Security,I lost my credit card. What should I do immediately?,"When you lose your credit card, the first thing you should do is to call your bank to report the loss. They will provide you with a replacement card and instructions on how to use it.
+
+If you can't find your credit card or you think it has been stolen, contact the bank immediately. They will immediately issue a fraud alert to your credit bureau and provide you with a replacement card, as well as instructions on how to use it.
+
+If you lose your credit card at a ATM, you can call your bank and report the loss. They will provide you with a replacement card and instructions on how to use it.
+
+In both cases, do not attempt to use the card until you receive",10.5697,150,14.19,0.1232876712328767,0.6341810822486877
+TinyLlama/TinyLlama-1.1B-Chat-v1.0,2,Accounts,What is the difference between a savings account and a checking account?,"A savings account and a checking account are both types of financial accounts that allow you to save money for future expenses or to spend money now. However, there are some key differences between these types of accounts.
+
+1. Savings vs. Checking:
+- Savings accounts deposit money in your account and allow you to earn interest on the money you have saved. - Checking accounts allow you to spend money from your account, but you can also set up automatic transfers from your savings account to your checking account. - Savings accounts typically have lower minimum balance requirements and require a higher minimum amount to open a checking account. - Checking accounts typically have higher minimum balance requirements and may not offer certain features like",9.186,150,16.33,0.14285714285714285,0.884412407875061
+TinyLlama/TinyLlama-1.1B-Chat-v1.0,3,Loans,How can I apply for a mortgage?,"I do not have access to your specific bank's mortgage application process. However, generally speaking, the process of applying for a mortgage involves the following steps:
+
+1. Check eligibility: start by checking your eligibility for a mortgage. Check with your bank to understand your eligibility requirements for different loan programs, such as conforming lending limits, debt-to-income ratio, etc.
+
+2. Apply online: most banks now accept online mortgage applications. You can fill out the application online and upload necessary documents, such as your tax returns, pay stubs, and credit report.
+
+3. Submit documents: you will need to submit",8.7876,150,17.07,0.06779661016949154,0.6409095525741577
+TinyLlama/TinyLlama-1.1B-Chat-v1.0,4,Digital Banking,I forgot my online banking password.,"I can't remember my password as I don't have the capability to have one. However, if you have forgotten your password, you can try resetting it by following these steps:
+
+1. Go to the bank's website or mobile app and enter your login credentials.
+2. Click on the ""forgot password"" link or use the ""password reset"" feature on the screen.
+3. Enter your email address associated with your account and click ""reset password.""
+4. The bank will send you an email with a link to create a new password. Follow the instructions in the email to create a new password.
+5. Make sure to change your bank's login credentials to avoid any future",8.8205,150,17.01,0.17518248175182483,0.669707715511322
+TinyLlama/TinyLlama-1.1B-Chat-v1.0,5,Fees,Why was I charged an overdraft fee?,"I don't have access to your personal banking records to know the specific reason for the overdraft fee that you were charged. However, I can tell you that the bank may have charged an overdraft fee if you did not have enough funds in your account to cover the transaction(s) you attempted to make. This may have been due to insufficient or insufficiently sufficient funds in your account, or because you made multiple transactions that were not successful due to insufficient funds. In such a scenario, you would have been charged an overdraft fee, as it is the bank's policy to recover any overdrawn funds from an account.",7.9297,139,17.53,0.10937499999999999,0.7939815521240234

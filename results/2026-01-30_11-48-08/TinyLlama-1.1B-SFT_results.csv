@@ -1,0 +1,22 @@
+model,query_id,category,query,response,inference_time_seconds,tokens_out,tokens_per_second,rouge_l,semantic_similarity
+TinyLlama-1.1B-SFT,1,Security,I lost my credit card. What should I do immediately?,"Immediately after losing your credit card, you should:
+
+1. Contact your bank or credit union to report the loss and determine if you need to report a theft or fraud.
+2. Check your account statements for any suspicious transactions or activity.
+3. Change your PIN or debit card number immediately to prevent unauthorized transactions.
+4. Contact your local law enforcement agency and file a report.",6.3899,93,14.55,0.16867469879518074,0.647877037525177
+TinyLlama-1.1B-SFT,2,Accounts,What is the difference between a savings account and a checking account?,"A savings account is a monetary account specifically designed for saving money, whereas a checking account is an open-account service offered by banks for checking and transacting transactions.",2.154,38,17.64,0.375,0.9247883558273315
+TinyLlama-1.1B-SFT,3,Loans,How can I apply for a mortgage?,"To apply for a mortgage, you can visit a bank branch or visit the mortgage department of your chosen financial institution. You can also apply online through the bank's website or through a third-party mortgage lender. Once you have completed the mortgage application, you will receive a mortgage offer from the lender.",4.1852,74,17.68,0.25,0.711575448513031
+TinyLlama-1.1B-SFT,4,Digital Banking,I forgot my online banking password.,"Simply follow these steps:
+
+1. Visit the bank's website
+2. Click on the ""Forgot Password"" link
+3. Enter your account number and last four digits of your Social Security number
+4. Click on ""Reset Password""
+5. Your new password will be sent to your email.",3.859,70,18.14,0.24242424242424243,0.7030520439147949
+TinyLlama-1.1B-SFT,5,Fees,Why was I charged an overdraft fee?,"If the account you used to initiate the transaction was insufficient to cover the transaction, you may have been charged an overdraft fee. The transaction was declined due to insufficient funds.",2.3841,43,18.04,0.125,0.5956194996833801
+TinyLlama-1.1B-SFT,6,Accounts,How do I open a joint account?,"To open a joint account, you would need to visit a branch and complete the process. The joint account holder would need to provide their name, address, and ID to open the account. Once the account is opened, the joint account holder would become responsible for all debts on the account.",3.3196,60,18.07,0.3157894736842105,0.8292620182037354
+TinyLlama-1.1B-SFT,7,Accounts,Is there a minimum balance requirement for checking accounts?,"Yes, all deposit accounts have a minimum balance requirement. The minimum balance for checking accounts is typically very low, typically below $50.",1.6911,30,17.74,0.3902439024390244,0.8080953359603882
+TinyLlama-1.1B-SFT,8,Accounts,Can I have multiple savings accounts?,"Yes, you can have multiple savings accounts with the same bank. However, you may have to set up separate accounts for different types of savings, such as checking, savings, and CDs.",2.3683,43,18.16,0.4090909090909091,0.7971587181091309
+TinyLlama-1.1B-SFT,9,Accounts,How do I close my account?,"To close your account, visit your nearest branch and speak to a bank representative. They will guide you through the process and provide you with all the necessary documentation. Follow the bank's instructions carefully to ensure a smooth transfer of your funds.",2.6867,49,18.24,0.25806451612903225,0.7709130048751831
+TinyLlama-1.1B-SFT,10,Accounts,What documents do I need to open a student account?,"You will need a valid ID, proof of enrollment (i.e. High School Diploma, College Degree), and current bank statements to open a student account.",2.2277,39,17.51,0.46808510638297873,0.8376253247261047

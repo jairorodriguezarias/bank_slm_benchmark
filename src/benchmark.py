@@ -3,6 +3,7 @@ import time
 import torch
 import pandas as pd
 from transformers import AutoTokenizer, AutoModelForCausalLM, pipeline
+from peft import PeftModel, PeftConfig
 from tqdm import tqdm
 import os
 import gc
@@ -16,17 +17,18 @@ load_dotenv()
 # Configuration
 MODELS_TO_TEST = [
     "TinyLlama/TinyLlama-1.1B-Chat-v1.0",
-    "Qwen/Qwen2-1.5B-Instruct",
-    "Qwen/Qwen1.5-0.5B-Chat",
-    "HuggingFaceTB/SmolLM-1.7B-Instruct",
-    "facebook/opt-1.3b",
-    "facebook/opt-125m"
+    # "Qwen/Qwen2-1.5B-Instruct",
+    # "Qwen/Qwen1.5-0.5B-Chat",
+    # "HuggingFaceTB/SmolLM-1.7B-Instruct",
+    # "facebook/opt-1.3b",
+    # "facebook/opt-125m"
 ]
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 PROJECT_ROOT = os.path.dirname(SCRIPT_DIR)
 DATA_PATH = os.path.join(PROJECT_ROOT, "data", "bank_queries.json")
 RESULTS_ROOT = os.path.join(PROJECT_ROOT, "results")
+MODELS_ROOT = os.path.join(PROJECT_ROOT, "models", "tuned")
 
 def get_device():
     if torch.cuda.is_available():
@@ -35,6 +37,19 @@ def get_device():
         return "mps"
     else:
         return "cpu"
+
+def discover_local_models():
+    """Finds locally trained adapters in models/tuned/"""
+    local_models = []
+    if os.path.exists(MODELS_ROOT):
+        for name in os.listdir(MODELS_ROOT):
+            full_path = os.path.join(MODELS_ROOT, name)
+            if os.path.isdir(full_path):
+                # Check if it looks like a PEFT model
+                if os.path.exists(os.path.join(full_path, "adapter_config.json")):
+                    print(f"Discovered local SFT model: {name}")
+                    local_models.append(full_path)
+    return local_models
 
 def setup_run_directory():
     """Creates a timestamped directory for the current run and updates history."""
@@ -85,6 +100,10 @@ def run_benchmark():
     device = get_device()
     print(f"Running on device: {device}")
     
+    # Add local models to test list
+    local_models = discover_local_models()
+    all_models = MODELS_TO_TEST + local_models
+    
     run_dir, run_id = setup_run_directory()
     print(f"Starting Benchmark Run: {run_id}")
     print(f"Results will be saved to: {run_dir}")
@@ -94,32 +113,49 @@ def run_benchmark():
 
     current_run_results = []
 
-    for model_name in MODELS_TO_TEST:
+    for model_name in all_models:
         print(f"\n{'='*20}\nTesting Model: {model_name}\n{'='*20}")
         
-        safe_name = model_name.replace("/", "_")
-        # Check if results exist in this specific run (unlikely unless resumed)
+        is_local = os.path.exists(model_name)
+        display_name = os.path.basename(model_name) if is_local else model_name
+        safe_name = display_name.replace("/", "_")
+        
         if os.path.exists(f"{run_dir}/{safe_name}_results.csv"):
             print(f"Skipping {model_name} (results already exist in this run)")
             continue
             
         try:
             print("Loading model...")
-            tokenizer = AutoTokenizer.from_pretrained(model_name, trust_remote_code=True)
+            if is_local:
+                # Load PEFT adapter
+                config = PeftConfig.from_pretrained(model_name)
+                base_model_path = config.base_model_name_or_path
+                print(f"Loading base model for adapter: {base_model_path}")
+                
+                tokenizer = AutoTokenizer.from_pretrained(base_model_path, trust_remote_code=True)
+                base_model = AutoModelForCausalLM.from_pretrained(
+                    base_model_path,
+                    torch_dtype=torch.float16 if device != "cpu" else torch.float32,
+                    trust_remote_code=True,
+                    device_map=device
+                )
+                model = PeftModel.from_pretrained(base_model, model_name)
+            else:
+                # Load Standard HF Model
+                tokenizer = AutoTokenizer.from_pretrained(model_name, trust_remote_code=True)
+                model = AutoModelForCausalLM.from_pretrained(
+                    model_name, 
+                    torch_dtype=torch.float16 if device != "cpu" else torch.float32, 
+                    trust_remote_code=True,
+                    device_map=device
+                )
             
             if tokenizer.pad_token is None:
                 tokenizer.pad_token = tokenizer.eos_token
                 
-            model = AutoModelForCausalLM.from_pretrained(
-                model_name, 
-                torch_dtype=torch.float16 if device != "cpu" else torch.float32, 
-                trust_remote_code=True,
-                device_map=device
-            )
-            
             model_results = []
             
-            for item in tqdm(queries, desc=f"Querying {model_name}"):
+            for item in tqdm(queries, desc=f"Querying {display_name}"):
                 start_time = time.time()
                 
                 if tokenizer.chat_template:
@@ -154,7 +190,7 @@ def run_benchmark():
                 tokens_per_second = num_tokens_out / inference_time if inference_time > 0 else 0
                 
                 result_entry = {
-                    "model": model_name,
+                    "model": display_name,
                     "query_id": item['id'],
                     "category": item['category'],
                     "query": item['query'],

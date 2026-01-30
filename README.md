@@ -1,35 +1,52 @@
-# Bank SLM Benchmark Project
+# Bank SLM Benchmark
 
-This project benchmarks 5 open-source Small Language Models (SLMs) on a set of banking-related customer support queries.
+A comprehensive benchmarking suite for testing and specialized fine-tuning of Small Language Models (SLMs) on banking customer support tasks.
 
-## Models Tested
-1. `TinyLlama/TinyLlama-1.1B-Chat-v1.0`
-2. `Qwen/Qwen2-1.5B-Instruct`
-3. `Qwen/Qwen1.5-0.5B-Chat`
-4. `HuggingFaceTB/SmolLM-1.7B-Instruct`
-5. `facebook/opt-1.3b` (Baseline)
+## Features
 
-## Setup
+- **Automated Benchmarking**: Measures latency, throughput (tokens/sec), and response quality (ROUGE-L, Semantic Similarity).
+- **Supervised Fine-Tuning (SFT)**: Built-in support for LoRA-based fine-tuning to specialize models for banking domain knowledge.
+- **Result History**: Every run is timestamped and logged, allowing for comparison across different training iterations.
+- **Professional Reporting**: Automatically generates visualization charts and a detailed PDF report comparing model performance and quality trade-offs.
 
-1. **Install Dependencies:**
-   ```bash
-   pip install -r requirements.txt
-   ```
+## Project Structure
 
-2. **Run Benchmark:**
-   The benchmark script downloads models (cached) and runs inference.
-   ```bash
-   python src/benchmark.py
-   ```
-   *Note: This script handles model loading, inference, and result aggregation.*
+- `src/benchmark.py`: Main execution script. Discovers and tests base models and local SFT adapters.
+- `src/train.py`: SFT training script using `peft` and `trl` for efficient LoRA adaptation.
+- `src/evaluate_models.py`: Computes quality metrics and generates a Markdown summary.
+- `src/generate_pdf_report.py`: Creates the final PDF report with charts and executive analysis.
+- `results/`: Contains timestamped directories for every benchmark run.
+- `models/tuned/`: Storage location for your fine-tuned SFT adapters.
 
-3. **Generate Report:**
-   Analyze the results and generate a Markdown report.
-   ```bash
-   python src/analyze_results.py
-   ```
+## Getting Started
 
-## Directory Structure
-- `data/`: Contains `bank_queries.json` (test dataset).
-- `src/`: Source code for benchmarking and analysis.
-- `results/`: CSV files containing raw outputs and metrics.
+### 1. Installation
+```bash
+pip install -r requirements.txt
+```
+
+### 2. Running a Benchmark
+Execute the benchmark on the default set of models. The script will automatically detect any models you have trained in `models/tuned/`.
+```bash
+python src/benchmark.py
+```
+
+### 3. Fine-Tuning a Model (SFT)
+Specialize a base model for the banking dataset:
+```bash
+python src/train.py --base_model "TinyLlama/TinyLlama-1.1B-Chat-v1.0" --output_dir "models/tuned/TinyLlama-Banking"
+```
+
+### 4. Generating Reports
+After a benchmark run, evaluate the quality and generate the PDF:
+```bash
+python src/evaluate_models.py
+python src/generate_pdf_report.py
+```
+Reports are saved in `results/latest/` (a symlink to the most recent run).
+
+## Hardware Support
+The project is optimized for:
+- **macOS**: Native acceleration via Metal (MPS).
+- **Linux/Windows**: Full CUDA support for NVIDIA GPUs.
+- **CPU**: Fallback mode for environment-agnostic execution.

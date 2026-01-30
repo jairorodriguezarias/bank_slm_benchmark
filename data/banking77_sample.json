@@ -1,0 +1,602 @@
+[
+  {
+    "id": 1,
+    "category": "Banking77 Intent: Cash Withdrawal Charge",
+    "query": "Why did I get charged a fee when I tried to obtain cash?",
+    "reference_answer": "The user is asking about: Cash Withdrawal Charge. Recommended action should be based on standard banking procedures for this topic."
+  },
+  {
+    "id": 2,
+    "category": "Banking77 Intent: Compromised Card",
+    "query": "I don't recognize some of the transactions on my card, I think someone must have gotten my card info and used it.",
+    "reference_answer": "The user is asking about: Compromised Card. Recommended action should be based on standard banking procedures for this topic."
+  },
+  {
+    "id": 3,
+    "category": "Banking77 Intent: Card Swallowed",
+    "query": "How can I get my card out of the damn ATM?",
+    "reference_answer": "The user is asking about: Card Swallowed. Recommended action should be based on standard banking procedures for this topic."
+  },
+  {
+    "id": 4,
+    "category": "Banking77 Intent: Card Payment Not Recognised",
+    "query": "I see a charge on my account that I don't recall making. I feel like my account may have been compromised.",
+    "reference_answer": "The user is asking about: Card Payment Not Recognised. Recommended action should be based on standard banking procedures for this topic."
+  },
+  {
+    "id": 5,
+    "category": "Banking77 Intent: Card Delivery Estimate",
+    "query": "my card was not in the mail again can you advise?",
+    "reference_answer": "The user is asking about: Card Delivery Estimate. Recommended action should be based on standard banking procedures for this topic."
+  },
+  {
+    "id": 6,
+    "category": "Banking77 Intent: Lost Or Stolen Card",
+    "query": "Some idiot stole my card.",
+    "reference_answer": "The user is asking about: Lost Or Stolen Card. Recommended action should be based on standard banking procedures for this topic."
+  },
+  {
+    "id": 7,
+    "category": "Banking77 Intent: Verify Top Up",
+    "query": "What are the benefits to verifying the top-up?",
+    "reference_answer": "The user is asking about: Verify Top Up. Recommended action should be based on standard banking procedures for this topic."
+  },
+  {
+    "id": 8,
+    "category": "Banking77 Intent: Contactless Not Working",
+    "query": "Do I need to make a regular payment before a contactless one?",
+    "reference_answer": "The user is asking about: Contactless Not Working. Recommended action should be based on standard banking procedures for this topic."
+  },
+  {
+    "id": 9,
+    "category": "Banking77 Intent: Contactless Not Working",
+    "query": "I tried to pay contactless at the bus today and it didn't work. Any ideas why?",
+    "reference_answer": "The user is asking about: Contactless Not Working. Recommended action should be based on standard banking procedures for this topic."
+  },
+  {
+    "id": 10,
+    "category": "Banking77 Intent: Request Refund",
+    "query": "Hello! I recently made a purchase and I'm needing to cancel my order and process a refund as soon as possible.",
+    "reference_answer": "The user is asking about: Request Refund. Recommended action should be based on standard banking procedures for this topic."
+  },
+  {
+    "id": 11,
+    "category": "Banking77 Intent: Declined Transfer",
+    "query": "Why did my my transfer get declined?",
+    "reference_answer": "The user is asking about: Declined Transfer. Recommended action should be based on standard banking procedures for this topic."
+  },
+  {
+    "id": 12,
+    "category": "Banking77 Intent: Lost Or Stolen Phone",
+    "query": "I lost my phone and would like to freeze my accounts.",
+    "reference_answer": "The user is asking about: Lost Or Stolen Phone. Recommended action should be based on standard banking procedures for this topic."
+  },
+  {
+    "id": 13,
+    "category": "Banking77 Intent: Card Not Working",
+    "query": "My card stopped working when I use it",
+    "reference_answer": "The user is asking about: Card Not Working. Recommended action should be based on standard banking procedures for this topic."
+  },
+  {
+    "id": 14,
+    "category": "Banking77 Intent: Refund Not Showing Up",
+    "query": "I should have received a refund however it is not showing on my statement",
+    "reference_answer": "The user is asking about: Refund Not Showing Up. Recommended action should be based on standard banking procedures for this topic."
+  },
+  {
+    "id": 15,
+    "category": "Banking77 Intent: Beneficiary Not Allowed",
+    "query": "My beneficiary has been denied, is this normal?",
+    "reference_answer": "The user is asking about: Beneficiary Not Allowed. Recommended action should be based on standard banking procedures for this topic."
+  },
+  {
+    "id": 16,
+    "category": "Banking77 Intent: Card Payment Fee Charged",
+    "query": "Will I always be charged a fee for using my card?",
+    "reference_answer": "The user is asking about: Card Payment Fee Charged. Recommended action should be based on standard banking procedures for this topic."
+  },
+  {
+    "id": 17,
+    "category": "Banking77 Intent: Get Disposable Virtual Card",
+    "query": "How do I obtain a disposable virtual card?",
+    "reference_answer": "The user is asking about: Get Disposable Virtual Card. Recommended action should be based on standard banking procedures for this topic."
+  },
+  {
+    "id": 18,
+    "category": "Banking77 Intent: Why Verify Identity",
+    "query": "I won't verify my identity.",
+    "reference_answer": "The user is asking about: Why Verify Identity. Recommended action should be based on standard banking procedures for this topic."
+  },
+  {
+    "id": 19,
+    "category": "Banking77 Intent: Cash Withdrawal Charge",
+    "query": "What is this charge on my account for a cash withdrawl?",
+    "reference_answer": "The user is asking about: Cash Withdrawal Charge. Recommended action should be based on standard banking procedures for this topic."
+  },
+  {
+    "id": 20,
+    "category": "Banking77 Intent: Refund Not Showing Up",
+    "query": "I keep checking my bank statements but I don't see a refund that I've requested from a seller. Can you ensure that I receive the refund from the seller?",
+    "reference_answer": "The user is asking about: Refund Not Showing Up. Recommended action should be based on standard banking procedures for this topic."
+  },
+  {
+    "id": 21,
+    "category": "Banking77 Intent: Card Payment Wrong Exchange Rate",
+    "query": "I purchased something in a foreign currency but the rate applied is wrong",
+    "reference_answer": "The user is asking about: Card Payment Wrong Exchange Rate. Recommended action should be based on standard banking procedures for this topic."
+  },
+  {
+    "id": 22,
+    "category": "Banking77 Intent: Cash Withdrawal Not Recognised",
+    "query": "There is an error, the app says I made an ATM withdrawal and I didn't.",
+    "reference_answer": "The user is asking about: Cash Withdrawal Not Recognised. Recommended action should be based on standard banking procedures for this topic."
+  },
+  {
+    "id": 23,
+    "category": "Banking77 Intent: Visa Or Mastercard",
+    "query": "What steps must I follow to get a Visa credit card?",
+    "reference_answer": "The user is asking about: Visa Or Mastercard. Recommended action should be based on standard banking procedures for this topic."
+  },
+  {
+    "id": 24,
+    "category": "Banking77 Intent: Top Up By Cash Or Cheque",
+    "query": "What locations can I top up with cash?",
+    "reference_answer": "The user is asking about: Top Up By Cash Or Cheque. Recommended action should be based on standard banking procedures for this topic."
+  },
+  {
+    "id": 25,
+    "category": "Banking77 Intent: Exchange Charge",
+    "query": "Does it cost extra to exchange currencies?",
+    "reference_answer": "The user is asking about: Exchange Charge. Recommended action should be based on standard banking procedures for this topic."
+  },
+  {
+    "id": 26,
+    "category": "Banking77 Intent: Card Payment Fee Charged",
+    "query": "There is a fee on my account. Why?",
+    "reference_answer": "The user is asking about: Card Payment Fee Charged. Recommended action should be based on standard banking procedures for this topic."
+  },
+  {
+    "id": 27,
+    "category": "Banking77 Intent: Disposable Card Limits",
+    "query": "I need to use my disposable card multiple times a day, is there a cutoff limit?",
+    "reference_answer": "The user is asking about: Disposable Card Limits. Recommended action should be based on standard banking procedures for this topic."
+  },
+  {
+    "id": 28,
+    "category": "Banking77 Intent: Pending Cash Withdrawal",
+    "query": "I tried taking money from the ATM but no money came out, but the transaction is still pending? How is this possible?",
+    "reference_answer": "The user is asking about: Pending Cash Withdrawal. Recommended action should be based on standard banking procedures for this topic."
+  },
+  {
+    "id": 29,
+    "category": "Banking77 Intent: Virtual Card Not Working",
+    "query": "Payments from my disposable virtual card don't work",
+    "reference_answer": "The user is asking about: Virtual Card Not Working. Recommended action should be based on standard banking procedures for this topic."
+  },
+  {
+    "id": 30,
+    "category": "Banking77 Intent: Transaction Charged Twice",
+    "query": "I recently got charged twice from a restaurant that I was at this week and I would like for one of those payments to be removed from my account.",
+    "reference_answer": "The user is asking about: Transaction Charged Twice. Recommended action should be based on standard banking procedures for this topic."
+  },
+  {
+    "id": 31,
+    "category": "Banking77 Intent: Card Not Working",
+    "query": "Can someone assist me by explaining why my card is not working?",
+    "reference_answer": "The user is asking about: Card Not Working. Recommended action should be based on standard banking procedures for this topic."
+  },
+  {
+    "id": 32,
+    "category": "Banking77 Intent: Card Payment Not Recognised",
+    "query": "Payment i did not do",
+    "reference_answer": "The user is asking about: Card Payment Not Recognised. Recommended action should be based on standard banking procedures for this topic."
+  },
+  {
+    "id": 33,
+    "category": "Banking77 Intent: Card Payment Not Recognised",
+    "query": "I don't recall making that payment?",
+    "reference_answer": "The user is asking about: Card Payment Not Recognised. Recommended action should be based on standard banking procedures for this topic."
+  },
+  {
+    "id": 34,
+    "category": "Banking77 Intent: Exchange Rate",
+    "query": "Please advise what is the exchange rate",
+    "reference_answer": "The user is asking about: Exchange Rate. Recommended action should be based on standard banking procedures for this topic."
+  },
+  {
+    "id": 35,
+    "category": "Banking77 Intent: Card About To Expire",
+    "query": "I need to know the cost and when I will receive a new card to replace an old one.",
+    "reference_answer": "The user is asking about: Card About To Expire. Recommended action should be based on standard banking procedures for this topic."
+  },
+  {
+    "id": 36,
+    "category": "Banking77 Intent: Transfer Not Received By Recipient",
+    "query": "I am still awaiting the completion of the transaction.",
+    "reference_answer": "The user is asking about: Transfer Not Received By Recipient. Recommended action should be based on standard banking procedures for this topic."
+  },
+  {
+    "id": 37,
+    "category": "Banking77 Intent: Topping Up By Card",
+    "query": "Why can't I see the top-up amount I just added to my account?",
+    "reference_answer": "The user is asking about: Topping Up By Card. Recommended action should be based on standard banking procedures for this topic."
+  },
+  {
+    "id": 38,
+    "category": "Banking77 Intent: Cancel Transfer",
+    "query": "I would like to revert a transaction I did this morning",
+    "reference_answer": "The user is asking about: Cancel Transfer. Recommended action should be based on standard banking procedures for this topic."
+  },
+  {
+    "id": 39,
+    "category": "Banking77 Intent: Change Pin",
+    "query": "Can i change my PIN at the ATM?",
+    "reference_answer": "The user is asking about: Change Pin. Recommended action should be based on standard banking procedures for this topic."
+  },
+  {
+    "id": 40,
+    "category": "Banking77 Intent: Lost Or Stolen Card",
+    "query": "I believe my credit card was stolen.",
+    "reference_answer": "The user is asking about: Lost Or Stolen Card. Recommended action should be based on standard banking procedures for this topic."
+  },
+  {
+    "id": 41,
+    "category": "Banking77 Intent: Top Up Reverted",
+    "query": "I topped up my account and even though it was confirmed at first, the money isn't there anymore! why did this happen, and where did my money go?",
+    "reference_answer": "The user is asking about: Top Up Reverted. Recommended action should be based on standard banking procedures for this topic."
+  },
+  {
+    "id": 42,
+    "category": "Banking77 Intent: Declined Transfer",
+    "query": "My transfers are being declined. IT has always worked for me but now it's declining my card. I've tried several times.",
+    "reference_answer": "The user is asking about: Declined Transfer. Recommended action should be based on standard banking procedures for this topic."
+  },
+  {
+    "id": 43,
+    "category": "Banking77 Intent: Wrong Exchange Rate For Cash Withdrawal",
+    "query": "I took out cash abroad and the exchange rate isn't correct.",
+    "reference_answer": "The user is asking about: Wrong Exchange Rate For Cash Withdrawal. Recommended action should be based on standard banking procedures for this topic."
+  },
+  {
+    "id": 44,
+    "category": "Banking77 Intent: Contactless Not Working",
+    "query": "How do I use contactless pay?",
+    "reference_answer": "The user is asking about: Contactless Not Working. Recommended action should be based on standard banking procedures for this topic."
+  },
+  {
+    "id": 45,
+    "category": "Banking77 Intent: Top Up Failed",
+    "query": "The app denied my top-up",
+    "reference_answer": "The user is asking about: Top Up Failed. Recommended action should be based on standard banking procedures for this topic."
+  },
+  {
+    "id": 46,
+    "category": "Banking77 Intent: Country Support",
+    "query": "Is my country supported",
+    "reference_answer": "The user is asking about: Country Support. Recommended action should be based on standard banking procedures for this topic."
+  },
+  {
+    "id": 47,
+    "category": "Banking77 Intent: Declined Transfer",
+    "query": "Why did I get a transfer declined?",
+    "reference_answer": "The user is asking about: Declined Transfer. Recommended action should be based on standard banking procedures for this topic."
+  },
+  {
+    "id": 48,
+    "category": "Banking77 Intent: Exchange Charge",
+    "query": "How much do I have to pay for the exchange fee?",
+    "reference_answer": "The user is asking about: Exchange Charge. Recommended action should be based on standard banking procedures for this topic."
+  },
+  {
+    "id": 49,
+    "category": "Banking77 Intent: Transfer Timing",
+    "query": "If my transfer is from Europe how long will it take?",
+    "reference_answer": "The user is asking about: Transfer Timing. Recommended action should be based on standard banking procedures for this topic."
+  },
+  {
+    "id": 50,
+    "category": "Banking77 Intent: Top Up Reverted",
+    "query": "Do you know if my top-up has been cancelled?",
+    "reference_answer": "The user is asking about: Top Up Reverted. Recommended action should be based on standard banking procedures for this topic."
+  },
+  {
+    "id": 51,
+    "category": "Banking77 Intent: Verify Top Up",
+    "query": "Is it necessary to verify my top up?",
+    "reference_answer": "The user is asking about: Verify Top Up. Recommended action should be based on standard banking procedures for this topic."
+  },
+  {
+    "id": 52,
+    "category": "Banking77 Intent: Order Physical Card",
+    "query": "Where will I find my card?",
+    "reference_answer": "The user is asking about: Order Physical Card. Recommended action should be based on standard banking procedures for this topic."
+  },
+  {
+    "id": 53,
+    "category": "Banking77 Intent: Top Up By Bank Transfer Charge",
+    "query": "Should I expect to be charged for topping up by transfer?",
+    "reference_answer": "The user is asking about: Top Up By Bank Transfer Charge. Recommended action should be based on standard banking procedures for this topic."
+  },
+  {
+    "id": 54,
+    "category": "Banking77 Intent: Card Linking",
+    "query": "Could you help me reactivate my card? It was previously lost, but I found it this morning in my jacket.",
+    "reference_answer": "The user is asking about: Card Linking. Recommended action should be based on standard banking procedures for this topic."
+  },
+  {
+    "id": 55,
+    "category": "Banking77 Intent: Card Payment Fee Charged",
+    "query": "Is there a reason I was charged a fee for using my card as payment? I've never had an extra fee before.",
+    "reference_answer": "The user is asking about: Card Payment Fee Charged. Recommended action should be based on standard banking procedures for this topic."
+  },
+  {
+    "id": 56,
+    "category": "Banking77 Intent: Declined Card Payment",
+    "query": "Card payment declined?",
+    "reference_answer": "The user is asking about: Declined Card Payment. Recommended action should be based on standard banking procedures for this topic."
+  },
+  {
+    "id": 57,
+    "category": "Banking77 Intent: Balance Not Updated After Cheque Or Cash Deposit",
+    "query": "Why is the cash deposit not showing up in my account?",
+    "reference_answer": "The user is asking about: Balance Not Updated After Cheque Or Cash Deposit. Recommended action should be based on standard banking procedures for this topic."
+  },
+  {
+    "id": 58,
+    "category": "Banking77 Intent: Top Up By Bank Transfer Charge",
+    "query": "What us the fee to transfer money from my bank?",
+    "reference_answer": "The user is asking about: Top Up By Bank Transfer Charge. Recommended action should be based on standard banking procedures for this topic."
+  },
+  {
+    "id": 59,
+    "category": "Banking77 Intent: Transfer Into Account",
+    "query": "I would like to transfer some money from my other bank account into this one.",
+    "reference_answer": "The user is asking about: Transfer Into Account. Recommended action should be based on standard banking procedures for this topic."
+  },
+  {
+    "id": 60,
+    "category": "Banking77 Intent: Beneficiary Not Allowed",
+    "query": "Why isn't my transfer going through? I get a message saying it's not possible. I've had no issues in the past.",
+    "reference_answer": "The user is asking about: Beneficiary Not Allowed. Recommended action should be based on standard banking procedures for this topic."
+  },
+  {
+    "id": 61,
+    "category": "Banking77 Intent: Pending Cash Withdrawal",
+    "query": "My card was denied at an ATM earlier today but the transaction is pending. Please cancel it as I did not receive my money.",
+    "reference_answer": "The user is asking about: Pending Cash Withdrawal. Recommended action should be based on standard banking procedures for this topic."
+  },
+  {
+    "id": 62,
+    "category": "Banking77 Intent: Failed Transfer",
+    "query": "My transfer keeps failing and I just want to transfer the money can you please make it work?",
+    "reference_answer": "The user is asking about: Failed Transfer. Recommended action should be based on standard banking procedures for this topic."
+  },
+  {
+    "id": 63,
+    "category": "Banking77 Intent: Card Payment Wrong Exchange Rate",
+    "query": "Hi, I don't think your exchange rate is right. I need you to check the official interbank exchange please.",
+    "reference_answer": "The user is asking about: Card Payment Wrong Exchange Rate. Recommended action should be based on standard banking procedures for this topic."
+  },
+  {
+    "id": 64,
+    "category": "Banking77 Intent: Transfer Into Account",
+    "query": "What are the steps I follow to transfer money into my account?",
+    "reference_answer": "The user is asking about: Transfer Into Account. Recommended action should be based on standard banking procedures for this topic."
+  },
+  {
+    "id": 65,
+    "category": "Banking77 Intent: Apple Pay Or Google Pay",
+    "query": "I received my American Express card, but I am having problems making it work with Apple pay.  Can you help me with this problem?",
+    "reference_answer": "The user is asking about: Apple Pay Or Google Pay. Recommended action should be based on standard banking procedures for this topic."
+  },
+  {
+    "id": 66,
+    "category": "Banking77 Intent: Top Up By Cash Or Cheque",
+    "query": "Do you accept checks?",
+    "reference_answer": "The user is asking about: Top Up By Cash Or Cheque. Recommended action should be based on standard banking procedures for this topic."
+  },
+  {
+    "id": 67,
+    "category": "Banking77 Intent: Compromised Card",
+    "query": "How can I stop fraud on my account right now?",
+    "reference_answer": "The user is asking about: Compromised Card. Recommended action should be based on standard banking procedures for this topic."
+  },
+  {
+    "id": 68,
+    "category": "Banking77 Intent: Pending Cash Withdrawal",
+    "query": "How long with my cash withdrawal stay pending for?",
+    "reference_answer": "The user is asking about: Pending Cash Withdrawal. Recommended action should be based on standard banking procedures for this topic."
+  },
+  {
+    "id": 69,
+    "category": "Banking77 Intent: Virtual Card Not Working",
+    "query": "Tell me why my virtual disposable card won't work.",
+    "reference_answer": "The user is asking about: Virtual Card Not Working. Recommended action should be based on standard banking procedures for this topic."
+  },
+  {
+    "id": 70,
+    "category": "Banking77 Intent: Failed Transfer",
+    "query": "I've now been trying to do a really standard transfer 5 times already. What's going on, is your system broken or something?!",
+    "reference_answer": "The user is asking about: Failed Transfer. Recommended action should be based on standard banking procedures for this topic."
+  },
+  {
+    "id": 71,
+    "category": "Banking77 Intent: Card Swallowed",
+    "query": "My card is stuck in the ATM, what can I do?",
+    "reference_answer": "The user is asking about: Card Swallowed. Recommended action should be based on standard banking procedures for this topic."
+  },
+  {
+    "id": 72,
+    "category": "Banking77 Intent: Terminate Account",
+    "query": "Please close my account. I am unsatisfied with your service.",
+    "reference_answer": "The user is asking about: Terminate Account. Recommended action should be based on standard banking procedures for this topic."
+  },
+  {
+    "id": 73,
+    "category": "Banking77 Intent: Transfer Timing",
+    "query": "how long dies it take for transfers to reflect on my balance",
+    "reference_answer": "The user is asking about: Transfer Timing. Recommended action should be based on standard banking procedures for this topic."
+  },
+  {
+    "id": 74,
+    "category": "Banking77 Intent: Age Limit",
+    "query": "Could I open an account for my children?",
+    "reference_answer": "The user is asking about: Age Limit. Recommended action should be based on standard banking procedures for this topic."
+  },
+  {
+    "id": 75,
+    "category": "Banking77 Intent: Contactless Not Working",
+    "query": "I'm unable to use contactless payments for purchases.",
+    "reference_answer": "The user is asking about: Contactless Not Working. Recommended action should be based on standard banking procedures for this topic."
+  },
+  {
+    "id": 76,
+    "category": "Banking77 Intent: Getting Spare Card",
+    "query": "I'd like to have another card",
+    "reference_answer": "The user is asking about: Getting Spare Card. Recommended action should be based on standard banking procedures for this topic."
+  },
+  {
+    "id": 77,
+    "category": "Banking77 Intent: Country Support",
+    "query": "i live in the US can i still get a card?",
+    "reference_answer": "The user is asking about: Country Support. Recommended action should be based on standard banking procedures for this topic."
+  },
+  {
+    "id": 78,
+    "category": "Banking77 Intent: Card Payment Not Recognised",
+    "query": "There is a fraudulent charge on my statement.",
+    "reference_answer": "The user is asking about: Card Payment Not Recognised. Recommended action should be based on standard banking procedures for this topic."
+  },
+  {
+    "id": 79,
+    "category": "Banking77 Intent: Activate My Card",
+    "query": "Could you please activate my card",
+    "reference_answer": "The user is asking about: Activate My Card. Recommended action should be based on standard banking procedures for this topic."
+  },
+  {
+    "id": 80,
+    "category": "Banking77 Intent: Card Linking",
+    "query": "Can I link another card to my account?",
+    "reference_answer": "The user is asking about: Card Linking. Recommended action should be based on standard banking procedures for this topic."
+  },
+  {
+    "id": 81,
+    "category": "Banking77 Intent: Lost Or Stolen Card",
+    "query": "What should I do if I lost my card?",
+    "reference_answer": "The user is asking about: Lost Or Stolen Card. Recommended action should be based on standard banking procedures for this topic."
+  },
+  {
+    "id": 82,
+    "category": "Banking77 Intent: Fiat Currency Support",
+    "query": "Do you support all fiat currencies?",
+    "reference_answer": "The user is asking about: Fiat Currency Support. Recommended action should be based on standard banking procedures for this topic."
+  },
+  {
+    "id": 83,
+    "category": "Banking77 Intent: Cash Withdrawal Charge",
+    "query": "Why is there an extra charge for money that was withdrawn?",
+    "reference_answer": "The user is asking about: Cash Withdrawal Charge. Recommended action should be based on standard banking procedures for this topic."
+  },
+  {
+    "id": 84,
+    "category": "Banking77 Intent: Edit Personal Details",
+    "query": "I no longer live at my address on file, how do I change it?",
+    "reference_answer": "The user is asking about: Edit Personal Details. Recommended action should be based on standard banking procedures for this topic."
+  },
+  {
+    "id": 85,
+    "category": "Banking77 Intent: Terminate Account",
+    "query": "Please delete my account.",
+    "reference_answer": "The user is asking about: Terminate Account. Recommended action should be based on standard banking procedures for this topic."
+  },
+  {
+    "id": 86,
+    "category": "Banking77 Intent: Beneficiary Not Allowed",
+    "query": "I am having problems transferring to a beneficiary.",
+    "reference_answer": "The user is asking about: Beneficiary Not Allowed. Recommended action should be based on standard banking procedures for this topic."
+  },
+  {
+    "id": 87,
+    "category": "Banking77 Intent: Transfer Into Account",
+    "query": "I want to use bank transfer for topping up my account. How is it handled?",
+    "reference_answer": "The user is asking about: Transfer Into Account. Recommended action should be based on standard banking procedures for this topic."
+  },
+  {
+    "id": 88,
+    "category": "Banking77 Intent: Top Up Reverted",
+    "query": "When I topped up, the app reverted my funds.",
+    "reference_answer": "The user is asking about: Top Up Reverted. Recommended action should be based on standard banking procedures for this topic."
+  },
+  {
+    "id": 89,
+    "category": "Banking77 Intent: Request Refund",
+    "query": "Hello I changed my mind and really need a refund on one of things I bought recently. Can you please cancel the transaction and get my money back. Please it's urgent.",
+    "reference_answer": "The user is asking about: Request Refund. Recommended action should be based on standard banking procedures for this topic."
+  },
+  {
+    "id": 90,
+    "category": "Banking77 Intent: Lost Or Stolen Card",
+    "query": "My card was taken from me",
+    "reference_answer": "The user is asking about: Lost Or Stolen Card. Recommended action should be based on standard banking procedures for this topic."
+  },
+  {
+    "id": 91,
+    "category": "Banking77 Intent: Verify Top Up",
+    "query": "Can you give me information about verification code?",
+    "reference_answer": "The user is asking about: Verify Top Up. Recommended action should be based on standard banking procedures for this topic."
+  },
+  {
+    "id": 92,
+    "category": "Banking77 Intent: Extra Charge On Statement",
+    "query": "What is the \u20ac1 fee for?",
+    "reference_answer": "The user is asking about: Extra Charge On Statement. Recommended action should be based on standard banking procedures for this topic."
+  },
+  {
+    "id": 93,
+    "category": "Banking77 Intent: Failed Transfer",
+    "query": "My transfer did not go through.",
+    "reference_answer": "The user is asking about: Failed Transfer. Recommended action should be based on standard banking procedures for this topic."
+  },
+  {
+    "id": 94,
+    "category": "Banking77 Intent: Failed Transfer",
+    "query": "What is stopping my money from transferring?",
+    "reference_answer": "The user is asking about: Failed Transfer. Recommended action should be based on standard banking procedures for this topic."
+  },
+  {
+    "id": 95,
+    "category": "Banking77 Intent: Card Not Working",
+    "query": "Can a card stop working?",
+    "reference_answer": "The user is asking about: Card Not Working. Recommended action should be based on standard banking procedures for this topic."
+  },
+  {
+    "id": 96,
+    "category": "Banking77 Intent: Transaction Charged Twice",
+    "query": "Why is there a transaction that shows multiple times?",
+    "reference_answer": "The user is asking about: Transaction Charged Twice. Recommended action should be based on standard banking procedures for this topic."
+  },
+  {
+    "id": 97,
+    "category": "Banking77 Intent: Getting Virtual Card",
+    "query": "Can you help me sign up for a virtual card?",
+    "reference_answer": "The user is asking about: Getting Virtual Card. Recommended action should be based on standard banking procedures for this topic."
+  },
+  {
+    "id": 98,
+    "category": "Banking77 Intent: Card Swallowed",
+    "query": "I was at an ATM and it swallowed my card.",
+    "reference_answer": "The user is asking about: Card Swallowed. Recommended action should be based on standard banking procedures for this topic."
+  },
+  {
+    "id": 99,
+    "category": "Banking77 Intent: Get Disposable Virtual Card",
+    "query": "Can i get a throw away card",
+    "reference_answer": "The user is asking about: Get Disposable Virtual Card. Recommended action should be based on standard banking procedures for this topic."
+  },
+  {
+    "id": 100,
+    "category": "Banking77 Intent: Reverted Card Payment?",
+    "query": "There was a canceled payment for my card.",
+    "reference_answer": "The user is asking about: Reverted Card Payment?. Recommended action should be based on standard banking procedures for this topic."
+  }
+]

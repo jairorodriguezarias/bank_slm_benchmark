@@ -1,0 +1,30 @@
+model,query_id,category,query,response,inference_time_seconds,tokens_out,tokens_per_second,rouge_l,semantic_similarity
+HuggingFaceTB/SmolLM-1.7B-Instruct,1,Security,I lost my credit card. What should I do immediately?,"Don't worry, I'm here to help! If you've lost your credit card, the first thing you should do is contact your bank's customer support to report the loss. They can assist you in getting a new card or a replacement card if your lost credit card was a valid one.",5.5149,59,10.7,0.2777777777777778,0.6655290126800537
+HuggingFaceTB/SmolLM-1.7B-Instruct,2,Accounts,What is the difference between a savings account and a checking account?,"A savings account and a checking account are two types of bank accounts that serve different purposes and offer distinct benefits.
+
+**Savings Account:**
+
+A savings account is a type of bank account designed to help you save money over time. Its primary purpose is to earn interest on your deposited funds, providing a relatively low-risk and liquid option for short-term savings. Here are some key features of a savings account:
+
+* Low or no fees (e.g., checking account fees may apply)
+* Typically earns a fixed or variable interest rate
+* Allows you to deposit and withdraw funds frequently (e.g., daily, weekly, monthly)
+* Often has a higher minimum balance requirement to avoid fees",14.7335,149,10.11,0.16541353383458648,0.8822256922721863
+HuggingFaceTB/SmolLM-1.7B-Instruct,3,Loans,How can I apply for a mortgage?,"To apply for a mortgage, you'll need to follow these steps:
+
+**Step 1: Check Your Credit Score**
+
+* Your credit score plays a significant role in determining the interest rate you'll qualify for and whether you'll be approved for a mortgage.
+* You can check your credit score for free on websites like Credit Karma, Credit Sesame, or Experian.
+
+**Step 2: Gather Required Documents**
+
+* Gather the following documents:
+	+ Identification (driver's license, passport, state ID)
+	+ Proof of income (pay stubs, W-2 forms, tax returns)
+	+ Proof of employment (letter from employer, contract)
+	+ Proof of",27.1277,150,5.53,0.07079646017699114,0.6343339085578918
+HuggingFaceTB/SmolLM-1.7B-Instruct,4,Digital Banking,I forgot my online banking password.,Sorry to hear that. Can you please provide your login credentials?,2.5255,13,5.15,0.06451612903225806,0.36068135499954224
+HuggingFaceTB/SmolLM-1.7B-Instruct,5,Fees,Why was I charged an overdraft fee?,"I apologize for any inconvenience you've experienced. If you've been charged an overdraft fee, please let us know the details of your transaction. Can you please provide the date, time, and type of transaction you were involved in? This will help us investigate and resolve the issue more efficiently.
+
+If you're able to provide more information, we'll do our best to ensure it's resolved as soon as possible.",12.2102,85,6.96,0.11111111111111112,0.7464881539344788

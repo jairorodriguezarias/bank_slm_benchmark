@@ -16,3 +16,6 @@ tabulate
 bitsandbytes
 fpdf2
 matplotlib
+peft
+trl
+datasets

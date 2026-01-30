@@ -1,0 +1,510 @@
+model,query_id,category,query,response,inference_time_seconds,tokens_out,tokens_per_second
+TinyLlama/TinyLlama-1.1B-Chat-v1.0,1,Security,I lost my credit card. What should I do immediately?,"If you have lost your credit card, the first thing you should do is to immediately call your bank or the card issuer to notify them of the loss. Here are some steps you can take:
+
+1. Check your statement for any suspicious charges or bills.
+2. Contact the bank or card issuer and provide your name, address, and date of purchase.
+3. Ask about the lost card or any recent account activity.
+4. Obtain a copy of your credit report to ensure there are no fraudulent activities on your account.
+5. Keep your card at a safe place and avoid using it for transactions or purchases until you have heard back from the bank or card issuer.",11.9089,150,12.6
+TinyLlama/TinyLlama-1.1B-Chat-v1.0,2,Accounts,What is the difference between a savings account and a checking account?,"Savings accounts and checking accounts are two types of bank accounts available to customers. Here's a breakdown of the differences:
+
+1. Savings accounts: Savings accounts are accounts that allow you to save money and earn interest on it. They typically have lower interest rates than checking accounts, but they offer greater access to your funds and can be used for various purposes such as emergency fund, saving for retirement, and other long-term goals.
+
+2. Checking accounts: Checking accounts are accounts that allow you to access your funds for day-to-day transactions such as making payments, transferring money, and accessing your balance. They typically have higher interest rates than savings accounts, and",9.885,150,15.17
+TinyLlama/TinyLlama-1.1B-Chat-v1.0,3,Loans,How can I apply for a mortgage?,"To apply for a mortgage, you can do the following:
+
+1. Visit your local bank or mortgage lender.
+2. Check for available mortgage products.
+3. Meet with a mortgage loan officer who can guide you through the loan process and answer any questions you may have.
+4. Prepare the required documentation, including income tax returns, pay stubs, and any other relevant documents.
+5. Discuss your financial situation with the mortgage loan officer, including your credit score, debt-to-income ratio, and any other factors that may affect your ability to qualify for a mortgage.
+6. Provide any special terms",10.5424,150,14.23
+TinyLlama/TinyLlama-1.1B-Chat-v1.0,4,Digital Banking,I forgot my online banking password.,"Are you referring to the online banking account?
+
+If yes, the password is used to secure the account and protect your personal and financial information from unauthorized access.
+
+If you have forgotten your online banking password, you can reset it by following the below steps:
+
+1. Go to the bank's online account login page.
+2. Enter your username and password.
+3. After logging in, you will be redirected to the bank's online banking dashboard.
+4. Click on the ""Forgot Password"" option on the login page.
+5. Enter your email address.
+6. The bank will send you a password reset link to your email.
+7",9.6631,150,15.52
+TinyLlama/TinyLlama-1.1B-Chat-v1.0,5,Fees,Why was I charged an overdraft fee?,"I don't have access to your specific transaction history or account information. However, based on the information provided, it seems that you may have incurred an overdraft fee due to a request for a withdrawal from your account exceeding the available funds. Overdraft fees are usually charged for transactions that exceed the available balance in your account. If you have any doubts or concerns about the charges or fees associated with your account, it would be best to contact the bank directly or visit their website to review the transaction history and account information.",7.3037,115,15.75
+TinyLlama/TinyLlama-1.1B-Chat-v1.0,6,Accounts,How do I open a joint account?,"To open a joint account, you will need to follow these steps:
+
+1. Visit your bank's branch or go online to the bank's website.
+2. Navigate to the ""Account Opening"" or ""Account Opening for Joint Account"" section.
+3. Select the account type you want to open.
+4. Choose the person who will be opening the account, typically the primary account holder, based on the number of accounts you have.
+5. Choose the joint account holder, either the primary account holder or another person.
+6. Enter the required details, such as name, address, and bank account information.
+7. Pay the required fees and sign the",9.3475,150,16.05
+TinyLlama/TinyLlama-1.1B-Chat-v1.0,7,Accounts,Is there a minimum balance requirement for checking accounts?,"Yes, there is a minimum balance requirement for checking accounts as defined by banks and credit unions. This minimum balance requirement is typically set by the bank or credit union at the time of account opening. It is often referred to as a ""minimum balance requirement"" or a ""minimum balance"" requirement. The minimum balance requirement depends on the type of account and the type of interest earned on the account. Typically, the minimum balance required for a checking account is lower than that required for saving accounts or other types of savings accounts, such as money market accounts. When it comes to checking accounts, the minimum balance requirement typically ranges from a minimum of $0 to a maximum of $1,000 or more. However, some",9.4816,150,15.82
+TinyLlama/TinyLlama-1.1B-Chat-v1.0,8,Accounts,Can I have multiple savings accounts?,"Yes, you can have multiple savings accounts if you wish. However, choosing the right savings account for you depends on your specific needs and preferences. It is always a good idea to choose an account that offers several benefits, such as interest rates, fees, and services that help you manage your money effectively. You can consult with your bank or financial institution for guidance on the best savings account for you based on your personal financial goals and requirements.",5.7614,94,16.32
+TinyLlama/TinyLlama-1.1B-Chat-v1.0,9,Accounts,How do I close my account?,"Closing your account with a bank is a simple and straightforward process. Here's how to do it:
+
+1. First, visit the bank's website or contact the bank directly.
+
+2. If you haven't done so already, create a new login and password.
+
+3. Log in to your account and navigate to the ""Account Settings"" page.
+
+4. Look for a section titled ""Account Termination.""
+
+5. If your account is still active, you will find a ""Closing Account"" button. Click on it.
+
+6. Fill out the required fields.
+
+7. Confirm that you understand the bank's closing terms and conditions.",9.5418,150,15.72
+TinyLlama/TinyLlama-1.1B-Chat-v1.0,10,Accounts,What documents do I need to open a student account?,"To open a student account, you will need the following documents:
+
+1. A permanent address (e.g. Apartment or home address)
+2. A valid ID (e.g. A driver's license, passport, or state ID)
+3. Proof of income (e.g. A paycheck stub, bank statement, or W-2 form)
+4. Proof of residency (e.g. A rental agreement, lease, utility bill, or landlord letter)
+5. Proof of school enrollment (e.g. A letter from your school indicating your enrollment status)
+6. Proof of citizenship (e.g. A U",10.7275,150,13.98
+TinyLlama/TinyLlama-1.1B-Chat-v1.0,11,Accounts,Do you offer business accounts for startups?,"Yes, I can certainly provide information about business accounts for startups. Business accounts are designed to meet the specific needs and requirements of startups, including limited resources and budgets. Some features of business accounts that can be tailored specifically for startups include:
+
+1. Limited financial capacity: Startups often have a limited financial capacity, which can make it challenging to open and manage a bank account. Business accounts can help startups access affordable banking services and manage their finances more efficiently.
+
+2. Flexible payment options: Startups may have limited payment options and preferences, such as only accepting electronic payments or requiring more frequent invoicing. Business accounts can offer flexible payment options that suit startups",9.7496,150,15.39
+TinyLlama/TinyLlama-1.1B-Chat-v1.0,12,Accounts,How can I add a beneficiary to my account?,"To add a beneficiary to your account, you can follow these steps:
+
+1. Log in to your account on the bank's website or app.
+
+2. Navigate to the ""Account Details"" section and select the ""Beneficiary Information"" tab.
+
+3. Click on the ""Add Beneficiary"" button.
+
+4. Enter the beneficiary's name and the account number they are entitled to receive the funds from.
+
+5. If the beneficiary is on your account, click on the ""Save"" button to save the changes.
+
+6. If the beneficiary is not on your account, you can add them by clicking on the",9.497,150,15.79
+TinyLlama/TinyLlama-1.1B-Chat-v1.0,13,Accounts,What is a certificate of deposit (CD)?,"A certificate of deposit (CD) is a type of savings account that provides a fixed interest rate and maturity date. The interest rate is stated upfront, and the CD will mature at a specified date in the future. CDs are a popular investment option for individuals and businesses alike as they offer a guaranteed return on their investment, even in periods of low interest rates. The CD will pay interest continuously while the holder is in possession of the account. CDs are typically opened and funded through banks or other financial institutions.",7.2377,116,16.03
+TinyLlama/TinyLlama-1.1B-Chat-v1.0,14,Accounts,Can I convert my student account to a regular account?,"I do not have access to your specific bank account or student status. However, you can contact your bank's customer support team or visit their website to find information on how to convert your student account to a regular account. They will be able to provide you with the necessary steps and requirements for transferring your account. It's always a good idea to have a plan in place before making any major changes to your account.",5.6557,87,15.38
+TinyLlama/TinyLlama-1.1B-Chat-v1.0,15,Accounts,How do I order new checks?,"As a customer support assistant for a bank, you can order new checks by following these steps:
+
+1. Log in to your bank's website or app.
+2. Look for the ""Checks"" or ""Notes"" section in the menu on the left-hand side of the screen.
+3. Choose the account you want to check out and the check or note you need.
+4. Scroll down the list of available checks and select the one you want.
+5. Click the ""Add to Cart"" button.
+6. In the ""Note"" section, enter the order number, if applicable.
+7. If you have any special instructions for the check, such as notes or instructions, add",9.4296,150,15.91
+TinyLlama/TinyLlama-1.1B-Chat-v1.0,16,Security,How do I enable two-factor authentication?,"To enable two-factor authentication (2FA) for your bank's login page, you need to follow these steps:
+
+1. Log in to your bank's website and go to the login page.
+
+2. Click on the ""Account"" or ""Login"" button.
+
+3. The login screen will display.
+
+4. Click on the ""Forgot your password"" link or the ""I don't have a login"" link.
+
+5. Enter your bank's username and your email address, and then click on ""Send Reset Link.""
+
+6. You will receive an email with a link to reset your password.
+
+7. Enter the reset link in the",9.1901,150,16.32
+TinyLlama/TinyLlama-1.1B-Chat-v1.0,17,Security,I see a transaction I didn't make. What now?,"If you can see a transaction you didn't make on your bank's website or mobile application, you can check the transaction on your bank's reporting system, which is usually called a KYC (Know Your Customer) portal.
+
+Log in to your bank's KYC portal using your account details, and you should be able to view the transaction details. Sometimes, you may need to provide additional information or documents to confirm your identity, such as a copy of your passport or driver's license. The bank may also have other requirements, such as document verification, to ensure that the transaction was legitimate.
+
+If you find that the transaction is legitimate, you should confirm the details with",9.2951,150,16.14
+TinyLlama/TinyLlama-1.1B-Chat-v1.0,18,Security,Is mobile banking safe?,"Yes, mobile banking can be considered safe, especially with the use of secure communication protocols such as HTTPS, which encrypts all data transmitted between the bank's server and the customer's device. Mobile banking is also protected by multi-factor authentication, which requires additional authentication beyond just a password. Additionally, banking apps usually have dedicated user interfaces that are secure and do not allow unauthorized access to sensitive information. However, it is always advisable to follow common sense and avoid sharing personal information such as passwords or account numbers with anyone who asks for them in exchange for mobile banking services.",7.9682,128,16.06
+TinyLlama/TinyLlama-1.1B-Chat-v1.0,19,Security,How often should I change my banking password?,"It's recommended to change your banking password on a regular basis, at least once a year. This is to ensure that your banking information remains secure and that any unauthorized access or theft is prevented. It's also a good practice to change your password whenever you update your email address, phone number, or any other information that could potentially be used to access your accounts. Changing your password frequently is also an excellent way to detect and prevent any potential security breaches.",6.2667,103,16.44
+TinyLlama/TinyLlama-1.1B-Chat-v1.0,20,Security,What is a phishing scam?,"A phishing scam is a type of fraudulent email or message that pretends to be from a reputable source to trick a person into providing personal or financial information. The scammer will use a fake email address or URL to send the phishing message, and they will often include a link or attachment that seems legitimate but leads the recipient to a fake website that looks identical to the original site. The scammer will then ask the recipient to enter their login or personal information, such as their username and password, and then use that information to steal financial data or access their accounts.
+
+To avoid becoming a victim of a phishing scam, be cautious of unsolicited emails or",9.393,150,15.97
+TinyLlama/TinyLlama-1.1B-Chat-v1.0,21,Security,How do I freeze my debit card?,"Follow these steps to freeze your debit card:
+
+1. Go to your bank's website or mobile app.
+2. Click on the ""My Account"" tab.
+3. Scroll down and look for the ""Debit Card"" section.
+4. Click on the ""Frozen"" tab.
+5. Under ""Frozen Cards,"" click on the debit card number you wish to freeze.
+6. Follow the on-screen instructions to complete the process.
+
+Your debit card will be frozen until you unfreeze it by following the same steps. If you want to unfreeze a frozen card, follow these steps:
+
+1. Go to",9.661,150,15.53
+TinyLlama/TinyLlama-1.1B-Chat-v1.0,22,Security,Will the bank ever ask for my PIN?,"Yes, the bank will typically ask for your PIN when making a deposit or withdrawal from an account. This information is required to verify your identity and ensure that the transaction is authorized by you. If the bank does not verify your identity, they may ask for your PIN as a security measure. The PIN may be used as a one-time password or a secure code that is entered when making a deposit or withdrawal. The PIN should be kept secure and should not be shared with anyone.",6.6118,107,16.18
+TinyLlama/TinyLlama-1.1B-Chat-v1.0,23,Security,How can I spot a card skimmer at an ATM?,"Here are some signs that you may have been the victim of a card skimmer at an ATM:
+
+1. A magnetic strip or skimmer is located on the ATM machine.
+
+2. The skimmer is hidden behind the ATM's keypad or screen.
+
+3. The skimmer can read the magnetic strip on your card and capture your PIN.
+
+4. The skimmer appears to be a physical device or attachment that protrudes from the ATM.
+
+5. The skimmer has a small, hidden antenna that can pick up your card's magnetic strip.
+
+6. The skimmer can be used by an attacker to steal your PIN.",9.7397,150,15.4
+TinyLlama/TinyLlama-1.1B-Chat-v1.0,24,Security,What do I do if my identity is stolen?,"If your identity is stolen, it's essential to take action to protect yourself and prevent further damage. Here are some steps to take:
+
+1. Report the theft: Contact your bank or credit card issuer immediately and report the theft to the local law enforcement agency. Provide them with the police report and any documentation that supports your claim.
+
+2. Change your personal information: Change your Social Security number, birthday, and address to prevent future identity theft.
+
+3. Implement fraud protection measures: Implement fraud protection measures such as credit freezes, identity theft monitoring, and monitoring your accounts for suspicious activity.
+
+4. Monitor your accounts: Mon",9.1064,150,16.47
+TinyLlama/TinyLlama-1.1B-Chat-v1.0,25,Security,Can I set transaction limits on my card?,"Yes, you can set transaction limits on your card. This will allow you to limit the amount of transactions you enter onto the card and prevent unauthorized transactions. Here are the steps to set transaction limits on your card:
+
+1. Log in to your online banking account and go to the ""Account Details"" section.
+2. Click on the ""Card Details"" tab.
+3. Click on the ""Manage Card"" button.
+4. Scroll down to the ""Transaction Limits"" section and click on ""Edit"" to set the transaction limits.
+5. Enter the transaction limit amount for each category of transactions, such as ATM withdrawals, credit card purchases, and phone bills.",9.5499,150,15.71
+TinyLlama/TinyLlama-1.1B-Chat-v1.0,26,Loans,What is the current interest rate for personal loans?,"As of March 2021, the current interest rate for personal loans is 4.05%. This rate may change periodically and is subject to change by the lender. It is recommended to check the current interest rate with your lender before applying for a personal loan.",3.6764,61,16.59
+TinyLlama/TinyLlama-1.1B-Chat-v1.0,27,Loans,Can I pay off my loan early?,"As a customer support assistant for a bank, I do not have access to your specific financial details or bank policies. However, based on the information provided, you may be able to pay off your loan early using the available options and procedures. It is best to check with your bank directly for details on how to make early payments or extend the repayment period. You may also consult your loan agreement for any specific information on the early payoff policy.",5.8286,93,15.96
+TinyLlama/TinyLlama-1.1B-Chat-v1.0,28,Loans,What is the difference between a fixed and variable rate loan?,"A fixed rate loan has a predetermined interest rate that remains constant throughout the loan term. This means that the interest rate will not change during the term of the loan, regardless of any interest rate changes that the bank may experience. In contrast, a variable rate loan allows the borrower to adjust the interest rate based on changes in interest rates between the signing of the loan and the end of the loan term.
+
+In a fixed rate loan, the interest rate remains constant for the entire loan term, which means that the borrower is guaranteed a fixed monthly payment. In a variable rate loan, the interest rate may fluctuate based on changes in market interest rates, which can make the loan more risky for the",9.7702,150,15.35
+TinyLlama/TinyLlama-1.1B-Chat-v1.0,29,Loans,How do I check my loan balance?,"To check your loan balance, follow these steps:
+
+1. Log in to your bank account online or at a branch.
+2. Once you're logged in, go to the loan section on your account dashboard.
+3. Choose the loan that you want to check balance for.
+4. You'll see the loan balance displayed on the right-hand side of your screen.
+
+Note: You may need to log out and back in to the bank account to see the updated balance.
+
+If you have any questions about your loan balance, you can also contact your bank's customer support team for assistance.",8.4251,133,15.79
+TinyLlama/TinyLlama-1.1B-Chat-v1.0,30,Loans,Do you offer auto loans for used cars?,"Yes, I offer auto loans for used cars at my financial institution. I can provide you with more details on the process and eligibility criteria based on your specific needs and preferences. Please let me know if you have any further questions. Best regards,
+[Your Name]",3.6433,59,16.19
+TinyLlama/TinyLlama-1.1B-Chat-v1.0,31,Loans,What is a home equity line of credit (HELOC)?,"A home equity line of credit (HELOC) is a type of credit that allows you to borrow against the equity in your home. With a HELOC, you borrow a fixed amount of money for a set period of time and then repay it with a fixed interest rate. The money you borrow is a line of credit, and you can draw down this line of credit at any time without incurring any interest charges. When you repay the loan, the remaining amount is transferred to your home's equity, which is used to pay off the loan. HELOCs are often used by homeowners who want to access their equity for specific purposes, such as making home improvements, consolidating debt,",9.322,150,16.09
+TinyLlama/TinyLlama-1.1B-Chat-v1.0,32,Loans,How long does it take to get a loan approved?,"It can take several days to get a loan approved depending on the lender's processing time, the type of loan program you are applying for, and other factors such as your credit score, employment history, and other financial information. The exact timing will vary depending on the specific lender and program you are applying for, and you will receive notification about your loan status from the lender. It is recommended to provide all the necessary information and documents to the lender as soon as possible to ensure your loan application is processed quickly.",6.5983,109,16.52
+TinyLlama/TinyLlama-1.1B-Chat-v1.0,33,Loans,What factors affect my eligibility for a loan?,"There are several factors that may affect your eligibility for a loan, including but not limited to:
+
+1. Credit score: Your credit score is an important factor in determining your eligibility for a loan. A higher credit score can help you get a better interest rate and lower loan payments.
+
+2. Loan amount: The amount of the loan you are eligible for will depend on your income and expenses, as well as your credit score. A larger loan amount may be available to you if you have a stronger credit score and a higher income.
+
+3. Loan term: The length of the loan term may also affect your eligibility. Loans with shorter terms may be",9.3415,150,16.06
+TinyLlama/TinyLlama-1.1B-Chat-v1.0,34,Loans,Can I refinance my student loans?,"Yes, you can refinance your student loans. Here's what you need to know:
+
+1. What are student loans?
+Student loans are a type of debt that you take out to pay for tuition, fees, textbooks, and other education-related expenses. They typically have a fixed-interest rate and are usually paid back through your salary over a set period.
+
+2. How can I refinance my student loans?
+There are two main ways to refinance your student loans:
+
+- Direct consolidation: This is the most common way to refinance student loans. You can consolidate your student loans,",9.3808,150,15.99
+TinyLlama/TinyLlama-1.1B-Chat-v1.0,35,Loans,What is the minimum credit score for a mortgage?,"The minimum credit score for a mortgage depends on the lender and the terms of the loan. However, the typical minimum credit score for a mortgage is normally around 620 or higher. Lenders may consider a range of factors such as credit history, credit utilization, debt-to-income ratio, employment history, rent payments, and other financial data when evaluating applicants for mortgage loans. Additionally, some lenders may require a higher credit score to qualify for better terms or more lenient underwriting standards.",7.2893,119,16.33
+TinyLlama/TinyLlama-1.1B-Chat-v1.0,36,Digital Banking,How do I deposit a check with my phone?,"To deposit a check with your phone, follow these steps:
+
+1. Open the email or text message that contains the check.
+2. Click on the link that appears on the screen. This will take you to the bank's website where you can deposit the check.
+3. Follow the on-screen instructions to fill out the required information, including the check amount, check number, and your name and account number.
+4. If you're depositing an electronic check, you'll be asked to insert the check into a scanner or imager.
+5. If you're depositing a paper check, you'll need to print out the check and fill out the required information.",9.732,150,15.41
+TinyLlama/TinyLlama-1.1B-Chat-v1.0,37,Digital Banking,Can I pay bills online?,"Yes, you can pay bills online. Many banks offer online payment options for bill payment, account access, and other banking services. Here are some of the most popular online payment options for bills:
+
+1. PayPal: PayPal is a popular online payment platform that allows you to pay bills and other online transactions. You can link your PayPal account to your bank account to make payments.
+
+2. Venmo: Venmo is a money transfer platform that allows you to pay bills directly to your bank account. You can link your Venmo account to your bank account to make payments.
+
+3. Square: Square is an online payment processor that allows you to pay bills and other online",8.7665,150,17.11
+TinyLlama/TinyLlama-1.1B-Chat-v1.0,38,Digital Banking,The app is crashing on my phone.,"I'm sorry to hear that. Can you provide more information about the app crashing on your phone? Perhaps, can you provide some details about your phone model and operating system? Also, can you please provide us with the app name so that I can investigate the issue further?
+
+please feel free to provide more details and I will do my best to assist you.",4.3702,78,17.85
+TinyLlama/TinyLlama-1.1B-Chat-v1.0,39,Digital Banking,How do I download my bank statements?,"To download your bank statements or account statements, you'll need to access your bank account online. Here's how to do it:
+
+1. Log in to your bank account online.
+
+2. Go to your account dashboard.
+
+3. Click on the ""Accounts"" tab.
+
+4. Choose the account that you want to view your statements for.
+
+5. Click on the ""View Statements"" button.
+
+6. You will be directed to a page where you can view your statements.
+
+7. You will see a list of your account statements and the date range you selected.
+
+8. Click on the ""Download"" button next to your statement to download",8.6262,150,17.39
+TinyLlama/TinyLlama-1.1B-Chat-v1.0,40,Digital Banking,Can I sync my account with budgeting apps?,"Yes, you can sync your account with budgeting apps. Most popular budgeting apps like Mint, Budgetly, and Personal Capital allow you to sync your bank accounts to create a single view of your finances. By doing this, you can have a clear picture of your spending and earnings, and adjust your budget accordingly. This helps you monitor your spending and savings, and improve your overall financial health.",4.9357,88,17.83
+TinyLlama/TinyLlama-1.1B-Chat-v1.0,41,Digital Banking,How do I update my contact information?,"To update your contact information, you can do the following:
+
+1. Visit the bank's website (https://www.yourbank.com/home) and log in to your account.
+
+2. Click on the ""Account"" tab and then click on the ""Contact"" icon.
+
+3. From there, you can update your contact information. This includes your name, phone number, email address, and any other relevant details.
+
+4. Make the necessary changes and click on the ""Save Changes"" button.
+
+5. You might see a confirmation message stating that the updates were successful.
+
+6. If you encounter any issues while updating your contact information, you can contact the",8.5058,150,17.64
+TinyLlama/TinyLlama-1.1B-Chat-v1.0,42,Digital Banking,Where can I find my routing number?,"I do not have access to your bank's routing number, which is a unique identifier for the bank's banking transactions. You can find your routing number at your bank's website or by contacting their customer service. You can search for your bank's routing number by entering your bank's name and checking their website or by contacting their customer service. Once you have your routing number, you can use it as a substitute for your account number when making banking transactions.",5.5707,101,18.13
+TinyLlama/TinyLlama-1.1B-Chat-v1.0,43,Digital Banking,Can I stop a payment online?,"Yes, you can stop a payment online. Here are the steps to do so:
+
+1. Go to the bank's website and log in to your account.
+
+2. Navigate to the payment history section and select the payment you want to stop.
+
+3. Click on the ""Stop Payment"" button for the payment you want to stop.
+
+4. Complete the payment details as required and submit the request.
+
+5. Once the payment is stopped, you will receive an email confirmation from the bank.
+
+Note: It's essential to read the bank's policy on stop payments to avoid any inconvenience or errors.",7.9457,142,17.87
+TinyLlama/TinyLlama-1.1B-Chat-v1.0,44,Digital Banking,Is there a limit to mobile deposits?,"No, there is no limit to mobile deposits. Mobile deposits are a convenient and secure way to deposit checks into your account, and they are available for all Bank of America customers. You can deposit checks by using your mobile device or a banking app, and you can even deposit checks at a local branch if you prefer to do so in person.",4.1802,76,18.18
+TinyLlama/TinyLlama-1.1B-Chat-v1.0,45,Digital Banking,How do I set up alerts for low balance?,"To set up alerts for low balance, follow these steps:
+
+1. Navigate to your bank's online banking website.
+2. Click on the ""Accounts"" tab at the top of the screen.
+3. Select the account that has the low balance alert set up.
+4. Click on the ""Notifications"" tab.
+5. Click on ""Create a New Alert.""
+6. In the ""Alert Settings"" section, select the ""Low Balance"" option.
+7. Enter the amount that you want to be alerted about.
+8. Check the box next to ""Activate for this transaction.""
+9. Customize the alert message by entering a message that",8.6856,150,17.27
+TinyLlama/TinyLlama-1.1B-Chat-v1.0,46,Fees,How can I avoid monthly maintenance fees?,"To avoid monthly maintenance fees when managing your bank accounts, follow these tips:
+
+1. Keep your account active: Make sure your account is active as much as possible. If you have an account balance, it means you are making regular deposits or withdrawals, which can reduce maintenance fees.
+
+2. Set up automatic transfers: If you have an automatic transfer set up, it can help reduce the number of transactions that require manual transfers. Make sure these automatic transfers match your payment schedule.
+
+3. Close overdraft protection: If you have an overdraft protection feature, make sure it is not active. This can also help reduce maintenance fees as you won't have to",8.5176,150,17.61
+TinyLlama/TinyLlama-1.1B-Chat-v1.0,47,Fees,What is the fee for using another bank's ATM?,"The fee for using another bank's ATM depends on the bank's terms and conditions. In most cases, fees may vary based on the bank, the location of the ATM, and the type of ATM. In some cases, the bank may have a self-service kiosk, which you can use without an ATM card. In that case, you may need to pay a fee for using it. It is best to check the bank's website or contact their customer support for the latest information on ATM fees.",6.3835,114,17.86
+TinyLlama/TinyLlama-1.1B-Chat-v1.0,48,Fees,Do you charge for wire transfers?,"I do not have information about specific services or products offered by financial institutions, including banks. However, most banks offer wire transfer services to facilitate instant and secure transfers of funds between bank accounts. It is a common service that allows you to send or receive money from any bank account to another bank account in real-time. If you would like to inquire about your bank's wire transfer services, you may contact them directly for further information.",5.0274,92,18.3
+TinyLlama/TinyLlama-1.1B-Chat-v1.0,49,Fees,Is there a fee for replacement cards?,"Yes, there is a fee for replacement cards. The fees vary depending on the bank, but they are usually charged per card or per replacement card. The amount of the fee can vary depending on the policy of the bank. It's always best to check the bank's policy before applying for a replacement card to ensure that the amount you'll have to pay is reasonable.",4.3388,79,18.21
+TinyLlama/TinyLlama-1.1B-Chat-v1.0,50,Fees,What is a foreign transaction fee?,"A foreign transaction fee or foreign transaction charge is a fee that a bank charges you when you make a transaction in a currency other than the currency in which you have your account. The fee can vary depending on the bank and the country in which the transaction is being made. Some examples of foreign transaction fees include international transaction fees, currency conversion fees, and foreign transaction minimums.",4.3318,79,18.24
+TinyLlama/TinyLlama-1.1B-Chat-v1.0,51,Fees,How much does a cashier's check cost?,"I don't have real-time information or access to current exchange rates. But generally, a cashier's check costs at least $25 to $50 in most states. You can find more information about fees and charges for cashier's checks on the bank's website or by contacting them directly.",3.8792,71,18.3
+TinyLlama/TinyLlama-1.1B-Chat-v1.0,52,Fees,Are there fees for dormant accounts?,"Yes, there may be fees associated with dormant accounts. Dormant accounts are accounts that have not been accessed or used in a certain period of time. If an account is dormant, the bank may charge a fee to reactivate it, depending on the terms and conditions of the account. These fees could include account maintenance charges, account overdraft charges, or an account activation fee. It is always best to check the terms and conditions of your specific account to understand any fees associated with dormancy.",6.1431,111,18.07
+TinyLlama/TinyLlama-1.1B-Chat-v1.0,53,Fees,What is the returned item fee?,"In this context, the ""returned item fee"" is a fee charged by a bank for returning an item to the bank. This fee may vary based on the type and condition of the item, and it may be included in the bank's fee schedule or may be negotiated directly with the borrower.",3.5665,65,18.23
+TinyLlama/TinyLlama-1.1B-Chat-v1.0,54,Fees,Do you charge for paper statements?,"I am not able to charge for paper statements. While banks and financial institutions may charge for paper statements, I'm unaware of any services or products that do not offer digital statements or other forms of online or digital communication. However, you can always check with your bank or financial institution for any specific information related to their policies regarding paper statements.",3.8482,71,18.45
+TinyLlama/TinyLlama-1.1B-Chat-v1.0,55,Fees,Can I get a fee refunded?,I do not have access to the policies and procedures of specific banks or financial institutions. It is best to check the bank's terms and conditions regarding fee refunds. Please refer to the bank's website or contact customer service for more information.,2.8216,52,18.43
+TinyLlama/TinyLlama-1.1B-Chat-v1.0,56,Credit Cards,How do I increase my credit limit?,"To increase your credit limit, the following steps can be followed:
+
+1. Contact your bank: The bank that you have an account with will be the first place you need to visit to talk about the increase. You can contact them through phone, online chat, or even in-person.
+
+2. Explain your situation: Explain your current financial situation, how the increase is needed, and why you need it.
+
+3. Provide proof of income: If you are applying for a credit card or a loan, provide proof of your income, such as a paystub or a tax return. If you are applying for a credit card, provide proof of your good credit history.
+
+4. Submit",8.4387,150,17.78
+TinyLlama/TinyLlama-1.1B-Chat-v1.0,57,Credit Cards,What is the APR on my credit card?,"The APR (annual percentage rate) is the annual rate of interest that a credit card issuer charges you for borrowing money. The APR is typically displayed in the form of a rate table, and it is calculated based on a specific set of terms and conditions. The APR can vary depending on the type of credit card, the interest rate, the payment frequency, and other factors, such as late fees and balance transfer fees. The APR is expressed as an annual percentage rate (APR) and can be written as a percentage of the total credit limit or as a fixed or variable interest rate.",7.3571,128,17.4
+TinyLlama/TinyLlama-1.1B-Chat-v1.0,58,Credit Cards,How do I redeem my rewards points?,"To redeem your rewards points, follow these steps:
+
+1. Log in to your account on the bank's website or mobile app.
+2. Find the rewards program section where you can redeem your rewards points. This section is usually located at the top or bottom of the page.
+3. Look for the ""Redeem Rewards"" or ""Redeem Points"" button.
+4. Select the rewards program you want to redeem your points for.
+5. Enter the rewards points you want to redeem.
+6. Choose the reward you want to receive.
+7. Click ""Submit"" to complete the redemption process.",8.4374,150,17.78
+TinyLlama/TinyLlama-1.1B-Chat-v1.0,59,Credit Cards,Can I add an authorized user?,"Yes, you can add an authorized user as a customer support assistant for the bank. 1. Log in to your bank's customer support portal. 2. Click on the 'Customer Support' section on the navigation menu. 3. Click on the 'Add User' button. 4. Fill out the required details such as name, email, password, and role (customer support assistant or bank employee). 5. Select the appropriate user type and click on 'Save Changes.' 6. Once the user is created, you will receive an email with a link to your new user's login credentials. 7. After logging in, you can add additional users by following the same process. You can also",8.4144,150,17.83
+TinyLlama/TinyLlama-1.1B-Chat-v1.0,60,Credit Cards,What is a balance transfer?,"A balance transfer is a type of credit card debt consolidation that allows you to transfer your existing balance to a new credit card with a lower interest rate. When you transfer your account to a new credit card, the old account remains open and active, but you no longer have to pay the interest on the old balance. This is a great option for people who want to reduce their monthly payments, save money on interest, and avoid late fees or other penalties for late payments.",5.7465,104,18.1
+TinyLlama/TinyLlama-1.1B-Chat-v1.0,61,Credit Cards,Is there an annual fee for this card?,"I don't have access to the latest information or product details of the specific bank card you are referring to. However, most credit or debit cards do not have an annual fee, as they are designed to be used continuously over the course of a year. The only exception may be if the card offers some specific features such as rewards or travel benefits, which may have an annual fee associated with them. It's best to check the specific details of your card with the bank or credit union to determine if there is an annual fee or not.",6.3194,114,18.04
+TinyLlama/TinyLlama-1.1B-Chat-v1.0,62,Credit Cards,How do I dispute a credit card charge?,"To dispute a credit card charge, follow these steps:
+
+1. Check your credit card statement for the charge.
+
+2. Identify the transaction number, date, and amount.
+
+3. Contact your credit card company to dispute the charge.
+
+4. Explain the reason for the dispute, such as incorrect or insufficient information, a mistake, or a fraudulent charge.
+
+5. Provide any supporting documentation, such as receipts or bills, to support your claim.
+
+6. Wait for the credit card company to review and process the dispute.
+
+7. If the dispute is approved, the credit card company will issue a refund or a credit to your",8.4456,150,17.76
+TinyLlama/TinyLlama-1.1B-Chat-v1.0,63,Credit Cards,When is my credit card payment due?,"Usually, the payment due date for a credit card is the same as the statement due date. This means that payment deadlines for credit cards are usually communicated to customers via email or by mail. The exact due date can vary depending on the specific terms and conditions of your credit card agreement(s). It's best to check with your credit card issuer directly to ensure you have the correct payment due date.",4.6934,86,18.32
+TinyLlama/TinyLlama-1.1B-Chat-v1.0,64,Credit Cards,Does applying for a credit card hurt my score?,"Applying for a credit card can potentially lower your credit score, depending on your credit history and other factors. Here's what you need to know:
+
+1. Credit Score: Your credit score is a measurement of your likelihood of paying back creditors if you default on a credit card loan. If you apply for a credit card and make regular payments over time, it may help improve your credit score. However, applying for a credit card with a high APR (annual percentage rate) or opening multiple cards in a short period of time can negatively impact your credit score.
+
+2. Credit History: Your credit history is the record of your credit obligations, including payments, delin",9.5098,150,15.77
+TinyLlama/TinyLlama-1.1B-Chat-v1.0,65,Credit Cards,What happens if I miss a payment?,"If you miss a payment on your loan from the bank, we will work with you to find a solution that meets your financial needs. Here are some common solutions we may offer:
+
+1. Late payment fees: We may charge a fee for late payments, which is usually determined based on the amount of time that has passed since the due date.
+
+2. Extension of repayment schedule: We may agree to extend the repayment schedule if you can afford to pay more than what is due at the time.
+
+3. Reduced monthly repayment amount: We may reduce your monthly payment amount if you can afford it and provide your financial documents to show that you have a stable income",9.1205,150,16.45
+TinyLlama/TinyLlama-1.1B-Chat-v1.0,66,Transfers,How do I send money to a friend?,"To send money to a friend through a bank, you can follow the steps below:
+
+1. Check the account of the friend you want to transfer money to.
+2. Log in to your bank account using your login credentials.
+3. Click on the ""Transfer Money"" tab.
+4. Choose the recipient's account from the list of available accounts.
+5. Select the amount you want to transfer.
+6. Click on the ""Send Money"" button.
+7. Follow the prompts to complete the transfer.
+
+If you have a personal checking or savings account with the bank, you can also receive funds from your friend's account directly into your own account.",8.8795,150,16.89
+TinyLlama/TinyLlama-1.1B-Chat-v1.0,67,Transfers,What is the limit for Zelle transfers?,"Zelle allows customers to send and receive money within the US up to a per-transaction limit of $2,500. This limit may be higher in certain states or jurisdictions depending on their specific banking laws and regulations. However, it's always best to double-check with your bank or financial institution regarding their specific Zelle limits.",4.3394,75,17.28
+TinyLlama/TinyLlama-1.1B-Chat-v1.0,68,Transfers,How long do wire transfers take?,"Wire transfers usually take anywhere from 1-5 business days from the time you initiate the transfer to the time it is actually cleared and available for use by the receiving bank. However, there can be delays in certain circumstances, such as holidays or bank holidays, as well as during peak business hours. It is recommended to check with the bank prior to making a wire transfer to confirm the actual processing time.",5.2729,90,17.07
+TinyLlama/TinyLlama-1.1B-Chat-v1.0,69,Transfers,Can I transfer money to another bank?,"Yes, you can transfer money to another bank as a customer support assistant for a bank. You would need to provide proof of identity, address, and account information to transfer funds. The bank would verify your account balance and transaction history before approving the transfer. In most cases, you can provide a wire transfer or e-transfer to the receiving bank, and the transfer will usually clear within a few business days.",4.8224,85,17.63
+TinyLlama/TinyLlama-1.1B-Chat-v1.0,70,Transfers,Is there a fee for internal transfers?,"No, there is no fee for internal transfers to or from the bank's accounts. The bank's internal transfer facility is free of charge.",1.789,32,17.89
+TinyLlama/TinyLlama-1.1B-Chat-v1.0,71,Transfers,How do I schedule a recurring transfer?,"To schedule a recurring transfer in your account with your bank, follow these steps:
+
+1. Log into your account on the bank's website or app.
+2. Navigate to the ""Transfers"" section in your account menu or dashboard.
+3. Select the transfer you want to schedule.
+4. In the ""Schedule"" section, click on ""Recurring Transfers.""
+5. Select the frequency, amount, and date for the transfer.
+6. Click on ""Save"" to confirm your changes.
+7. Check the ""Scheduled"" box next to the transfer and click on ""Confirm"" to schedule the transfer.
+
+Your new recurring transfer will",8.5363,150,17.57
+TinyLlama/TinyLlama-1.1B-Chat-v1.0,72,Transfers,Can I cancel a pending transfer?,"Yes, you can cancel a pending transfer. Pending transfers are still active and will not appear in the status page. To cancel a pending transfer, follow these steps:
+
+1. Log in to your bank's website and navigate to the transfer status page.
+2. Click on the transfer you want to cancel.
+3. Click on the ""Cancel"" button next to the transfer.
+4. Enter your new transfer details, if applicable.
+5. Review your cancellation request and click ""Submit"" to confirm.
+6. Your transfer will be cancelled immediately.
+
+Note that you may still receive a confirmation email and the transfer may take some time to process. However, canceling a pending transfer",9.2657,150,16.19
+TinyLlama/TinyLlama-1.1B-Chat-v1.0,73,Transfers,What is an ACH transfer?,"An ACH transfer, also known as an electronic funds transfer, is a fast and secure way to send money from one bank account to another. It allows individuals and businesses to send funds directly to each other without the need for a physical transfer or wire transfer.
+
+When a person or business wants to transfer funds from one bank account to another, they use the ACH transfer process. They sign up for an ACH account with the bank that they want to transfer the funds to, and then they authorize the transfer. This authorization is usually done online, over the phone, or through email.
+
+Once the transfer is authorized, the funds are transferred from the sender's account to the recipient's account.",9.7286,150,15.42
+TinyLlama/TinyLlama-1.1B-Chat-v1.0,74,Transfers,Do you support international transfers?,"Yes, we support international transfers through various payment methods. Our banking partners have extensive international network, allowing customers to send funds to over 190 countries. We offer the following methods of international transfers:
+
+1. International wire transfers - This method is commonly used for sending funds to other countries, including those that are not part of our network. We offer fast and secure international wire transfers.
+
+2. Electronic fund transfer (EFT) - This method allows you to transfer funds from your account to another bank account. We offer EFT to customers in countries where we have partnerships.
+
+3. Mobile banking - We offer mobile banking for our customers, which makes it easy to send",8.9335,150,16.79
+TinyLlama/TinyLlama-1.1B-Chat-v1.0,75,Transfers,Why is my transfer on hold?,"I don't have access to the specific details of your transfer request. However, in general, a hold or delay in the transfer process can occur due to various reasons like:
+
+1. Insufficient funding: if there is not enough funding in your account to cover the transfer amount, your transfer may be delayed or held.
+
+2. Technical issues: if there is a technical issue with your account or the sender's account, it may cause a hold or delay in the transfer process.
+
+3. Bank policy: some banks have policies that limit the number of transfers per day or per week, and if you exceed these limits, your transfer may be delayed or held.
+
+4. Error",8.5891,150,17.46
+TinyLlama/TinyLlama-1.1B-Chat-v1.0,76,Investments,How do I start investing?,"Starting investing can seem daunting due to the amount of information available about the stock market and the different investment options available. However, here are some simple steps to help you get started:
+
+1. Define your investment goals and risk tolerance. Think about what you want to achieve with your investments, what amount of risk you can tolerate, and the time frame you want to invest for.
+
+2. Research different investment options. There are many different investment options to choose from, such as stocks, mutual funds, bonds, and real estate. Research the different types of investments, their risks, and their returns to help you choose the right investment for your goals and",8.5254,150,17.59
+TinyLlama/TinyLlama-1.1B-Chat-v1.0,77,Investments,What are the fees for trading stocks?,"The fees for trading stocks may vary based on different financial institutions and platforms. However, the typical fees for trading stocks in the US are as follows:
+
+1. Commissions or brokerage fees: These fees are charged by the financial institution for facilitating the purchase or sale of stocks. They range from a few dollars to thousands of dollars per trade.
+
+2. Account maintenance fees: These fees are charged to maintain an account with the financial institution. The fees may vary based on the type and size of the account.
+
+3. Equity derivatives trading fees: These fees are charged by the financial institution for trading equity derivatives, such",8.5027,150,17.64
+TinyLlama/TinyLlama-1.1B-Chat-v1.0,78,Investments,Can I open an IRA?,"I do not have the ability to open an ira account. However, I can provide you with information on how to open an ira account.
+
+here are the steps to open an ira account:
+
+1. Visit your local bank or financial institution and ask for an ira application.
+
+2. Fill out the application, including your name, address, social security number, and income.
+
+3. Provide all required documentation, including your tax returns, W-2 forms, and bank statements.
+
+4. Submit the application to the bank or financial institution.
+
+5. The bank or financial institution will review your application and notify you if your account is approved.
+
+6",8.4749,150,17.7
+TinyLlama/TinyLlama-1.1B-Chat-v1.0,79,Investments,Do you have financial advisors?,"Yes, we do have financial advisors. Our financial advisors are knowledgeable and experienced professionals who are committed to providing clients with the best financial advice and strategies to help them achieve their financial goals. Our financial advisors can provide a range of services, including:
+
+1. Retirement planning: Our team of financial advisors can help clients plan for retirement, including 401(k) plans, IRAs, and other retirement savings vehicles.
+
+2. Wealth management: Our financial advisors can help clients establish and manage their wealth, including investment management, estate planning, and charitable giving strategies.
+
+3. Investment advice: Our financial advisors can offer compreh",8.4604,150,17.73
+TinyLlama/TinyLlama-1.1B-Chat-v1.0,80,Investments,What is the minimum to open an investment account?,"The minimum to open an investment account with a bank depends on the type of account and the bank's policies. However, the typical minimum deposit for investment accounts in the United States is typically $1,000 or more, but the amount can vary depending on the type of account, the bank, and the bank's requirements. Some banks may also offer introductory deposit bonuses or other incentives to attract new customers.",5.2256,95,18.18
+TinyLlama/TinyLlama-1.1B-Chat-v1.0,81,Investments,Are my investments FDIC insured?,"Yes, your investments are federally insured up to a certain amount by the Federal Deposit Insurance Corporation (FDIC). As a deposit holder with the FDIC, your investments are insured up to a certain amount, depending on the type of account you have. This insurance coverage protects your funds in case of bank failures or other financial emergencies.
+
+The specific amount of insurance coverage is determined based on your account balance and the type of account you have. The insurance coverage typically ranges from $250,000 to $250,000 per account holder for savings and checking accounts, and up to $250,00",8.5384,150,17.57
+TinyLlama/TinyLlama-1.1B-Chat-v1.0,82,Investments,How do I transfer an existing portfolio here?,"To transfer an existing portfolio from one Exchange to another, follow these steps:
+
+1. Navigate to the Exchange where you want to transfer the portfolio.
+2. Click on the ""Portfolios"" tab on the left-hand side of the screen.
+3. Click on the ""Add Portfolio"" button at the top of the page.
+4. Select the portfolio you want to transfer from the dropdown menu.
+5. Click on the ""Transfer"" button.
+6. Choose the Exchange where you want to transfer the portfolio.
+7. Click on the ""OK"" button.
+8. A confirmation message will appear, indicating that the portfolio has been successfully transferred",8.4928,150,17.66
+TinyLlama/TinyLlama-1.1B-Chat-v1.0,83,Investments,What are mutual funds?,"Mutual funds are investment vehicles that pool money from several investors to invest in a variety of assets such as stocks, bonds, and real estate. They are designed to provide investors with exposure to a diversified portfolio of stocks, bonds, and real estate securities. A mutual fund makes it possible to diversify your investments and increase your returns by providing access to a broader range of investment options. Mutual funds are traded like shares on stock exchanges and can be purchased and sold like any other stock.",6.6248,118,17.81
+TinyLlama/TinyLlama-1.1B-Chat-v1.0,84,Investments,Can I buy crypto?,"Yes, you can buy crypto. Crypto is a digital asset that can be traded on cryptocurrency exchanges, and there are various ways to buy crypto, including through bank transfers, credit cards, or digital wallets. Some banks offer crypto banking services, allowing you to transfer crypto from your bank account to a cryptocurrency exchange. In general, you should do your research and check the terms and conditions for each exchange before making a purchase.",5.6414,99,17.55
+TinyLlama/TinyLlama-1.1B-Chat-v1.0,85,Investments,How do I access tax documents for my investments?,"To access tax documents for your investments, follow these steps:
+
+1. Log in to the online platform where you held your investments.
+
+2. Click on the ""Investor Relations"" tab.
+
+3. Click on ""Financial Documents.""
+
+4. Select the appropriate tax document from the list.
+
+5. Click on the link to access the tax document.
+
+6. If you have any additional questions or concerns, refer to the bank's customer support team for help.",6.4551,112,17.35
+TinyLlama/TinyLlama-1.1B-Chat-v1.0,86,General,What are your branch hours?,"I don't have access to your specific branch hours. However, most online banks and financial institutions have detailed information about their branch hours on their website. You can check the bank's customer support center or call their customer service hotline to inquire about their branch hours. You can also check the specific branch's location to find out its working hours and contact information.",4.3528,77,17.69
+TinyLlama/TinyLlama-1.1B-Chat-v1.0,87,General,How do I find an ATM near me?,"To find an ATM near you, you can use the following strategies:
+
+1. Use your phone or online banking app: Many banks now offer a mobile app or online banking service that allows you to find the nearest ATM. This is particularly helpful if you're on the go or have limited access to a computer or mobile device.
+
+2. Check your bank's website: Your local bank's website should have a section where you can find information about ATMs near you. You can use this information to plan your route to and from the ATM.
+
+3. Ask your bank for the nearest ATM location: If you're a regular customer of your bank, they might be",8.5971,150,17.45
+TinyLlama/TinyLlama-1.1B-Chat-v1.0,88,General,How do I file a complaint?,"To file a complaint with the bank or any financial institution, follow these steps:
+
+1. Check the bank's website or contact the bank's customer service department.
+
+2. Look for a way to file a complaint, such as a form on the bank's website, email address, or phone number.
+
+3. Fill out the complaint form or contact the customer service representative.
+
+4. Explain the issue you are experiencing, including the date and time of the transaction, the name of the person involved, and the outcome of the transaction.
+
+5. State your reasons for filing the complaint and provide any relevant evidence, such as receipts or screensh",9.2227,150,16.26
+TinyLlama/TinyLlama-1.1B-Chat-v1.0,89,General,Is the bank open on holidays?,"Yes, the bank I referred to is open on all holidays, including Christmas Day, New Year's Day, Good Friday, Easter Sunday, Easter Monday, Labour Day, Victoria Day, Canada Day, and Thanksgiving Day. However, some branches may have altered their opening hours due to the COVID-19 pandemic, so it's best to check directly with the bank's website or call their customer service line for the most up-to-date information on their holiday hours.",6.187,108,17.46
+TinyLlama/TinyLlama-1.1B-Chat-v1.0,90,General,How do I update my mailing address?,"To update your mailing address with the bank, you can visit the official website of the bank or contact their customer support team. Here are the steps to follow:
+
+1. Visit the official website of the bank: Go to the website of the bank you want to update your mailing address.
+
+2. Find the contact page: Once you've arrived at the website, look for the ""Contact Us"" section at the top of the page.
+
+3. Search for the ""Customer Support"" section: If you're unsure of which section to search, it's usually located in the middle of the page.
+
+4. Look for the ""Contact Us"" tab: Once you've found",8.5846,150,17.47
+TinyLlama/TinyLlama-1.1B-Chat-v1.0,91,General,Do you have a notary public?,"I do not have access to specific information about your bank. However, in america, notary public services are provided by state governments, and you should check with your local government to see if they have a notary public office in your area.
+
+if you are unable to find a notary public in your area, you can consider hiring a local legal professional to serve as your notary. They can perform the required notarization on your behalf.",5.3887,97,18.0
+TinyLlama/TinyLlama-1.1B-Chat-v1.0,92,General,Can I open an account for a minor?,"Yes, you can open an account for a minor who is not yet 18 years old. In most cases, a minor aged 16 or 17 will need their parent or legal guardian to open the account on their behalf. However, you may need to provide additional identification documents or proof of parental or guardian relationships to verify their identity and eligibility. You can contact the bank's customer service department to obtain further information about opening an account for a minor.",5.6433,102,18.07
+TinyLlama/TinyLlama-1.1B-Chat-v1.0,93,General,What is the bank's routing number for international wires?,"Yes, the routing number for international wires is:
+
+Bank Name: [Bank Name]
+Routing Number: [Routing Number]
+
+The routing number is usually written on the back of a check or in the account statement. You can also find the routing number on the bottom left corner of your bank statement or in your online banking account.",4.2809,77,17.99
+TinyLlama/TinyLlama-1.1B-Chat-v1.0,94,General,How do I contact customer support?,"To contact customer support for a bank, you can follow these steps:
+
+1. Visit the bank's official website or download their mobile app.
+2. Look for the ""Contact Us"" section on the bank's website or app.
+3. Enter your concerns, questions or complaints in the ""Contact Us"" form.
+4. Provide your contact details such as name, email, phone number and any other relevant information.
+5. Once you have filled in the form, hit the ""Submit"" button.
+6. The bank's customer support team will respond to your inquiry within 24 hours.
+7. You can also call the bank's customer support department during business hours",8.7041,150,17.23
+TinyLlama/TinyLlama-1.1B-Chat-v1.0,95,General,Do you offer safe deposit boxes?,"Yes, I certainly do! My bank offers safe deposit boxes for its customers at select locations. These boxes are secure, tamper-resistant, and provide customers with a safe and secure way to store valuable items. Each safe deposit box comes with a unique key, which is provided at the time of deposit. Customers can access their boxes at any time and are responsible for keeping the keys safe. I would suggest checking with your local branch of my bank to find out the availability of safe deposit boxes in your area.",6.1801,111,17.96

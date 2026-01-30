@@ -1,0 +1,37 @@
+model,query_id,category,query,response,inference_time_seconds,tokens_out,tokens_per_second,rouge_l,semantic_similarity
+Qwen/Qwen2-1.5B-Instruct,1,Security,I lost my credit card. What should I do immediately?,"If you lose your credit card, it's important to act quickly to minimize the risk of fraud and potential losses:
+
+1. **Contact Your Bank**: Inform your bank as soon as possible about the loss or theft of your credit card. Provide them with details such as your name, address, phone number, and account number.
+
+2. **Call Your Credit Card Company**: Contact your credit card issuer to inform them that you have lost your card and request a replacement. Many issuers offer 24/7 customer service for this purpose.
+
+3. **Report It to the Police**: If you suspect identity theft or fraudulent activity on your card, report it to local law enforcement. You can also file a police report online through the National Crime Information Center",12.6179,150,11.89,0.1388888888888889,0.6085959672927856
+Qwen/Qwen2-1.5B-Instruct,2,Accounts,What is the difference between a savings account and a checking account?,"A savings account and a checking account both serve different purposes, but they are often confused with each other. Here's a breakdown of their key differences:
+
+1. **Purpose**: Savings accounts are typically used to save money for short-term goals or investments that might not require immediate access. They are designed to earn interest over time, which can be a good option if you're looking to grow your wealth without needing it immediately.
+
+2. **Withdrawal Restrictions**: Savings accounts usually have higher minimum balance requirements than checking accounts. This means you need to maintain a certain amount in your savings account before you can withdraw funds. Checking accounts, on the other hand, allow you to withdraw funds at any time as long as you don't go below your current balance.",12.2139,150,12.28,0.11920529801324502,0.8471971750259399
+Qwen/Qwen2-1.5B-Instruct,3,Loans,How can I apply for a mortgage?,"Applying for a mortgage is an important step in securing financing to purchase or refinance your home. Here’s how you can apply for a mortgage:
+
+1. **Understand Your Financial Situation**: Before applying, it's essential to understand your financial situation and what you can afford. This includes assessing your income, debts, credit score, and any other financial obligations.
+
+2. **Research Different Lenders**: There are various types of mortgages available, such as fixed-rate loans, adjustable-rate loans, and variable-rate loans. Each has its own pros and cons, so choose the one that best suits your needs.
+
+3. **Find a Mortgage Lender**: You can find a lender through referrals from friends, family members, or real estate agents. Alternatively",12.0852,150,12.41,0.08759124087591241,0.6158945560455322
+Qwen/Qwen2-1.5B-Instruct,4,Digital Banking,I forgot my online banking password.,"I'm sorry to hear that you've forgotten your online banking password. Here are some steps you can take:
+
+1. **Check Your Account Information**: Look at the details of your account, such as your email address or phone number, and any other information related to your account.
+
+2. **Contact Customer Service**: If possible, call the customer service number provided by your bank. They should be able to help you retrieve your password if it's registered with them.
+
+3. **Use the Online Banking Password Reset Feature**: Many banks have a feature called ""Forgot Password"" or ""Reset Password."" This will typically ask for personal information (such as your email address) and provide instructions on how to reset your password.
+
+4. **Use Security Questions**:",12.4239,150,12.07,0.0979020979020979,0.6941658854484558
+Qwen/Qwen2-1.5B-Instruct,5,Fees,Why was I charged an overdraft fee?,"I'm sorry to hear that you received an overdraft fee. Overdraft fees are typically incurred when your account balance falls below the minimum required amount, which can be set by the bank or individual account holders.
+
+There could be several reasons why you were charged an overdraft fee:
+
+1. **Insufficient funds**: If there were insufficient funds in your account at the time of the transaction.
+2. **Automatic payment deduction**: Some banks automatically deduct money from your checking account if it's not enough to cover the transaction.
+3. **Overdrawn transactions**: When multiple transactions are made in a single day or week and none of them have sufficient funds, this can lead to overdrawn balances.
+4. **Late payments**: If you make late",11.9158,150,12.59,0.14388489208633093,0.8469157218933105

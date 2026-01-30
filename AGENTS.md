@@ -1,31 +1,30 @@
 # Agent Handover & Project Status
 
 ## Project Overview
-This project benchmarks 5 Small Language Models (SLMs) using the Hugging Face `transformers` library on a specific Bank Customer Support use case.
+Benchmarks SLMs on a 95-query banking dataset using `transformers`, `rouge-score`, and `sentence-transformers`.
 
-## Current Status
-- **Environment:** Python 3.11+ with `torch`, `transformers`, `accelerate`, and `pandas`.
-- **Infrastructure:** Configured to run on `mps` (Apple Silicon) if available, falling back to `cpu`.
-- **Dataset:** 5 synthetic banking queries covering Security, Accounts, Loans, Digital Banking, and Fees.
-- **Models Benchmarked:**
-    - `Qwen/Qwen2-1.5B-Instruct`
-    - `Qwen/Qwen1.5-0.5B-Chat`
-    - `TinyLlama/TinyLlama-1.1B-Chat-v1.0`
-    - `HuggingFaceTB/SmolLM-1.7B-Instruct`
-    - `facebook/opt-1.3b`
-- **Output:** Individual CSVs per model and a consolidated `all_models_benchmark.csv` in the `results/` folder. A `BENCHMARK_REPORT.md` is generated with performance stats.
+## Current Status (As of Jan 30, 2026)
+- **Dataset:** Expanded from 5 to 95 queries in `data/bank_queries.json`.
+- **Metrics Implemented:**
+    - **Performance:** Latency (s), Tokens Generated, Tokens Per Second (TPS).
+    - **Quality:** ROUGE-L (F-measure) and Semantic Similarity (Cosine similarity using `sentence-transformers`).
+- **Models Benchmarked:** 5 models ranging from 0.5B to 1.7B parameters.
+- **Key Findings:**
+    - `TinyLlama/TinyLlama-1.1B-Chat-v1.0` currently leads in Semantic Similarity (0.725).
+    - `Qwen/Qwen1.5-0.5B-Chat` is the fastest at ~30 Tokens/Sec.
+- **Quantization:** A `src/benchmark_quantized.py` script was added using `bitsandbytes`. It is verified for CUDA environments but currently incompatible with the local Mac MPS backend for 4-bit loading.
 
 ## Technical Decisions
-- **Path Handling:** All scripts use `os.path` relative to `__file__` to ensure portability.
-- **Memory Management:** Explicit `gc.collect()` and cache clearing (`torch.mps.empty_cache()`) are implemented between model swaps to prevent OOM errors on local hardware.
-- **Padding:** Since many SLMs lack a `pad_token`, the scripts automatically patch the tokenizer to use `eos_token` as `pad_token`.
+- **Evaluation Workflow:** Separated inference (`benchmark.py`) from scoring (`evaluate_models.py`) to allow re-evaluation without expensive re-generation.
+- **Metrics Backfilling:** Created a temporary script to update existing results with TPS and token counts by re-tokenizing decoded responses.
+- **Dependencies:** Added `rouge-score`, `sentence-transformers`, `evaluate`, `scikit-learn`, `tabulate`, and `bitsandbytes`.
 
-## Next Steps / Future Work
-1. **Model Expansion:** Test even smaller models like `google/shieldgemma-2b` or `microsoft/phi-3-mini` (requires fixing the `rope_scaling` config issue noted in earlier iterations).
-2. **Evaluation Metrics:** Implement automated scoring (e.g., ROUGE, BLEU, or LLM-as-a-judge) to compare model responses against the `reference_answer` in `bank_queries.json`.
-3. **Quantization:** Add support for `bitsandbytes` (4-bit/8-bit) to test larger SLMs or improve speed.
-4. **API Deployment:** Create a small FastAPI wrapper for the best-performing SLM found in the benchmark.
+## Next Steps
+1. **Mac Quantization:** Implement GGUF support via `llama-cpp-python` to test quantization on Apple Silicon.
+2. **Visualizations:** Create a script to generate charts (e.g., Latency vs. Accuracy scatter plot).
+3. **Dataset Refinement:** Increase the number of reference answers per query to improve ROUGE reliability.
+4. **API Integration:** Wrap the top-performing model (`TinyLlama`) in a FastAPI service.
 
 ## How to Continue
-- Run `python3 src/benchmark.py` to add new models (update the `MODELS_TO_TEST` list).
-- Run `python3 src/analyze_results.py` to refresh the report after changes.
+- Run `python3 src/evaluate_models.py` to refresh the `BENCHMARK_REPORT.md` after any result changes.
+- Check `results/all_models_benchmark.csv` for the most up-to-date raw statistics.
