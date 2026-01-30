@@ -2,13 +2,30 @@ import pandas as pd
 import json
 import os
 import glob
+import argparse
 from rouge_score import rouge_scorer
 from sentence_transformers import SentenceTransformer, util
 import torch
 from tqdm import tqdm
 
-def evaluate_results():
-    results_dir = os.path.join(os.path.dirname(__file__), '..', 'results')
+def evaluate_results(run_dir=None):
+    base_results_dir = os.path.join(os.path.dirname(__file__), '..', 'results')
+    
+    if run_dir:
+        # Check if it's a full path or just a run ID
+        if os.path.isdir(run_dir):
+            target_dir = run_dir
+        else:
+            target_dir = os.path.join(base_results_dir, run_dir)
+    else:
+        target_dir = os.path.join(base_results_dir, 'latest')
+        
+    if not os.path.exists(target_dir):
+        print(f"Error: Results directory not found: {target_dir}")
+        return pd.DataFrame()
+
+    print(f"Evaluating results in: {target_dir}")
+
     queries_file = os.path.join(os.path.dirname(__file__), '..', 'data', 'bank_queries.json')
     
     # Load queries
@@ -23,7 +40,9 @@ def evaluate_results():
     model = SentenceTransformer('all-MiniLM-L6-v2')
     
     # Find all model result CSVs (excluding the summary one)
-    result_files = glob.glob(os.path.join(results_dir, '*_results.csv'))
+    result_files = glob.glob(os.path.join(target_dir, '*_results.csv'))
+    # Filter out the summary file if it gets matched
+    result_files = [f for f in result_files if 'all_models_benchmark.csv' not in f]
     
     summary_stats = []
     
@@ -72,13 +91,20 @@ def evaluate_results():
         })
     
     # Create consolidated summary
-    summary_df = pd.DataFrame(summary_stats)
-    summary_df.to_csv(os.path.join(results_dir, 'all_models_benchmark.csv'), index=False)
-    
-    print("\nEvaluation complete. Summary updated in results/all_models_benchmark.csv")
-    return summary_df
+    if summary_stats:
+        summary_df = pd.DataFrame(summary_stats)
+        summary_df.to_csv(os.path.join(target_dir, 'all_models_benchmark.csv'), index=False)
+        print(f"\nEvaluation complete. Summary updated in {os.path.join(target_dir, 'all_models_benchmark.csv')}")
+        return summary_df
+    else:
+        print("No result files found to evaluate.")
+        return pd.DataFrame()
 
-def update_report(summary_df):
+def update_report(summary_df, run_dir=None):
+    if summary_df.empty:
+        return
+
+    # If run_dir is provided, save report there too
     report_path = os.path.join(os.path.dirname(__file__), '..', 'BENCHMARK_REPORT.md')
     
     with open(report_path, 'w') as f:
@@ -98,5 +124,9 @@ def update_report(summary_df):
             f.write(f"- **Fastest Model:** {fastest_model}\n")
 
 if __name__ == "__main__":
-    stats = evaluate_results()
-    update_report(stats)
+    parser = argparse.ArgumentParser(description='Evaluate SLM benchmark results.')
+    parser.add_argument('--run-dir', type=str, help='Path to the run directory (e.g., results/2023-...) or run ID. Defaults to results/latest.')
+    args = parser.parse_args()
+
+    stats = evaluate_results(args.run_dir)
+    update_report(stats, args.run_dir)

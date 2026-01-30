@@ -2,15 +2,10 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from fpdf import FPDF
 import os
+import argparse
 
 # Constants
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-RESULTS_DIR = os.path.join(BASE_DIR, "results")
-CSV_FILE = os.path.join(RESULTS_DIR, "all_models_benchmark.csv")
-PDF_FILE = os.path.join(RESULTS_DIR, "benchmark_report.pdf")
-CHART_LATENCY = os.path.join(RESULTS_DIR, "chart_latency.png")
-CHART_THROUGHPUT = os.path.join(RESULTS_DIR, "chart_throughput.png")
-CHART_QUALITY = os.path.join(RESULTS_DIR, "chart_quality.png")
 
 class PDFReport(FPDF):
     def header(self):
@@ -54,9 +49,13 @@ def process_data(df):
     
     return agg_df
 
-def generate_charts(df):
+def generate_charts(df, output_dir):
     # Set style
     plt.style.use('ggplot')
+    
+    chart_latency = os.path.join(output_dir, "chart_latency.png")
+    chart_throughput = os.path.join(output_dir, "chart_throughput.png")
+    chart_quality = os.path.join(output_dir, "chart_quality.png")
     
     # 1. Latency Chart
     plt.figure(figsize=(10, 6))
@@ -64,7 +63,7 @@ def generate_charts(df):
     plt.xlabel('Average Latency (seconds)')
     plt.title('Model Latency Comparison (Lower is Better)')
     plt.tight_layout()
-    plt.savefig(CHART_LATENCY)
+    plt.savefig(chart_latency)
     plt.close()
 
     # 2. Throughput Chart
@@ -73,7 +72,7 @@ def generate_charts(df):
     plt.xlabel('Tokens Per Second')
     plt.title('Model Throughput Comparison (Higher is Better)')
     plt.tight_layout()
-    plt.savefig(CHART_THROUGHPUT)
+    plt.savefig(chart_throughput)
     plt.close()
 
     # 3. Quality Chart (Semantic Similarity)
@@ -83,10 +82,15 @@ def generate_charts(df):
     plt.title('Response Quality Comparison (Higher is Better)')
     plt.xlim(0, 1)
     plt.tight_layout()
-    plt.savefig(CHART_QUALITY)
+    plt.savefig(chart_quality)
     plt.close()
 
-def create_pdf(df):
+    return chart_latency, chart_throughput, chart_quality
+
+def create_pdf(df, output_dir, charts):
+    pdf_file = os.path.join(output_dir, "benchmark_report.pdf")
+    chart_latency, chart_throughput, chart_quality = charts
+
     pdf = PDFReport()
     pdf.add_page()
 
@@ -134,33 +138,52 @@ def create_pdf(df):
     pdf.add_page()
     pdf.chapter_title("3. Visual Analysis")
     
-    pdf.image(CHART_THROUGHPUT, w=170)
-    pdf.ln(5)
-    pdf.image(CHART_LATENCY, w=170)
+    if os.path.exists(chart_throughput):
+        pdf.image(chart_throughput, w=170)
+        pdf.ln(5)
+    if os.path.exists(chart_latency):
+        pdf.image(chart_latency, w=170)
     
-    pdf.add_page()
-    pdf.image(CHART_QUALITY, w=170)
+    if os.path.exists(chart_quality):
+        pdf.add_page()
+        pdf.image(chart_quality, w=170)
 
     # Output
-    pdf.output(PDF_FILE)
-    print(f"PDF Report generated successfully: {PDF_FILE}")
+    pdf.output(pdf_file)
+    print(f"PDF Report generated successfully: {pdf_file}")
 
 def main():
-    if not os.path.exists(CSV_FILE):
-        print(f"Error: Results file not found at {CSV_FILE}")
+    parser = argparse.ArgumentParser(description='Generate PDF report for SLM benchmark.')
+    parser.add_argument('--run-dir', type=str, help='Path to the run directory (e.g., results/2023-...) or run ID. Defaults to results/latest.')
+    args = parser.parse_args()
+
+    results_root = os.path.join(BASE_DIR, "results")
+    
+    if args.run_dir:
+        if os.path.isdir(args.run_dir):
+            target_dir = args.run_dir
+        else:
+            target_dir = os.path.join(results_root, args.run_dir)
+    else:
+        target_dir = os.path.join(results_root, "latest")
+
+    csv_file = os.path.join(target_dir, "all_models_benchmark.csv")
+
+    if not os.path.exists(csv_file):
+        print(f"Error: Results file not found at {csv_file}")
         return
 
-    print("Loading data...")
-    raw_df = pd.read_csv(CSV_FILE)
+    print(f"Loading data from: {csv_file}")
+    raw_df = pd.read_csv(csv_file)
     
     print("Processing data...")
     agg_df = process_data(raw_df)
     
     print("Generating charts...")
-    generate_charts(agg_df)
+    charts = generate_charts(agg_df, target_dir)
     
     print("Compiling PDF...")
-    create_pdf(agg_df)
+    create_pdf(agg_df, target_dir, charts)
 
 if __name__ == "__main__":
     main()
