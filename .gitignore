@@ -1,0 +1,21 @@
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Data & Results
+results/*.csv
+results/*.json
+!results/.gitkeep
+BENCHMARK_REPORT.md
+
+# OS
+.DS_Store
+Thumbs.db

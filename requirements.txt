@@ -1,0 +1,16 @@
+torch
+transformers
+accelerate
+scipy
+numpy
+pandas
+tqdm
+sentencepiece
+protobuf
+python-dotenv
+rouge-score
+sentence-transformers
+evaluate
+scikit-learn
+tabulate
+bitsandbytes
