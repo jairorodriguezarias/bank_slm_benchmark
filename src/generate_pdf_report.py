@@ -30,9 +30,21 @@ class PDFReport(FPDF):
         self.ln()
 
 def process_data(df):
-    """Aggregates raw data by model."""
+    """Aggregates raw data by model or returns already aggregated data."""
+    
+    # Check if data is already aggregated (Legacy format)
+    if 'Model' in df.columns and 'Avg Latency (s)' in df.columns:
+        print("Detected pre-aggregated data.")
+        return df
+
     # Ensure numeric columns are actually numeric
     cols_to_avg = ['inference_time_seconds', 'tokens_per_second', 'semantic_similarity']
+    
+    # Check if we have the raw columns
+    if not all(col in df.columns for col in cols_to_avg):
+        print(f"Warning: Missing expected columns. Available: {df.columns.tolist()}")
+        return df
+        
     for col in cols_to_avg:
         df[col] = pd.to_numeric(df[col], errors='coerce')
     
