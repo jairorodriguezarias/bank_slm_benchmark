@@ -7,7 +7,7 @@ This project implements a pipeline to **distill** knowledge from a large teacher
 - `distillation_project/`
     - `data/`: Contains `bank_queries.json` and the generated `distilled_training_data.json`.
     - `src/`:
-        - `generate_distillation_data.py`: Simulates the Teacher (DeepSeek-V3) generating CoT reasoning and answers. **(Executed Successfully)**
+        - `src/utils/generate_distillation_data.py`: Simulates the Teacher (DeepSeek-V3) generating CoT reasoning and answers. **(Executed Successfully)**
         - `benchmark_comparison.py`: Logic to compare `Qwen2-1.5B`, `Phi-3`, and `DeepSeek-R1-Distill-Qwen-1.5B`.
     - `results/`: Stores benchmark CSVs.
 
@@ -26,12 +26,12 @@ This project implements a pipeline to **distill** knowledge from a large teacher
 
 ## Key Findings (Projected)
 - Distilled models like `DeepSeek-R1-Distill-Qwen` are expected to outperform standard base models of the same size on reasoning tasks due to the high-quality synthetic data (CoT) used during their training.
-- The `generate_distillation_data.py` script demonstrates how to clone this capability for custom domains (like Banking).
+- The `src/utils/generate_distillation_data.py` script demonstrates how to clone this capability for custom domains (like Banking).
 
 ## How to Run
 1.  **Generate Data**:
     ```bash
-    python3 src/generate_distillation_data.py
+    python3 src/src/utils/generate_distillation_data.py
     ```
 2.  **Run Benchmark**:
     ```bash

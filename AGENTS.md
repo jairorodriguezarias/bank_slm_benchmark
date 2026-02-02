@@ -6,7 +6,7 @@ Benchmarks SLMs on a 95-query banking dataset using `transformers`, `rouge-score
 ## Current Status (As of Feb 02, 2026)
 - **Project Unification:**
     - Merged `distillation_SLM` into this project.
-    - Added `src/generate_distillation_data.py` for generating synthetic training data from DeepSeek-V3.
+    - Added `src/utils/generate_distillation_data.py` for generating synthetic training data from DeepSeek-V3.
     - Added `src/benchmark_distillation.py` (formerly `benchmark_comparison.py`) for specific teacher-student comparisons.
     - Archived legacy reports to `DISTILLATION_REPORT_ARCHIVE.md`.
 - **Dataset Expansion:**
@@ -24,7 +24,7 @@ Benchmarks SLMs on a 95-query banking dataset using `transformers`, `rouge-score
 ## Key Files
 - `src/benchmark.py`: Main unified benchmark script for all models (HF, GGUF).
 - `src/evaluate.py`: Scoring and reporting (ROUGE, Similarity, PDF generation).
-- `src/generate_distillation_data.py`: Generates distilled training data from Teacher models.
+- `src/utils/generate_distillation_data.py`: Generates distilled training data from Teacher models.
 - `src/train.py`: SFT/LoRA training script for model fine-tuning.
 - `src/utils/`: Contains data downloaders and dataset generators.
 
@@ -41,6 +41,6 @@ Benchmarks SLMs on a 95-query banking dataset using `transformers`, `rouge-score
 
 ## How to Continue
 - Run `./venv/bin/python src/benchmark.py` to execute standard benchmarks.
-- Run `./venv/bin/python src/generate_distillation_data.py` to generate new training data.
+- Run `./venv/bin/python src/utils/generate_distillation_data.py` to generate new training data.
 - Run `./venv/bin/python src/evaluate.py` to refresh reports.
 - Check `results/latest/all_models_benchmark.csv` for the most up-to-date raw statistics.
