@@ -39,10 +39,10 @@ A comprehensive suite for **Benchmarking**, **Distilling**, and **Fine-Tuning** 
 │   └── blockchain_sft_dataset.jsonl # Generated dataset for SFT
 ├── src/
 │   ├── benchmark.py                 # Main benchmarking entry point
-│   ├── generate_distillation_data.py # DeepSeek Teacher simulation
 │   ├── evaluate.py                  # Scoring & PDF Report generation
 │   ├── train.py                     # LoRA Fine-tuning script
 │   └── utils/                       # Downloaders & Dataset converters
+│       ├── generate_distillation_data.py # DeepSeek Teacher simulation
 ├── models/                          # Local storage for GGUF & Adapters
 └── results/                         # Raw CSV logs, Plots, and PDF reports
 ```
@@ -80,12 +80,25 @@ A comprehensive suite for **Benchmarking**, **Distilling**, and **Fine-Tuning** 
 ## 📖 Detailed Usage Guide
 
 ### Phase 1: Data Preparation & Distillation
-If you want to train your own model using a "Teacher" model's knowledge:
-```bash
-# 1. Generate synthetic CoT data from DeepSeek
-python src/generate_distillation_data.py
+Before training or benchmarking, you need high-quality data. This project provides two primary methods for generating synthetic training datasets:
 
-# 2. (Optional) Convert your own PDFs to training pairs
+#### 1. Knowledge Distillation (Teacher-to-Student)
+This method uses a high-capacity "Teacher" model (conceptually DeepSeek-V3) to generate high-quality responses and reasoning paths for your queries.
+- **Goal**: To teach a small model *how* to reason by showing it the step-by-step logic (Chain-of-Thought) of a larger model.
+- **Process**: Runs through `data/bank_queries.json` and generates reasoning + final answers.
+- **Output**: `data/distilled_training_data.json`
+
+```bash
+python src/utils/generate_distillation_data.py
+```
+
+#### 2. Domain Specialization (PDF-to-SFT)
+Turn technical banking documents (Directives, Annexes, Whitepapers) into structured Q&A pairs.
+- **Extraction**: Automatically converts PDFs in `data/raw_pdfs/` to text, skipping irrelevant pages like indexes.
+- **Synthetic Generation**: A local SLM (Qwen2.5-0.5B) processes chunks of the technical text to create complex, professional instruction-output pairs.
+- **Output**: `data/blockchain_sft_dataset.jsonl`
+
+```bash
 python src/utils/generate_dataset.py
 ```
 
