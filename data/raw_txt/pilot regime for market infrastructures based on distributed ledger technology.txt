@@ -1,0 +1,1404 @@
+EN 
+8 
+ EN 
+4. 
+BUDGETARY IMPLICATIONS 
+This proposal holds implications in terms of costs and administrative burden for NCAs and 
+ESMA. The magnitude and distribution of these costs will depend on the precise requirements 
+placed on DLT market infrastructures and the related supervisory and monitoring tasks.  
+The estimated supervisory costs for each Member State (including staff, training, IT 
+infrastructure) can range from €150.000 to €250.000 per year per DLT market infrastructure. 
+However, this would be partially offset by the supervisory fees that NCAs would levy on 
+DLT market infrastructures. 
+For ESMA, the estimated cost in relation to review and coordination are estimated at 
+€150.000-300.000 in total, not per DLT market infrastructure, as they will have no direct 
+supervision. These costs will be covered by ESMA’s operating budget, which will be 
+increased. In addition, ESMA is expected to maintain a register of DLT market infrastructures 
+in operation, the costs related to this are considered to be covered by the costs relating to the 
+maintenance of the register as referred to in the proposal for a Regulation on Markets in 
+Crypto-Assets.  
+All budgetary implications of this proposal is detailed in the legislative financial statement 
+attached to the proposal for a Regulation on Markets in Crypto-Assets.  
+5. 
+OTHER ELEMENTS 
+• 
+Detailed explanation of the specific provisions of the proposal 
+This proposal seeks to provide legal certainty and flexibility for market participants who wish 
+to operate a DLT market infrastructure by establishing uniform requirements for operating 
+these. Permissions granted under this Regulation would allow market participants to operate a 
+DLT market infrastructure and to provide their services across all Member States.  
+Article 1 defines the subject matter and scope. In particular, this Regulation establishes 
+operating conditions for DLT market infrastructures, permissions to make use of them and the 
+supervision and cooperation of competent authorities and ESMA. The Regulation applies to 
+market participants (either investment firms, market operators or central securities 
+depositories, CSDs) permissioned in accordance with Article 7 or Article 8. Article 2 sets out 
+terms and definitions, among others: ‘DLT market infrastructure’, ‘DLT multilateral trading 
+facility’ or ‘DLT MTF’, ‘DLT securities settlement system’ and ‘DLT transferable securities’. 
+Article 3 describes the limitations in terms of DLT transferable securities that can be admitted 
+to trading on, or recorded by, DLT market infrastructures. For shares, the market 
+capitalisation or the tentative market capitalisation of the issuer of DLT transferable securities 
+should be less than EUR 200 million; for public bonds other than sovereign bonds, covered 
+bonds and corporate bonds the limit is EUR 500 million. DLT market infrastructures should 
+not admit to trading or record sovereign bonds. In addition, the total market value of DLT 
+transferable securities recorded by a CSD operating a DLT securities settlement system, or by 
+a DLT MTF where allowed to record such DLT transferable securities, shall not exceed EUR 
+2.5 billion.     
+Article 4 sets the requirements for a DLT MTF, which are the same as for an MTF under 
+Directive 2014/65/EU and specifies the exemptions possible under this Regulation. Article 5 
+sets the requirements for a CSD operating a securities settlement system, which are the same 
+as for a CSD under Regulation (EU) No 909/2014 and specifies the exemptions possible 
+under this Regulation. Article 4 and Article 5 contain a limited list of exemptions that DLT 
+market infrastructures can request and the conditions attached to such exemptions.  
+EN 
+9 
+ EN 
+Article 6 sets the additional requirements applicable to DLT market infrastructures to address 
+the novel forms of risks raised by the use of DLT. DLT market infrastructures must provide 
+all members, participants, clients and investors with clear and unambiguous information on 
+how they carry out their functions, services and activities and how these are different from a 
+traditional MTF or CSD. DLT market infrastructures must also ensure that overall IT and 
+cyber arrangements related to the use of DLT are adequate. Where the business model of a 
+DLT market infrastructure involves the safekeeping of clients’ funds or DLT transferable 
+securities, or the means to access these, they must have adequate arrangements to safeguard 
+such assets. 
+Article 7 and Article 8 set out the procedure for the specific permission to operate a DLT 
+MTF and a DLT securities settlement system respectively and include details on the 
+information that must be submitted to the competent authority.  
+Article 9 defines the cooperation between the DLT market infrastructure, competent 
+authorities and ESMA. DLT market infrastructures must inform competent authorities and 
+ESMA of, for example: proposed material changes to their business plan including critical 
+staff, evidence of hacking, fraud or other serious malpractice, material changes in the 
+information contained in the initial application, technical or operational difficulties in 
+delivering activities or services covered under the permission and any risks to investor 
+protection, market integrity or financial stability that may have arisen and were not foreseen at 
+the time the permission was given. Where notified of such information, the competent 
+authority may request the DLT market infrastructure to submit an application for another 
+permission, exemption or take any corrective measure it deems appropriate. The DLT market 
+infrastructure is obliged to provide any requested information to the competent authority 
+which granted the permission and ESMA. The competent authority, after the consultation of 
+ESMA, may recommend corrective measures to the DLT market infrastructure to ensure 
+investor protection, market integrity or financial stability. The DLT market infrastructure 
+needs to detail how these have been accommodated. In addition, the DLT market 
+infrastructure shall produce and submit a report to the competent authority and ESMA 
+detailing all of the information above including potential difficulties in applying EU financial 
+services legislation. ESMA shall, on a regular basis, inform all competent authorities about 
+the aforementioned reports produced by DLT market infrastructures and exemptions granted 
+in accordance with Article 7 and Article 8, monitor the application of these exemptions and 
+submit an annual report to the Commission on how they are applied in practice. 
+Article 10 details, that at the latest after a five-year period, ESMA will produce a detailed 
+report on the pilot regime to the Commission. On the basis of ESMA’s assessment, the 
+Commission will produce a report including a cost-benefit analysis on whether the pilot 
+regime should be maintained as it is or amended, whether it should be extended to new 
+categories of financial instruments, whether targeted amendments to EU legislation should be 
+considered to enable a widespread use of DLT and whether the pilot regime should be 
+terminated.  
+Article 11 indicates that the regulation shall enter into application 12 months after its entry 
+into force.  
+
+EN 
+10 
+ EN 
+2020/0267 (COD) 
+Proposal for a 
+REGULATION OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL 
+on a pilot regime for market infrastructures based on distributed ledger technology 
+(Text with EEA relevance) 
+THE EUROPEAN PARLIAMENT AND THE COUNCIL OF THE EUROPEAN UNION, 
+Having regard to the Treaty on the Functioning of the European Union, and in particular 
+Article 114 thereof, 
+Having regard to the proposal from the European Commission, 
+After transmission of the draft legislative act to the national parliaments, 
+Having regard to the opinion of the European Economic and Social Committee30,  
+Having regard to the opinion of the European Central Bank31 
+Acting in accordance with the ordinary legislative procedure, 
+Whereas: 
+
+(1) 
+The European Commission’s communication on a Digital Finance Strategy32 aims to 
+ensure that the Union financial services legislation is fit for the digital age and 
+contributes to a future-ready economy that works for the people, including by enabling 
+the use of innovative technologies. The Union has a policy interest in developing and 
+promoting the uptake of transformative technologies in the financial sector, such as 
+blockchain and distributed ledger technology (‘DLT’). Crypto-assets are one of the 
+main DLT applications for finance. 
+(2) 
+The majority of crypto-assets fall outside of the scope of EU legislation and raise, 
+among others, challenges in terms of investor protection, market integrity and 
+financial stability. They therefore require a dedicated regime at Union level. By 
+contrast, other crypto-assets qualify as financial instruments within the meaning of 
+Directive 2014/65/EU of the European Parliament and of the Council (Markets in 
+Financial Instruments Directive, MiFID II)33. In so far as a crypto-asset qualifies as a 
+financial instrument under that Directive, a full set of Union financial rules, including 
+Regulation (EU) 2017/1129 of the European Parliament and of the Council (the 
+
+30 
+OJ C , , p. . 
+31 
+OJ C […], […], p. […]. 
+32 
+Communication from the Commission to the European Parliament, the Council, the European Central 
+Bank, the European Economic and Social Committee and the committee of the Regions on a Digital 
+Finance Strategy for EU COM(2020)591 
+33 
+Directive 2014/65/EU of the European Parliament and of the Council of 15 May 2014 on markets in 
+financial instruments and amending Directive 2002/92/EC and Directive 2011/61/EU (OJ L 173, 
+12.6.2014, p. 349). 
+EN 
+11 
+ EN 
+Prospectus Regulation)34, Directive 2013/50/EU of the European Parliament and of the 
+Council (the Transparency Directive)35, Regulation (EU) No 596/2014 of the 
+European Parliament and of the Council (the Market Abuse Regulation)36, Regulation 
+(EU) No 236/2012 of the European Parliament and of the Council (the Short Selling 
+Regulation)37, Regulation (EU) No 909/2014 of the European Parliament and of the 
+Council (the Central Securities Depositories Regulation)38 and Directive 98/26/EC of 
+the European Parliament and of the Council (the Settlement Finality Directive)39 may 
+apply to its issuer and firms conducting activities related to it. The so-called 
+tokenisation of financial instruments, that is to say their transformation into crypto-
+assets to enable them to be issued, stored and transferred on a distributed ledger, is 
+expected to open up opportunities for efficiency improvements in the entire trading 
+and post-trading area.  
+(3) 
+The Union financial services legislation was not designed with DLT and crypto-assets 
+in mind40, and there are provisions in existing EU financial services legislation that 
+may preclude or limit the use of DLT in the issuance, trading and settlement of crypto-
+assets which qualify as financial instruments. There is also currently a lack of market 
+infrastructures using DLT and providing trading and settlement services for crypto-
+assets that qualify as financial instruments. Without a secondary market able to 
+provide liquidity and to enable investors to buy and sell such assets, the primary 
+market for crypto-assets that qualify as financial instruments will never expand in a 
+sustainable way. 
+(4) 
+At the same time, regulatory gaps exist due to legal, technological and operational 
+specificities related to the use of DLT and crypto-assets that qualify as financial 
+instruments. For instance, there are no transparency, reliability and safety 
+requirements imposed on the protocols and smart contracts underpinning crypto-assets 
+that qualify as financial instruments. The underlying technology could also pose some 
+novel forms of cyber risks that are not appropriately addressed by existing rules. 
+Several projects for the trading and post-trading of crypto-assets qualifying as 
+
+34 
+Regulation (EU) 2017/1129 of the European Parliament and of the Council of 14 June 2017 on the 
+prospectus to be published when securities are offered to the public or admitted to trading on a 
+regulated market, and repealing Directive 2003/71/EC (OJ L 168, 30.6.2017, p. 12) 
+35 
+Directive 2013/50/EU of the European Parliament and of the Council of 22 October 2013 amending 
+Directive 2004/109/EC of the European Parliament and of the Council on the harmonisation of 
+transparency requirements in relation to information about issuers whose securities are admitted to 
+trading on a regulated market, Directive 2003/71/EC of the European Parliament and of the Council on 
+the prospectus to be published when securities are offered to the public or admitted to trading and 
+Commission Directive 2007/14/EC laying down detailed rules for the implementation of certain 
+provisions of Directive 2004/109/EC (OJ L 294, 6.11.2013, p. 13)  
+36 
+Regulation (EU) No 596/2014 of the European Parliament and of the Council of 16 April 2014 on 
+market abuse (market abuse regulation) and repealing Directive 2003/6/EC of the European Parliament 
+and of the Council and Commission Directives 2003/124/EC, 2003/125/EC and 2004/72/EC (OJ L 173, 
+12.6.2014, p. 1) 
+37 
+Regulation (EU) No 236/2012 of the European Parliament and of the Council of 14 March 2012 on 
+short selling and certain aspects of credit default swaps (OJ L 86, 24.3.2012, p. 1).  
+38 
+Regulation (EU) No 909/2014 of the European Parliament and of the Council of 23 July 2014 on 
+improving securities settlement in the European Union and on central securities depositories and 
+amending Directives 98/26/EC and 2014/65/EU and Regulation (EU) No 236/2012 (OJ L 257, 
+28.8.2014, p. 1) 
+39 
+Directive 98/26/EC of the European Parliament and of the Council of 19 May 1998 on settlement 
+finality in payment and securities settlement systems (OJ L 166, 11.6.1998, p. 45) 
+40 
+European Securities and Markets Authority’s, Report with advice on Initial Coin Offerings and Crypto-
+Assets (ESMA50-157-1391) 
+EN 
+12 
+ EN 
+financial instruments have been developed in the Union, but few are already in 
+operation or they have limited scale. Given this limited experience as regards the 
+trading and post-trading of transactions in crypto-assets that qualify as financial 
+instruments, it would currently be premature to bring significant modifications to the 
+Union financial services legislation to enable the full deployment of such crypto-assets 
+and their underlying technology. At the same time, the creation of financial market 
+infrastructures for crypto-assets that qualify as financial instruments is currently 
+constrained by some requirements embedded in the Union’s financial services 
+legislation that would not be fully adapted to crypto-assets qualifying as financial 
+instruments and to the use of DLT. For instance, trading platforms for crypto-assets 
+usually give direct access to retail investors, while traditional trading venues usually 
+give access through financial intermediaries.  
+(5) 
+In order to allow for the development of crypto-assets that qualify as financial 
+instruments and DLT, while preserving a high level of financial stability, market 
+integrity, transparency and investor protection, it would be useful to create a pilot 
+regime for DLT market infrastructures. A pilot regime for DLT market infrastructures 
+should allow such DLT market infrastructures to be temporarily exempted from some 
+specific requirements under the Union financial services legislation that could 
+otherwise prevent them from developing solutions for the trading and settlement of 
+transactions in crypto-assets that qualify as financial instruments. The pilot regime 
+should also enable the European Securities and Markets Authorities (ESMA) and  
+competent authorities to gain experience on the opportunities and specific risks created 
+by crypto-assets that qualify as financial instruments, and by their underlying 
+technology.   
+(6) 
+To meet this objective, a new Union status of DLT market infrastructures should be 
+created. This status of DLT market infrastructure should be optional and should not 
+prevent financial market infrastructures, such as trading venues, central securities 
+depositories and central counterparties, from developing trading and post-trading 
+services and activities for crypto-assets which qualify as financial instruments or are 
+based on DLT, under the existing Union financial services legislation. 
+(7) 
+A DLT market infrastructure should be defined either as a DLT multilateral trading 
+facility (DLT MTF) or a DLT securities settlement system. 
+(8) 
+A DLT MTF should be a multilateral trading facility that is operated by an investment 
+firm or a market operator that operate the business or a regulated market and maybe 
+the regulated market itself, authorised under Directive 2014/65/EU (Markets in 
+Financial Instruments Directive, MiFID II), and that has received a specific permission 
+under this Regulation. Such a DLT MTF should be subject to all the requirements 
+applicable to a multilateral trading facility under the framework of Directive 
+2014/65/EU (Markets in Financial Instruments Directive, MiFID II), Regulation EU 
+No 600/2014 of the European Parliament and of the Council (the Markets in Financial 
+Instruments Regulation, MiFIR)41, or any other EU financial services legislation, 
+except if it has been granted one or several exemptions by its national competent 
+
+41 
+Regulation (EU) No 600/2014 of the European Parliament and of the Council of 15 May 2014 on 
+markets in financial instruments and amending Regulation (EU) No 648/2012 (OJ L 173, 12.6.2014, p. 
+84) 
+EN 
+13 
+ EN 
+authority, in accordance with this Regulation and Directive (EU) .../... of the European 
+Parliament and of the Council42. 
+(9) 
+The use of distributed ledger technology, with all transactions recorded in a 
+decentralised ledger, can expedite and condense trading and settlement to nearly real-
+time and could enable the merger of trading and post-trading activities. However, the 
+current rules envisage the performance of trading and settlement activities by separate 
+market infrastructures. Regulation (EU) No 909/2014 of the European Parliament and 
+of the Council (the Central Securities Depositories Regulation) requires that financial 
+instruments admitted to trading on a trading venue within the meaning of Directive 
+2014/65/EU (Market in Financial Instruments Directive, MiFID II) be recorded with a 
+central securities depositary (‘CSD’), while a distributed ledger could be potentially 
+used as a decentralised version of such a depository. Therefore, it would be justified to 
+allow a DLT MTF to perform some activities normally performed by a CSD. 
+Therefore, when granted the relevant exemption(s), a DLT MTF should be allowed to 
+ensure the initial recording of DLT transferable securities, the settlement of 
+transactions in DLT transferable securities and the safekeeping of DLT transferable 
+securities.  
+(10) 
+A DLT securities settlement system should be a securities settlement system operated 
+by a CSD authorised under Regulation (EU) No 909/2014 (the Central Securities 
+Depositories Regulation) that has received a specific permission under this Regulation. 
+A DLT securities settlement system, and the CSD operating it, should be subject to the 
+relevant requirements of Regulation (EU) No 909/2014 (the Central Securities 
+Depository Regulation), except where the national competent authority has granted the 
+CSD operating the DLT securities settlement system with one or several exemptions, 
+in accordance with this Regulation.  
+(11) 
+A DLT MTF or a CSD operating a DLT securities settlement system should only 
+admit to trading or record DLT transferable securities on their distributed ledger. DLT 
+transferable securities should be crypto-assets that qualify as ‘transferable securities’ 
+within the meaning of Directive 2014/65/EU (the Market in Financial Instruments 
+Directive, MiFID II) and that are issued, transferred and stored on a distributed ledger.  
+(12) 
+In order to allow innovation and experimentation in a sound regulatory environment 
+while preserving financial stability, the type of transferable securities admitted to 
+trading on a DLT MTF or recorded in a CSD operating a DLT securities settlement 
+system should be limited to securities, such as shares and bonds that are not liquid.  In 
+order to determine whether a share or bond is liquid or not, this Regulation should set 
+some value thresholds. To avoid the creation of any risk to financial stability, the total 
+market value of DLT transferable securities recorded by a CSD operating a DLT 
+securities settlement system, or admitted to trading by a DLT MTF, should also be 
+limited. DLT market infrastructures should also be prevented from admitting to 
+trading or recording on the distributed ledger sovereign bonds. To verify that the DLT 
+transferable securities traded on or recorded by a DLT market infrastructure meets the 
+conditions imposed under this Regulation, national competent authorities should be 
+allowed to require such DLT market infrastructures to submit reports.   
+
+42 
+Proposal for a Directive of the European Parliament and of the Council amending Directives 
+2006/43/EC, 2009/65/EC, 2009/138/EU, 2011/61/EU, EU/2013/36, 2014/65/EU, (EU) 2015/2366 and 
+EU/2016/2341 - COM(2020)596 
+EN 
+14 
+ EN 
+(13) 
+In order to ensure a level playing field with transferable securities admitted to trading 
+on a traditional trading venue within the meaning of Directive 2014/65/EU (the 
+Market in Financial Instruments Directive, MiFID II) and a high level of market 
+integrity, the DLT transferable securities admitted to trading on a DLT MTF should 
+always be subject to the provisions prohibiting market abuse in Regulation (EU) No 
+596/2014 (the Market Abuse Regulation).  
+(14) 
+A DLT MTF should be able to request one or several exemptions on a temporary 
+basis, as listed under this Regulation, to be granted by the competent authority, if it 
+complies with the conditions attached to such exemptions as well as additional 
+requirements set under this Regulation to address novel forms of risks raised by the 
+use of DLT. The DLT MTF should also comply with any compensatory measure 
+imposed by the competent authority in order to meet the objectives pursued by the 
+provision for which an exemption has been requested. 
+(15) 
+Where a financial instrument is admitted to trading on an MTF, it is to be recorded 
+with an authorised Central Securities Depository in accordance with Regulation (EU) 
+No 909/2014 (the Central Securities Depository Regulation). While the recording of a 
+transferable security and the settlement of related transactions could potentially take 
+place on a distributed ledger, Regulation (EU) No 909/2014 imposes an intermediation 
+by a CSD and would oblige to replicate the recording on the distributed ledger at the 
+CSD level, potentially imposing a functionally redundant overlay to the trade lifecycle 
+of a financial instrument handled by DLT market infrastructures subject to this 
+Regulation. Therefore, a DLT MTF should be able to request an exemption of the 
+book-entry requirement and the recording with a CSD set by Regulation (EU) No 
+909/2014, where the DLT MTF complies with equivalent requirements to those 
+applying to a CSD. The DLT MTF should record the transferable securities on its 
+distributed ledger, ensure the integrity of the issues on the distributed ledger, establish 
+and maintain procedures to ensure the safekeeping of the DLT transferable securities, 
+complete the settlement of transactions, and prevent settlement fails.  
+(16) 
+Where performing the settlement of transactions in DLT transferable securities, the 
+DLT MTF should ensure that the payment for DLT transferable securities from the 
+buyer occurs at the same time as DLT transferable securities are delivered from the 
+seller (delivery versus payment). Where practicable and available, the cash payments 
+should be settled through central bank money and, where not practicable or available, 
+through commercial bank money. In order to test innovative solutions and to allow for 
+the cash payments to occur on a distributed ledger, the DLT MTFs should also be 
+allowed to use so-called settlement coins, that is to say commercial bank money in a 
+tokenised form, or e-money tokens as defined in the Regulation No 2021/XX on 
+Markets in Crypto-Assets43. Where using commercial bank money for cash payments, 
+the DLT MTF should limit counterparty risk by establishing and monitoring adherence 
+by the credit institutions used for the settlement of cash payments to strict criteria, 
+such as their regulation and supervision, creditworthiness, capitalisation, access to 
+liquidity and operational reliability.   
+
+43 Proposal for a Regulation of the European Parliament and of the Council on Markets in Crypto-assets, and 
+amending Directive (EU) 2019/1937– COM(2020)593 
+EN 
+15 
+ EN 
+(17) 
+Under Directive (EU) .../...44, which amends Directive 2014/65/EU (Markets in 
+Financial Instruments Directive, MiFID II), a DLT MTF is able to request an 
+exemption from the obligation of intermediation. Traditional MTFs may admit as 
+members or participants only investment firms, credit institutions and other persons 
+who have sufficient level of trading ability, competence and with adequate 
+organisational arrangements and resources. By contrast, many trading platforms for 
+crypto-assets offer a disintermediated access and provide direct access to retail clients. 
+One potential regulatory hurdle to the development of MTFs for DLT transferable 
+securities could be the obligation of intermediation embedded in Directive 
+2014/65/EU (Markets in Financial Instruments Directive, MiFID II). A DLT MTF is 
+allowed to request a temporary derogation to such an obligation of intermediation and 
+to provide access to retail investors, provided that adequate safeguards in terms of 
+investor protection would be in place and that such retail investors are fit and proper 
+for anti-money laundering and combatting the financing of terrorism purpose. 
+(18) 
+To be granted an exemption under this Regulation, the DLT MTF should demonstrate 
+that the exemption is proportionate and limited to the use of DLT as described in its 
+business plan and that the exemption requested is limited to the DLT MTF and not 
+extended to any other MTF operated by the same investment firm or market operator.  
+(19) 
+A CSD operating a DLT securities settlement system should be able to request one or 
+several exemptions on a temporary basis, as listed under this Regulation, to be granted 
+by the relevant competent authority, if it complied with the conditions to such 
+exemptions as well as additional requirements to address novel forms of risks raised 
+by the use of DLT. The CSD operating the DLT securities settlement system should 
+comply with any compensatory measure imposed by the competent authority in order 
+to meet the objectives pursued by the provision for which an exemption has been 
+requested.  
+(20) 
+A CSD operating a securities settlement system should be allowed to request 
+exemptions from different provisions that are likely to create regulatory obstacles for 
+the development of settlement securities systems for transferable securities. For 
+instance, a CSD should be able to request an exemption from some definitions of 
+Regulation (EU) 909/2014 (the Central Securities Depositories Regulation), such as 
+the notion of ‘dematerialised form’, ‘security account’, ‘transfer orders’ as well as 
+exemptions from provisions which refers to the notion of ‘security account’, such as 
+the rules on the recording of securities, integrity of issue or segregation of accounts. 
+CSDs operate securities settlement system by crediting and debiting the securities 
+accounts of its participants. However, double-entry (or multiple-entry) book keepings 
+securities accounts may not always exist in a DLT system. Therefore, a CSD operating 
+a DLT securities settlements system should be able to request an exemption from the 
+rules referring to the notion of ‘securities account’ or ‘book-entry form’ should it be 
+necessary to allow the recording of DLT transferable securities on a distributed ledger, 
+to ensure the integrity of the DLT transferable security issue on the distributed ledger 
+and the segregation of the DLT transferable securities belonging to various 
+participants.   
+
+44 
+Proposal for a Directive of the European Parliament and of the Council amending Directive 
+EU/2013/36, Directive 2014/65/EU, Directive (EU) 2015/2366, Directive 2009/138/EC, Directive 
+EU/2016/2341, Directive 2009/65/EC, Directive 2011/61/EC and Directive 2006/43/EC, - 
+COM(2020)596 
+
+EN 
+16 
+ EN 
+(21) 
+Under Regulation (EU) No 909/2014 (the Central Securities Depositories Regulation), 
+a CSD can only outsource one of its core activities, after receiving an authorisation 
+from the competent authority. The CSD is also required to respect several conditions, 
+so that the outsourcing does not result in a delegation of its responsibility or in a 
+modification of the obligations of the CSD towards its participants or issuers. 
+Depending on its business plan, a CSD operating a DLT securities settlement system 
+could be willing to share the responsibility of running its distributed ledger on which 
+the transferable securities are recorded with other entities, including with its 
+participants. The DLT securities settlement system should be able to request an 
+exemption from the outsourcing requirements to develop such innovative business 
+models. In such a case, they should demonstrate that the provisions on outsourcing are 
+incompatible with the use of DLT as envisaged in their business plan and they should 
+also demonstrate that some minimum requirements on outsourcing are met.  
+(22) 
+The obligation of intermediation through a credit institution or an investment firm so 
+that retail investors are not able to obtain direct access to the settlement and delivery 
+systems operated by a CSD could potentially create a regulatory obstacle to the 
+development of alternative models of settlement based on a DLT that allow direct 
+access by retail clients. Therefore, the CSD operating a DLT securities settlement 
+system should be allowed to request an exemption from the notion of participant, as 
+set out by Regulation (EU) No 909/2014 (the Central Securities Depositories 
+Regulation). Where seeking an exemption from the obligation of intermediation under 
+Regulation (EU) No 909/2014 (the Central Securities Depositories Regulation), the 
+CSD operating a securities settlement system should ensure that these persons are of 
+sufficient good repute and fit and proper for the purpose of anti-money laundering and 
+combatting the financing of terrorism. The CSD operating the securities settlement 
+system should also ensure that these participants have sufficient level of ability, 
+competence, experience and knowledge of post-trading and the functioning of DLTs.  
+(23) 
+The entities that are eligible to participate in a CSD covered by Regulation (EU) No 
+909/2014 (the Central Securities Depositories Regulation) are based on the entities 
+that are eligible to participate in a securities settlement system that is designated and 
+notified in accordance with Directive 98/26/EC (the Settlement Finality Directive) 
+because Regulation (EU) No 909/2014 (the Central Securities Depositories 
+Regulation) requires securities settlement systems operated by CSDs to be designated 
+and notified under Directive 98/26/EC. A DLT securities settlement system that 
+applies to be exempted from the participation requirements of Regulation (EU) No 
+909/2014 (the Central Securities Depositories Regulation) would not be compliant 
+with the participation requirements of Directive 98/26/EC. Consequently, such a DLT 
+securities settlement system could not be designated and notified under that Directive.  
+However, this would not preclude a DLT securities settlement system that complies 
+with all of the requirements of Directive 98/26/EC from being so designated and 
+notified.    
+(24) 
+Regulation (EU) No 909/2014 (the Central Securities Depositories Regulation) 
+encourages the settlement of transactions in central bank money. Where the settlement 
+of cash payments in central bank money is not available and practicable, this 
+settlement can take place in commercial bank money. That provision can be difficult 
+to apply for a CSD operating a DLT securities settlement system, as such a CSD 
+would have to effect movements in cash accounts at the same time as the delivery of 
+securities on the DLT. A CSD operating a DLT securities settlement system should be 
+allowed to request an exemption from the rules of Regulation (EU) No 909/2014 (the 
+EN 
+17 
+ EN 
+Central Securities Depositories Regulation) on cash settlement in order to develop 
+innovative solutions, such as the use of settlement coins or ‘e-money tokens’ as 
+defined  in the Regulation No 2021/XX on Markets in Crypto-Assets45.  
+(25) 
+Regulation (EU) No 909/2014 (the Central Securities Depositories Regulation) 
+requires that a CSD gives access to another CSD or to other market infrastructures. 
+The access to a CSD operating a DLT securities settlement system can be burdensome 
+or difficult to achieve, as the interoperability of legacy systems with DLT has not been 
+tested yet. A DLT securities settlement system should also be able to request an 
+exemption from such rules, if it can demonstrate that the application of such rules are 
+disproportionate to the size of the DLT securities settlement system.  
+(26) 
+Irrespective of the rule for which an exemption is requested, a CSD operating a DLT 
+securities settlement system should demonstrate that the exemption requested is 
+proportionate and justified by the use of DLT. The exemption should also be limited to 
+the DLT securities settlement system and not cover other securities settlement systems 
+operated by the same CSD.    
+(27) 
+DLT market infrastructures should also be subject to additional requirements, 
+compared to traditional market infrastructures. These requirements are necessary to 
+avoid risks raised by the use of DLT or by the new way the DLT market infrastructure 
+would carry out its activities. Therefore, DLT market infrastructure should establish a 
+clear business plan that details how the DLT would be used and the legal arrangements 
+put in place. 
+(28) 
+A CSD operating a DLT securities settlement system, or DLT MTF where they are 
+permitted to settle the transactions in DLT transferable securities themselves, should 
+establish the rules on the functioning of the proprietary DLT they operate, including 
+the rules to access and admission on the DLT, the rules for the participating nodes and 
+the rules to address potential conflicts of interest, as well as risk management 
+measures.  
+(29) 
+A DLT market infrastructure should be required to inform members, participants, 
+issuers and clients on how they intend to perform their activities and how the use of 
+DLT will create deviations compared to the way the service is normally provided by a 
+traditional MTF or a CSD operating a securities settlement system.  
+(30) 
+A DLT market infrastructure should have specific and robust IT and cyber 
+arrangements related to the use of DLT. These arrangements should be proportionate 
+to the nature, scale and complexity of the DLT market infrastructure’s business plan. 
+These arrangements should also ensure the continued reliability, continuity and 
+security of the services provided, including the reliability of smart contracts that are 
+potentially used. DLT market infrastructures should also ensure the integrity, security, 
+confidentiality, availability and accessibility of data stored on the DLT. The competent 
+authority of a DLT market infrastructure should be allowed to request an audit to 
+ensure that the overall IT and cyber arrangements are fit for purpose. The costs of such 
+an audit should be borne by the DLT market infrastructure.  
+(31) 
+Where the business plan of a DLT market infrastructure would involve the 
+safekeeping of clients’ funds, such as cash or cash equivalent, or DLT transferable 
+securities, or the means of access to such DLT transferable securities, including in the 
+
+45 Proposal for a Regulation of the European Parliament and of the Council on markets in crypto-assets, and 
+amending Directive (EU) 2019/1937 – COM(2020)593  
+EN 
+18 
+ EN 
+form of cryptographic keys, the DLT market infrastructure should have adequate 
+arrangements in place to safeguard their clients’ assets. They should not use clients’ 
+assets on own account, except with prior express consent from their clients. The DLT 
+market infrastructure should segregate clients’ funds or DLT transferable securities, or 
+the means of access to such assets, from its own assets or other clients’ assets. The 
+overall IT and cyber arrangements of DLT market infrastructures should ensure that 
+clients’ assets are protected against fraud, cyber threats or other malfunctions.  
+(32) 
+At the time where the specific permission is granted, DLT market infrastructures 
+should also have a credible exit strategy in place in case the regime on DLT market 
+infrastructures should be discontinued or the specific permission or some of the 
+exemptions granted should be withdrawn.   
+(33) 
+The specific permission granted to a DLT market infrastructure should follow the 
+same procedures as the authorisation of a traditional MTF, or a CSD where such a 
+CSD is seeking to operate a new securities settlement system. However, when 
+applying for a permission, the applicant DLT infrastructure should indicate the 
+exemptions it would be seeking. Before granting a permission to a DLT market 
+infrastructure, the competent authority should consult ESMA. ESMA should issue a 
+non-binding opinion and make any recommendations on the application or the 
+exemptions requested. ESMA should also consult the competent authorities of the 
+other Member States. Where issuing its non-binding opinion, ESMA should aim at 
+ensuring financial stability, market integrity and investor protection. In order to ensure 
+the level-playing field and fair competition across the single market, ESMA’s non-
+binding opinion should also aim at ensuring the consistency and proportionality of the 
+exemptions granted by different competent authorities across the Union.  
+(34) 
+The competent authority which would examine the application submitted by a 
+prospective DLT market infrastructure should have the possibility to refuse a 
+permission if there were reasons to believe that the DLT market infrastructure would 
+pose a threat to financial stability, investor protection or market integrity or if the 
+application were an attempt to circumvent existing requirements.  
+(35) 
+The specific permission given by a competent authority to a given DLT market 
+infrastructure should indicate the exemptions granted to that DLT market 
+infrastructure. Such a permission should be valid for the Union. ESMA should publish 
+on its website the list of DLT market infrastructures and the list of exemptions granted 
+to each of them.  
+(36) 
+The specific permission and the exemptions granted by national competent authorities 
+should be granted on a temporary basis, for a period of up to six years from the date of 
+the specific permission. After a five-year period from the entry into application of the 
+Regulation, ESMA and the Commission would be required to make an assessment of 
+this pilot regime for market infrastructures based on digital ledger technology. The 
+aforementioned six-year period provides DLT market infrastructures sufficient time to 
+adapt their business models to any modifications of this regime and operate under the 
+pilot in a commercially viable manner. It would allow ESMA and the Commission to 
+gather a useful data set encompassing around three calendar years of the operation of 
+the pilot regime following the grant of a critical mass of specific permissions and 
+related exemptions and to report thereon. It would also allow time for DLT market 
+infrastructures to take the necessary steps either to wind down their operations or to 
+transition to a new regulatory framework following ESMA’s and the Commission’s 
+reports.     
+EN 
+19 
+ EN 
+(37) 
+Without prejudice to the relevant provisions of  Directive 2014/65/EU (Markets in 
+Financial Instruments Directive, MiFID II) or Regulation (EU) No 909/2014 (the 
+Central Securities Depositories Regulation), the competent authorities should have the 
+power to withdraw the specific permission or any exemptions granted to the DLT 
+market infrastructure, where a flaw has been discovered in the underlying technology 
+or the services or activities provided by the DLT market infrastructure, and provided 
+that this flaw outweighs the benefits provided by the service at stake, or where the 
+DLT market infrastructure has breached any conditions attached to the exemptions 
+imposed by the competent authority at the time of the granting of the specific 
+permission, or where the DLT market infrastructure has recorded financial instruments 
+that do not meet the conditions of DLT transferrable securities under this Regulation. 
+In the course of its activity, a DLT market infrastructure should have the possibility to 
+ask for additional exemptions to those requested at the time of the permission. In such 
+a case, these additional exemptions requested by the DLT market infrastructures 
+should be subject to a specific permission by the competent authorities, in the same 
+way as those requested at the time of the initial permission of the DLT market 
+infrastructure.  
+(38) 
+Since DLT market infrastructures could receive temporary exemptions from existing 
+Union legislation, they should closely cooperate with competent authorities and the 
+European Securities and Markets Authority (ESMA) during the time of their specific 
+permission. DLT market infrastructures should inform the competent authorities and 
+ESMA about any material change to its business plan and its critical staff, any 
+evidence of cyber threats or attacks, fraud or serious malpractice, of any change in the 
+information provided at the time of the initial application for permission, of any 
+technical difficulties, and in particular those linked to the use of DLT, and of any new 
+risks to investor protection, market integrity and financial stability that was not 
+envisaged at the time where the specific permission was granted. Where notified of 
+such a material change, the competent authority should request the DLT market 
+infrastructure to apply for a new permission or exemption or it should take any 
+corrective measures it deems appropriate. DLT market infrastructures should also 
+provide any relevant data to competent authorities and ESMA, whenever such data is 
+requested. To ensure investor protection, market integrity and financial stability, the 
+competent authority which granted the specific permission to the DLT market 
+infrastructure should be able to recommend any corrective measures, after consultation 
+with ESMA.  
+(39) 
+DLT market infrastructures should also make regular reports to their competent 
+authorities and ESMA. ESMA should organise discussions on these reports to enable 
+all competent authorities across the Union to gain experience on the impact of the use 
+of DLT and on any adaptations to the Union financial services legislation that could be 
+necessary to allow for the use of DLT on a greater scale.  
+(40) 
+Five years after the entry into application of this Regulation, ESMA should report to 
+the Commission on this pilot regime for DLT market infrastructures, including on the 
+potential benefits linked to the use of DLT, the risks raised and the technical 
+difficulties. Based on ESMA’s report, the Commission should report to the Council 
+and European Parliament. This report should assess the costs and benefits of extending 
+this regime on DLT market infrastructures for another period of time, extending this 
+regime to new type of financial instruments, making this regime permanent with or 
+without modifications, bringing modifications to the Union financial services 
+legislation or terminating this regime.   
+EN 
+20 
+ EN 
+(41) 
+Some potential gaps have been identified in the existing EU financial services rules as 
+regards their application to crypto-assets that qualify as financial instruments46. In 
+particular, some regulatory technical standards under the Regulation EU No 600/2014 
+(the Markets in financial instruments Regulative) relative to certain data reporting 
+requirements and pre- and post-trade transparency requirements are not well adapted 
+to financial instruments issued on a distributed ledger technology. Secondary markets 
+in financial instruments issued on distributed ledger technology or similar technology 
+are still nascent and therefore their features may differ from markets in financial 
+instruments using traditional technology. The rules set out in these regulatory technical 
+standards should be capable of being effectively applied to all financial instruments, 
+regardless of the technology used. Therefore, ESMA should be mandated to carry out 
+a comprehensive assessment of these regulatory technical standards adopted in 
+application of Regulation EU No 600/2014 and propose any needed amendments 
+aimed at ensuring that the rules set out therein can be effectively applied to financial 
+instruments issued on distributed ledger technology. In carrying out this assessment, 
+ESMA should take into account the specificities of those financial instruments issued 
+on a distributed ledger technology and whether they require adapted standards which 
+would allow for their development without undermining the objectives of the rules laid 
+down in the regulatory technical standards adopted in application of Regulation EU 
+No 600/2014. 
+(42) 
+Where the objectives of this Regulation cannot be sufficiently achieved by the 
+Member States, because any regulatory obstacles to the development of DLT market 
+infrastructures for crypto-assets that qualify as financial instruments under Directive 
+2014/65/EU (Markets in Financial Instruments Directive, MiFID II) are embedded in 
+Union financial services legislation such objectives can rather be better achieved at 
+Union level. Therefore, the Union may adopt measures, in accordance with the 
+principle of subsidiarity as set out in Article 5 of the Treaty on European Union. In 
+accordance with the principle of proportionality as set out in that Article, this 
+Regulation does not go beyond what is necessary in order to achieve those objectives.  
+(43) 
+In order for the Union to keep pace with innovation, it is important that the regime of 
+DLT market infrastructures enters into application, as soon as possible, after the 
+transposition by Member States of the Directive (EU) .../... of the European Parliament 
+and of the Council47.   
+(44) 
+The European Data Protection Supervisor and the European Data Protection Board 
+were consulted in accordance with Article 42(1) of Regulation (EU) 2018/1725(EC) of 
+the European Parliament and of the Council48, and delivered their opinion on…[date 
+of the opinion(s)], 
+
+46 
+European Securities and Markets Authority’s, Report with advice on Initial Coin Offerings and Crypto-
+Assets (ESMA50-157-1391) 
+47 
+Proposal for a Directive of the European Parliament and of the Council amending Directives 
+2006/43/EC, 2009/65/EC, 2009/138/EU, 2011/61/EU, EU/2013/36, 2014/65/EU, (EU) 2015/2366 and 
+EU/2016/2341 - COM(2020)596 
+48 
+Regulation (EU) 2018/1725 of the European Parliament and of the Council of 23 October 2018 on the 
+protection of natural persons with regard to the processing of personal data by the Union institutions, 
+bodies, offices and agencies and on the free movement of such data, and repealing Regulation (EC) No 
+45/2001 and Decision No 1247/2002/EC (OJ L 295, 21.11.2018, p. 39). 
+EN 
+21 
+ EN 
+HAVE ADOPTED THIS REGULATION: 
+Article 1 
+Subject matter and scope  
+(1) 
+This Regulation lays down requirements on multilateral trading facilities and 
+securities settlement systems using distributed ledger technology ‘DLT market 
+infrastructures’, which are granted with a specific permissions to operate in 
+accordance with Article 7 and Article 8.  
+(2) 
+This Regulation establishes the requirements for:  
+(a) 
+granting and withdrawing such specific permissions;  
+(b) 
+granting, modifying and withdrawing related exemptions; 
+(c) 
+mandating, modifying and withdrawing attached conditions, compensatory or 
+corrective measures;  
+(d) 
+operating such DLT market infrastructures;   
+(e) 
+supervising such DLT market infrastructures; and 
+(f) 
+cooperation between operators of DLT market infrastructures, competent 
+authorities and ESMA. 
+Article 2 
+Definitions 
+For the purposes of this Regulation, the following definitions apply: 
+(1) 
+‘distributed ledger technology’ or ‘DLT’ means a class of technologies which 
+support the distributed recording of encrypted data; 
+(2) 
+‘DLT market infrastructure’ means either a ‘DLT multilateral trading facility’ or a 
+‘DLT securities settlement system’;      
+(3) 
+‘DLT  multilateral trading facility’ or ‘DLT MTF’ means a ‘multilateral trading 
+facility’, operated by an investment firm or a market operator, that only admits to 
+trading DLT transferable securities and that may be permitted, on the basis of 
+transparent, non-discretionary, uniform rules and procedures, to:  
+(a) 
+ensure the initial recording of DLT transferable securities;  
+(b) 
+settle transactions in DLT transferable securities against payment; and  
+(c) 
+provide safekeeping services in relation to DLT transferable securities, or 
+where applicable, to related payments and collateral, provided using the DLT 
+MTF;  
+(4) 
+‘DLT securities settlement system’ means a securities settlement system, operated by 
+a ‘central securities depository’, that settles transactions in DLT transferable 
+securities against payment;  
+(5) 
+‘DLT transferable securities’ means ‘transferable securities’ within the meaning of 
+Article 4(1)(44) (a) and (b) of Directive 2014/65/EU that are issued, recorded, 
+transferred and stored using a DLT;    
+EN 
+22 
+ EN 
+(6) 
+‘multilateral trading facility’ means a ‘multilateral trading facility’ as defined in 
+Article 4(1)(22) of Directive 2014/65/EU; 
+(7) 
+‘central securities depository’ or ‘CSD’ means a ‘central securities depository’ as 
+defined in Article 2(1) of Regulation (EU) No 909/2014; 
+(8) 
+‘financial instrument’ means a ‘financial instrument’ as defined in Article 4(1)(15) of  
+Directive 2014/65/EU; 
+(9) 
+‘settlement’ means ‘settlement’ as defined in Article 2(7) of Regulation (EU) No 
+909/2014;  
+(10) 
+‘business day’ means ‘business day’ as defined in Article 2(14) of Regulation (EU) 
+No 909/2014;  
+(11) 
+‘delivery versus payment mean’ or ‘DVP’ means ‘delivery versus payment’ as 
+defined in Article 2(27) of Regulation (EU) No 909/2014; 
+(12) 
+‘settlement fail’ means a ‘settlement fail’ as defined in Article 2(1)(15) of Regulation 
+(EU) No 909/2014; 
+(13) 
+‘sovereign bond’ means a bond issued by a sovereign issuer which is either:  
+(a) 
+the Union; 
+(b) 
+a Member State including a government department, an agency or a special 
+purpose vehicle of a Member State or another sovereign entity;  
+(c) 
+a sovereign entity which is not listed under points (a) and (b);  
+(14) 
+‘other public bond’ means a bond issued by any of the following public issuers:  
+(a) 
+in the case of a federal Member State, a member of that federation;  
+(b) 
+a special purpose vehicle for several Member States; 
+(c) 
+an international financial institution established by two or more Member States 
+which has the purpose of mobilising funding and providing financial assistance 
+to the benefit of its members to safeguard the stability of the euro area as a 
+whole.; 
+(d) 
+the European Investment Bank; 
+(e) 
+a public entity which is not an issuer of a sovereign bond as specified in point 
+(13).  
+(15) 
+‘convertible bond’ means an instrument consisting of a bond or a securitised debt 
+instrument with an embedded derivative, such as an option to buy the underlying 
+equity;  
+(16) 
+‘covered bond’ means bonds as referred to in Article 52(4) of Directive 2009/65/EC 
+of the European Parliament and of the Council49;  
+(17) 
+‘corporate bond’ means a bond that is issued by a Societas Europaea  established in 
+accordance with Council Regulation (EC) No 2157/200150 or a type of company 
+
+49 
+Directive 2009/65/EC of the European Parliament and of the Council of 13 July 2009 on the 
+coordination of laws, regulations and administrative provisions relating to undertakings for collective 
+investment in transferable securities (UCITS) (OJ L 302 17.11.2009, p. 32). 
+50 
+Council Regulation (EC) No 2157/2001 of 8 October 2001 on the Statute for a European company (SE) 
+
+OJ L 294, 10.11.2001, p. 1–21  
+EN 
+23 
+ EN 
+listed in Annex I of Directive 2017/1132/EC51 of the European Parliament and of the 
+Council or equivalent in third countries;  
+(18) 
+‘other bond’ means a bond that does not belong to any of the types of bonds 
+specified in points (13) to (17);  
+(19) 
+‘investment firm’ means an ‘investment firm’ as defined in Article 4(1)(1) of 
+Directive 2014/65/EU;  
+(20) 
+‘market operator’ means  a ‘market operator’ as defined in Article 4(1)(18) of 
+Directive 2014/65/EU;  
+(21) 
+‘competent authority’ means one or more competent authorities designated either in 
+accordance with:  
+(a) 
+Article 67 of Directive 2014/65/EU for investment firms and market 
+operators operating a DLT MTF;  
+(b) 
+Article 11 of Regulation (EU) No 909/2014 for a CSD operating a DLT 
+securities settlement system;  or  
+(c) 
+otherwise designated by the Member States for the purposes of 
+overseeing the application of this Regulation. 
+(22) 
+‘home  Member State’ means in the case of:  
+(a) 
+an investment firm operating a DLT MTF, the Member State determined 
+in accordance with Article 4(55)(a) (ii) and (iii) of Directive 2014/65/EU;  
+(b) 
+a market operator operating a DLT MTF, the Member State in which the 
+market operator of the DLT MTF is registered or, if under the law of that 
+Member State it has no registered office, the Member State in which the 
+head office of the marker operator of the DLT MTF is situated;    
+(c) 
+a CSD operating a DLT securities settlement system, the Member State 
+determined in accordance with Article 2(23) of Regulation (EU) No 
+909/2014/EU.   
+(23) 
+‘e-money tokens’ means ‘e-money tokens’ as defined in Article XX of Regulation 
+No 2021/XX on Markets in Crypto-Assets52. 
+Article 3 
+Limitations on the transferable securities admitted to trading on or settled by a DLT market 
+infrastructure  
+1. 
+Only DLT transferable securities that meet the following conditions may be admitted 
+to trading on a DLT MTF and recorded on a distributed ledger by a CSD operating a 
+DLT securities settlement system 
+(a) 
+shares, the issuer of which has a market capitalisation or a tentative market 
+capitalisation of less than EUR 200 million; or 
+
+51 
+Directive (EU) 2017/1132 of the European Parliament and of the Council of 14 June 2017 relating to 
+certain aspects of company law (OJ L 169, 30.6.2017, p. 46) 
+52 
+Proposal for a Regulation of the European parliament and of the Council on Markets in  Crypto-assets 
+and amending Directive (EU) 2019/1937 – COM(2020)593  
+EN 
+24 
+ EN 
+(b) 
+convertible bonds, covered bonds, corporate bonds, other public bonds and 
+other bonds, with an issuance size of less than EUR 500 million.   
+2. 
+An investment firm or market operator operating a DLT MTF shall not admit to 
+trading sovereign bonds under this Regulation. A CSD operating a DLT securities 
+settlement system, or an investment firm or market operator that is permitted to 
+record DLT transferable securities on a DLT MTF, in accordance with paragraphs 2 
+and 3 of Article 4, shall not record sovereign bonds under this Regulation.  
+3. 
+The total market value of DLT transferable securities recorded in a CSD operating a 
+DLT securities settlement system shall not exceed EUR 2.5 billion. Where a DLT 
+MTF records the DLT transferable securities instead of a CSD, in accordance with 
+paragraphs 2 and 3 of Article 4, the total market value of the DLT transferable 
+securities recorded by the investment firm or market operator operating the DLT 
+MTF shall not exceed EUR 2.5 billion. 
+4. 
+For the purposes of determining and monitoring the total market value of DLT 
+transferable securities under paragraph 1, the total market value of the DLT 
+transferable securities shall be: 
+(a) 
+determined daily, either by the CSD or the investment firm or market operator 
+concerned; and 
+(b) 
+equal to the sum of: the daily closing price of each DLT transferable security 
+admitted for trading on a DLT MTF, multiplied by the number of DLT 
+transferable securities with the same ISIN that are settled on the DLT securities 
+settlement system or DLT MTF concerned on that day, whether in full or in 
+part. 
+5. 
+The operator of a DLT market infrastructure shall submit to the competent authority 
+that granted the specific permission, in accordance with Article 7 or Article 8, 
+monthly reports, demonstrating that all the DLT transferable securities that are 
+recorded and settled on a DLT MTF permitted to do so, in accordance with 
+paragraphs 2 and 3 of Article 4, or by a CSD on a DLT securities settlement system, 
+fulfil the conditions under paragraphs 1 to 3. 
+Where the total market value of the DLT transferable securities reported under 
+paragraph 1, has reached EUR 2.25 billion, the investment firm or market operator 
+operating the DLT MTF concerned, or the CSD operating the DLT securities 
+settlement system concerned shall activate the transition strategy, referred to in 
+Article 6(6).  They shall notify the competent authority of the activation of their 
+transition strategy, in their monthly report and of the time-horizon for such transition.   
+The competent authority concerned may permit the DLT market infrastructure 
+concerned to continue to operate until the total market value of the DLT transferable 
+securities reported under paragraph 1 reaches EUR 2.75 billion provided that such 
+leeway is requested by the operator of the DLT market infrastructure concerned and 
+that it is objectively necessary for the orderly implementation of the transition 
+strategy.     
+6. 
+Regulation (EU) No 596/2014 shall apply to DLT transferable securities admitted to 
+trading on a DLT MTF.  
+EN 
+25 
+ EN 
+Article 4 
+Requirements and exemptions regarding DLT multilateral trading facilities 
+1. 
+A DLT MTF shall be subject to all the requirements applicable to an MTF under 
+Directive  2014/65/EU and Regulation (EU) No 2014/600, except if the investment 
+firm or the market operator operating the DLT MTF:  
+(a) 
+has requested an exemption as specified in paragraph 2 or under Directive (EU) 
+.../...53 and has been granted such an exemption by the  competent authority that 
+granted the specific permission in accordance with Article 7; and 
+(b) 
+complies with the obligations set out in Article 6; and 
+(c) 
+complies with the conditions set out in paragraphs 2 to 4 and with any 
+additional compensatory measures that the competent authority which granted 
+the specific permission may deem appropriate in order to meet the objectives 
+pursued by the provisions from which an exemption is requested or to ensure 
+investor protection, market integrity and/or financial stability.  
+2. 
+At its request, an investment firm or a market operator operating a DLT MTF may be 
+permitted to admit to trading DLT transferable securities that are not recorded in a 
+CSD in accordance with Article 3(2) of Regulation (EU) 909/2014 but instead 
+recorded on the DLT MTF’s distributed ledger.  
+An investment firm or market operator requesting an exemption pursuant to 
+paragraph 1 shall propose compensatory measures to meet the objectives pursued by 
+the provisions from which an exemption is requested, and ensure at a minimum: 
+(a) 
+the recording of the DLT transferable securities on the digital ledger 
+technology;  
+(b) 
+that the number of DLT transferable securities recorded on the DLT MTF 
+equals the total number of such DLT transferable securities in circulation on 
+the digital ledger technology at any given time;  
+(c) 
+that the DLT MTF keeps records which enable the investment firm or market 
+operator operating the DLT MTF, without delay at any given time, to segregate 
+the DLT transferable securities of a member, participant, issuer or client from 
+those of any other member, participant, issuer or client. 
+Where no request for an exemption has been made by the DLT MTF in accordance 
+with the first subparagraph, the DLT transferable securities shall either be recorded 
+in book-entry form in a CSD or on the distributed ledger technology of a CSD 
+operating a DLT securities settlement system.   
+3. 
+Where an investment firm or a market operator operating a DLT MTF has requested 
+an exemption under paragraph 2, it shall ensure, by means of robust procedures and 
+arrangements that, the DLT MTF:     
+(a) 
+guarantees that the number of DLT transferable securities in an issue or in part 
+of an issue admitted by the investment firm or market operator operating the 
+
+53 
+Proposal for a Directive of the European Parliament and of the Council amending Directives 
+2006/43/EC, 2009/65/EC, 2009/138/EU, 2011/61/EU, EU/2013/36, 2014/65/EU, (EU) 2015/2366 and 
+EU/2016/2341 - COM(2020)596 - - COM(2020)596 
+
+EN 
+26 
+ EN 
+DLT MTF, is equal to the sum of DLT transferable securities making up such 
+an issue or part of an issue, recorded on the DLT, at any given time;  
+(b) 
+guarantees the safekeeping of any DLT transferable securities, as well as any 
+funds to effect payments for such securities or any collateral provided in 
+respect of such transactions using the DLT MTF;  
+(c) 
+enables clear, accurate and timely confirmation of the details of transactions in 
+DLT transferable securities including any payments made in respect thereof as 
+well as the discharge of or calling for any collateral in respect of the same;  
+(d) 
+provides clear, accurate and timely information in relation to the settlement of 
+transactions, including settlement finality, by  defining the moment from which 
+transfer orders or other pre-identified instructions may not be revoked by a 
+member, participant, issuer or client;  
+(e) 
+settles transactions in DLT transferable securities close to real time or intraday, 
+and in any case, no later than on the second business day after the conclusion 
+of the trade;  
+(f) 
+ensures delivery versus payment.   
+The settlement of payments may be carried out through central bank money 
+where practicable and available, or where not practicable and available, 
+through commercial bank money, including commercial bank money in a 
+token-based form, or in e-money tokens.  
+Where settlement occurs through commercial bank money or e-money tokens, 
+the investment firm or market operator operating the DLT MTF shall identify, 
+measure, monitor, manage, and minimise any counterparty risk arising from 
+the use of such money; and 
+(g) 
+either prevents or, if not possible, addresses settlement fails.    
+4. 
+Where an investment firm or a market operator operating a DLT MTF requests an 
+exemption in accordance with paragraph 2 or with Directive (EU) .../...54, it shall in 
+any case demonstrate that the exemption requested is:    
+(a) 
+proportionate to and justified by the use of a DLT; and 
+(b) 
+limited to the DLT MTF and does not extended to any other MTF operated by 
+the said investment firm or market operator.  
+Article 5 
+Requirements and exemptions regarding DLT securities settlement system 
+1. 
+A CSD operating a DLT securities settlement system shall be subject to the 
+requirements applicable to a CSD under Regulation (EU) No 909/2014, except if 
+such a CSD:  
+
+54 
+Proposal for a Directive of the European Parliament and of the Council amending Directives 
+2006/43/EC, 2009/65/EC, 2009/138/EU, 2011/61/EU, EU/2013/36, 2014/65/EU, (EU) 2015/2366 and 
+EU/2016/2341 - - COM(2020)596 
+
+EN 
+27 
+ EN 
+(a) 
+has requested exemptions as specified in paragraphs 2 to 6 and has been  
+granted such exemptions by the competent authority that granted the specific 
+permission in accordance with Article 8;  
+(b) 
+complies with the obligations set out in Article 6; and 
+(c) 
+complies with the conditions set out in paragraphs 2 to 7 and with any 
+additional compensatory measures that the competent authority which granted 
+the specific permission may deem appropriate in order to meet the objectives 
+pursued by the provisions from which an exemption is requested or to ensure 
+investor protection, market integrity and/or financial stability.   
+2. 
+At its request, a CSD operating a DLT securities settlement system may be exempted 
+by the competent authority from the application of Article 2(4) on dematerialised 
+form, Article 2(9) on transfer of orders, Article 2(28) on securities accounts, Article 
+3 on the recording of securities, Article 37 on the integrity of issue, Article 38 on the 
+segregation of assets of Regulation (EU) No 909/2014, provided that the CSD 
+operating the DLT securities settlement system:   
+(a) 
+demonstrates that the use of a ‘securities account’ as defined under Article 2(28) of 
+Regulation (EU) No 909/2014 or the use of book-entry form are incompatible with 
+the use of its particular DLT;  
+(b) 
+proposes compensatory measures to meet the objectives pursued by the provisions 
+from which an exemption is requested, and ensures at minimum that: 
+(c) 
+the recording of the DLT transferable securities on the distributed ledger;  
+(d) 
+the number of DLT transferable securities in an issue or in part of an issue admitted 
+by the CSD operating the DLT settlement securities system, is equal to the sum of 
+DLT transferable securities making up such issue or part of an issue, recorded on the 
+distributed ledger at any given time; and 
+(e) 
+it keeps records which enable the CSD, without delay at any given time, to  segregate 
+the DLT transferable securities of a member, participant, issuer or client from those 
+of any other member, participant, issuer or client.    
+3. 
+At its request, a CSD operating a DLT securities settlement system may be exempted 
+by the competent authority from the application of Article 19 and Article 30 of 
+Regulation (EU) No 909/2014, provided that:  
+(a) 
+such provisions are incompatible with the use of a DLT as envisaged by 
+the particular DLT operated by the CSD concerned; and 
+(b) 
+the CSD operating the DLT securities settlement system ensures that the 
+conditions set out in points (c) to (i) of Article 30(1) and in Article 30(2) 
+of Regulation (EU) No 909/2014 are complied with.  
+4. 
+At its request, a CSD operating a DLT securities settlement system may be exempted 
+by the competent authority from the application of Article 2(19) of Regulation (EU) 
+No 909/2014 on participants and may be permitted to admit as participants natural 
+and legal persons other than those referred to in Article 2(19), provided that such 
+persons:  
+(a) 
+are of sufficient good repute and are fit and proper; and 
+(b) 
+have sufficient level of ability, competence, experience and knowledge of 
+the post-trading and the functioning of DLT.   
+EN 
+28 
+ EN 
+5. 
+At its request, a CSD operating a DLT securities settlement system may be exempted 
+by the competent authority from the application of Article 40 of Regulation (EU) No 
+909/2014 on cash settlement, provided that the CSD ensures delivery versus 
+payment.   
+The settlement of payments may be carried out through central bank money, where 
+practicable and available, or where not practicable and available, through 
+commercial bank money, including commercial bank money in a token-based form, 
+or in e-money tokens.  
+Where settlement occurs through commercial bank money or e-money tokens, the 
+investment firm or market operator operating the DLT MTF shall identify, measure, 
+monitor, manage, and minimise any counterparty risk arising from the use of such 
+money.  
+6. 
+At its request, a CSD operating a DLT securities settlement system may be exempted 
+by the competent authority from the application of Articles 50 and/or Article 53 on 
+standard link access and access between a CSD and another market infrastructure of 
+Regulation (EU) No 909/2014, provided that it demonstrates that the use of a DLT is 
+incompatible with legacy systems of other CSDs or other market infrastructures or 
+that granting such access to another CSD or another market infrastructure using 
+legacy systems would trigger disproportionate costs, given the size of the DLT 
+securities settlement system.    
+7. 
+Where a CSD operating a DLT securities settlement system has requested an 
+exemption in accordance with the first sub-paragraph, it shall give access to other 
+CSDs operating a DLT securities settlement system or to DLT MTFs.   
+Where a CSD operating a DLT securities settlement system requests an exemption in 
+accordance with paragraphs 2 to 6, it shall in any case demonstrate that:    
+(a) 
+the exemption requested is proportionate to and justified by the use of its DLT, 
+and;  
+(b) 
+the exemption requested is limited to the DLT securities settlement system and 
+does not extend to any other securities settlement system as defined in Article 
+2(10) of Regulation (EU) No 909/2014 operated by the same CSD.   
+8. 
+Where a CSD has requested and been granted an exemption under paragraph 3, the 
+requirement in Article 39(1) of Regulation (EU) No 909/2014/EU for Member States 
+to designate and notify the securities settlement system operated by the CSD in 
+accordance with Directive 98/26/EC shall not apply to the DLT securities settlement 
+system. The foregoing shall not preclude Member States from designating and 
+notifying a DLT securities settlement system in accordance with Directive 98/26/EC 
+where the DLT securities settlement system fulfils all of the requirements of that 
+Directive.        
+Article 6 
+ Additional requirements on DLT market infrastructures 
+1. 
+The operators of DLT market infrastructures shall establish a clear and detailed 
+business plan describing how they intend to carry out their services and activities, 
+including a description of critical staff, technical aspects, the use of the DLT and the 
+information required in paragraph 3.  
+EN 
+29 
+ EN 
+They shall also have up-to-date, clear and detailed publically available written 
+documentation, which may be made available by electronic means, defining the rules 
+under which the DLT market infrastructure shall operate, including the agreed upon 
+associated legal terms defining the rights, obligations, responsibilities and liabilities 
+of the operator of the DLT market infrastructure, as well as that of the members, 
+participants, issuers and/or clients using the DLT market infrastructure concerned. 
+Such legal arrangements shall specify the governing law, the pre-litigation dispute 
+settlement mechanism and the jurisdiction for bringing legal action.   
+2. 
+A CSD operating a DLT securities settlement system, and an investment firm or a 
+market operator operating a DLT MTF requesting an exemption from Article 3(2) of 
+Regulation (EU) No 909/2014, shall establish rules on the functioning of the DLT 
+they operate, including the rules for accessing the distributed ledger technology, the 
+participation of the validating nodes, addressing potential conflicts of interest, and 
+risk management including any mitigation measures.   
+3. 
+The operators of DLT market infrastructures shall provide their members, 
+participants, issuers and clients with clear and unambiguous information on their 
+website on how they carry out their functions, services and activities and how this 
+performance of functions, services and activities deviates from an MTF or a 
+securities settlement system. This information shall include the type of DLT used.  
+4. 
+The operators of DLT market infrastructures shall ensure that the overall IT and 
+cyber arrangements related to the use of their DLT are proportionate to the nature, 
+scale and complexity of their business. These arrangements shall ensure the 
+continued transparency, availability, reliability and security of their services and 
+activities, including the reliability of smart contracts used on the DLT. These 
+arrangements shall also ensure the integrity, security and confidentiality of any data 
+stored, and the availability and accessibility of such data.  
+The operators of DLT market infrastructures shall have a specific operational risk 
+procedure for the risks posed by the use of a DLT and crypto-assets and on how 
+these risks would be addressed if they materialised.   
+To assess the reliability of the overall IT and cyber arrangements of a DLT market 
+infrastructure, the competent authority may require an audit. The competent authority 
+shall appoint an independent auditor to carry out the audit. The DLT market 
+infrastructure shall bear the costs of such an audit. 
+5. 
+Where the operator of a DLT market infrastructure ensures the safekeeping of 
+participants’, members’, participants’, issuers’ or clients’ funds, collateral and DLT 
+transferable securities, as well as the means of access to such DLT transferable 
+securities, including in the form of cryptographic keys, the operators of such DLT 
+market infrastructures shall have adequate arrangements in place to prevent the use 
+of the said funds, collateral or DLT transferable securities on their own account other 
+than with the express consent, evidenced in writing, which may be made through 
+electronic means, of the participant, member, issuer, or client concerned.  
+The operator of a DLT market infrastructure shall maintain safe, accurate, reliable 
+and retrievable records of the funds, collateral and DLT transferable securities held 
+by its DLT market infrastructure for members, participants, issuers or clients as well 
+as of the means of access to such assets. 
+The operator of a DLT market infrastructure shall segregate the funds, collateral and 
+DLT transferable securities as well as the means of access to such assets, of the 
+EN 
+30 
+ EN 
+members, participants, issuers or clients using its DLT market infrastructure from its 
+own assets as well as from the same assets of other members, participants, issuers or 
+clients.  
+The overall IT and cyber arrangements, referred to in paragraph 4, shall ensure that 
+the said funds, collateral and DLT transferable securities, as well as the means of 
+access to such assets, are protected from the risks of unauthorised access, hacking, 
+degradation, loss, cyber-attack or theft. 
+6. 
+The operator of a DLT market infrastructure shall establish a clear, detailed and 
+publically available strategy for transitioning out of or winding down a particular 
+DLT market infrastructure (referred to herein as the ‘transition strategy’), ready to be 
+deployed in a timely manner, in the event that the permission or some of the 
+exemptions granted in accordance with Article 4 or Article 5 have to be withdrawn 
+or otherwise discontinued, or in the event of any voluntary or involuntary cessation 
+of the business of the DLT MTF or DLT securities settlement system. The transition 
+strategy shall set out how members, participants, issuers and clients shall be treated, 
+in the event of such withdrawal, discontinuation or cessation. The transition strategy 
+shall be updated on an ongoing basis subject to the prior consent of the competent 
+authority which granted the permission to operate and related exemptions under 
+Article 4 and Article 5.     
+Article 7 
+Specific permission to operate a DLT multilateral trading facility 
+1. 
+A legal person authorised either as an investment firm or to operate a regulated 
+market, under Directive 2014/65/EU, may apply for a specific permission to operate 
+a DLT MTF under this Regulation. 
+2. 
+Applications for a specific permission to operate a DLT MTF under this Regulation 
+shall be accompanied by the following information: 
+(a) 
+the information required under Article 7(4) of Directive 2014/65/EU;  
+(b) 
+the business plan, rules of the DLT MTF and associated legal arrangements as 
+referred to in Article 6(1) as well the information regarding the functioning, services 
+and activities of the DLT MTF as referred to in Article 6(3);  
+(c) 
+where applicable, the functioning of its proprietary DLT as referred to in Article 
+6(2);  
+(d) 
+its overall IT and cyber arrangements as referred to in Article 6(4);  
+(e) 
+where applicable, a description of the safekeeping arrangements of clients’ DLT 
+transferable securities as referred to in Article 6(5);  
+(f) 
+its transition strategy, as referred to in Article 6(6);  and 
+(g) 
+the exemptions it is requesting in accordance with Article 4, the justification for each 
+exemption sought, any compensatory measures proposed as well as the means 
+envisaged to comply with the conditions attached to such exemptions under Article 
+4. 
+3. 
+Before deciding on an application for a specific permission to operate a DLT MTF 
+under this Regulation, the competent authority of the home Member State shall 
+notify and provide all relevant information on the DLT MTF to ESMA, an 
+EN 
+31 
+ EN 
+explanation of the exemptions requested, their justifications and any compensatory 
+measures proposed by the applicant or required by the competent authority.   
+Within three months of receipt of the notification, ESMA shall provide the 
+competent authority with a non-binding opinion on the application and shall make 
+any recommendations on the exemptions requested by the applicant, that are 
+necessary to ensure investor protection, market integrity and financial stability. 
+ESMA shall also promote the consistency and proportionality of exemptions granted 
+by competent authorities to investment firms or market operators operating DLT 
+MTFs across the Union.  In order to do so, ESMA, shall consult the competent 
+authorities of the other Member States in a timely manner and take the utmost 
+account of their views in its opinion.     
+4. 
+Without prejudice to Article 7 and Article 44 of Directive 2014/65/EU, the 
+competent authority shall refuse to grant the applicant a permission to operate a DLT 
+MTF under this Regulation if there are objective grounds for believing any of the 
+following:  
+(a) 
+significant risks to investor protection, market integrity or financial stability are 
+not properly addressed and mitigated by the applicant; or 
+(b) 
+the specific permission to operate a DLT MTF under this Regulation and the 
+exemptions requested are sought to circumvent legal and/or regulatory 
+requirements.   
+5. 
+The specific permission granted to either an investment firm or a market operator to 
+operate a DLT MTF shall be valid throughout the Union for up to six years from the 
+date of the specific permission. It shall specify the exemptions that are granted, in 
+accordance with Article 4.  
+ESMA shall publish on its website the list of DLT MTFs, the start and end dates of 
+their specific permissions and the list of exemptions granted to each of them.  
+6. 
+Without prejudice to Article 8 and Article 44 of Directive 2014/65/EU, the 
+competent authority which granted a specific permission under this Regulation shall 
+withdraw such permission or any of the exemptions granted, after consultation with 
+ESMA, in accordance with paragraph 3, if any of the following has occurred: 
+(a) 
+a flaw has been discovered in the functioning of the DLT or in the services and 
+activities provided by the operator of the DLT MTF that poses a risk to 
+investor protection, market integrity or financial stability, which outweighs the 
+benefits of the services and activities under experimentation;  
+(b) 
+the investment firm or market operator operating the DLT MTF has breached 
+the conditions attached to the exemptions granted by the competent authority;  
+(c) 
+the investment firm or market operator, operating a DLT MTF has admitted to 
+trading financial instruments that do not fulfil the conditions laid down in 
+Article 3(1) and 3(2);  
+(d) 
+the investment firm or market operator, operating a DLT MTF, that has 
+requested an exemption from Article 3(2) of Regulation (EU) No 909/2014, 
+has recorded DLT transferable securities that do not fulfil the conditions laid 
+down in Article 3(1) and 3(2);  
+(e) 
+the investment firm or market operator, operating a DLT MTF, that has 
+requested specific permission to be exempted from Article 3(2) of Regulation 
+EN 
+32 
+ EN 
+(EU) No 909/2014, has exceeded the thresholds referred to in Article 3(3) or 
+(5), third subparagraph; or   
+(f) 
+the competent authority becomes aware that the investment firm or market 
+operator that applied for a specific permission to operate a DLT MTF, obtained 
+such permission or related exemptions on the basis of misleading information 
+including any material omission.   
+7. 
+Where in the course of its activity, an investment firm or a market operator operating 
+a DLT MTF proposes to introduces a material change to the functioning of the DLT, 
+or to its services or activities, which requires a new permission, a new exemption, or 
+the modification of one or more of its existing exemptions or of any conditions 
+attached to it, it shall request such permission, exemption or modification in 
+accordance with Article 4. Such permission, exemption or modification shall be 
+processed by the competent authority, in accordance with paragraphs 2 to 5.  
+Where in the course of its activity, an investment firm or a market operator operating 
+a DLT MTF requests a new permission or exemption, it shall do so in accordance 
+with Article 4. Such permission or exemption shall be processed by the competent 
+authority, in accordance with paragraphs 2 to 5.  
+Article 8 
+  Specific permission to operate a DLT securities settlement system 
+1. 
+A legal person authorised as a CSD under Regulation (EU) No 909/2014, may apply 
+for a specific permission to operate a DLT securities settlement system under this 
+Regulation.  
+2. 
+Applications for a specific permission to operate a DLT securities settlement system 
+under this Regulation shall be accompanied by the following information: 
+(a) 
+the information required under Article 7(9) of Regulation (EU) No 909/2014;  
+(b) 
+the business plan, rules of the DLT securities settlement system and associated 
+legal arrangements as referred to in Article 6(1) as well as information 
+regarding the functioning, services and activities of the DLT securities 
+settlement system as referred to in Article 6(3);  
+(c) 
+the functioning of its proprietary DLT as referred to in Article 6(2);   
+(d) 
+its overall IT and cyber arrangements as referred to in Article 6(4);  
+(e) 
+the safekeeping arrangements as referred to in Article 6(5);  
+(f) 
+the transition strategy as referred to in Article 6(6); 
+(g) 
+the exemptions it is requesting, in accordance with Article 5, the justifications 
+for each exemption sought, any compensatory measures proposed as well as 
+the measures envisaged to comply with the conditions attached to such 
+exemptions under Article 5. 
+3. 
+Before deciding on an application for a specific permission to operate a DLT MTF 
+under this Regulation, the competent authority shall notify and provide all relevant 
+information on the DLT securities settlement system to ESMA and an explanation of 
+the exemptions requested, their justification and any compensatory measures 
+proposed by the applicant or required by the competent authority.   

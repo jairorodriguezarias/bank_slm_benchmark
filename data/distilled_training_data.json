@@ -1,0 +1,667 @@
+[
+  {
+    "instruction": "I lost my credit card. What should I do immediately?",
+    "input": "",
+    "output": "To resolve your issue regarding Security, please follow these steps...",
+    "teacher_reasoning": "Thought: The user is asking about Security. I need to provide a clear, step-by-step guide.",
+    "model_source": "DeepSeek-V3"
+  },
+  {
+    "instruction": "What is the difference between a savings account and a checking account?",
+    "input": "",
+    "output": "To resolve your issue regarding Accounts, please follow these steps...",
+    "teacher_reasoning": "Thought: The user is asking about Accounts. I need to provide a clear, step-by-step guide.",
+    "model_source": "DeepSeek-V3"
+  },
+  {
+    "instruction": "How can I apply for a mortgage?",
+    "input": "",
+    "output": "To resolve your issue regarding Loans, please follow these steps...",
+    "teacher_reasoning": "Thought: The user is asking about Loans. I need to provide a clear, step-by-step guide.",
+    "model_source": "DeepSeek-V3"
+  },
+  {
+    "instruction": "I forgot my online banking password.",
+    "input": "",
+    "output": "To resolve your issue regarding Digital Banking, please follow these steps...",
+    "teacher_reasoning": "Thought: The user is asking about Digital Banking. I need to provide a clear, step-by-step guide.",
+    "model_source": "DeepSeek-V3"
+  },
+  {
+    "instruction": "Why was I charged an overdraft fee?",
+    "input": "",
+    "output": "To resolve your issue regarding Fees, please follow these steps...",
+    "teacher_reasoning": "Thought: The user is asking about Fees. I need to provide a clear, step-by-step guide.",
+    "model_source": "DeepSeek-V3"
+  },
+  {
+    "instruction": "How do I open a joint account?",
+    "input": "",
+    "output": "To resolve your issue regarding Accounts, please follow these steps...",
+    "teacher_reasoning": "Thought: The user is asking about Accounts. I need to provide a clear, step-by-step guide.",
+    "model_source": "DeepSeek-V3"
+  },
+  {
+    "instruction": "Is there a minimum balance requirement for checking accounts?",
+    "input": "",
+    "output": "To resolve your issue regarding Accounts, please follow these steps...",
+    "teacher_reasoning": "Thought: The user is asking about Accounts. I need to provide a clear, step-by-step guide.",
+    "model_source": "DeepSeek-V3"
+  },
+  {
+    "instruction": "Can I have multiple savings accounts?",
+    "input": "",
+    "output": "To resolve your issue regarding Accounts, please follow these steps...",
+    "teacher_reasoning": "Thought: The user is asking about Accounts. I need to provide a clear, step-by-step guide.",
+    "model_source": "DeepSeek-V3"
+  },
+  {
+    "instruction": "How do I close my account?",
+    "input": "",
+    "output": "To resolve your issue regarding Accounts, please follow these steps...",
+    "teacher_reasoning": "Thought: The user is asking about Accounts. I need to provide a clear, step-by-step guide.",
+    "model_source": "DeepSeek-V3"
+  },
+  {
+    "instruction": "What documents do I need to open a student account?",
+    "input": "",
+    "output": "To resolve your issue regarding Accounts, please follow these steps...",
+    "teacher_reasoning": "Thought: The user is asking about Accounts. I need to provide a clear, step-by-step guide.",
+    "model_source": "DeepSeek-V3"
+  },
+  {
+    "instruction": "Do you offer business accounts for startups?",
+    "input": "",
+    "output": "To resolve your issue regarding Accounts, please follow these steps...",
+    "teacher_reasoning": "Thought: The user is asking about Accounts. I need to provide a clear, step-by-step guide.",
+    "model_source": "DeepSeek-V3"
+  },
+  {
+    "instruction": "How can I add a beneficiary to my account?",
+    "input": "",
+    "output": "To resolve your issue regarding Accounts, please follow these steps...",
+    "teacher_reasoning": "Thought: The user is asking about Accounts. I need to provide a clear, step-by-step guide.",
+    "model_source": "DeepSeek-V3"
+  },
+  {
+    "instruction": "What is a certificate of deposit (CD)?",
+    "input": "",
+    "output": "To resolve your issue regarding Accounts, please follow these steps...",
+    "teacher_reasoning": "Thought: The user is asking about Accounts. I need to provide a clear, step-by-step guide.",
+    "model_source": "DeepSeek-V3"
+  },
+  {
+    "instruction": "Can I convert my student account to a regular account?",
+    "input": "",
+    "output": "To resolve your issue regarding Accounts, please follow these steps...",
+    "teacher_reasoning": "Thought: The user is asking about Accounts. I need to provide a clear, step-by-step guide.",
+    "model_source": "DeepSeek-V3"
+  },
+  {
+    "instruction": "How do I order new checks?",
+    "input": "",
+    "output": "To resolve your issue regarding Accounts, please follow these steps...",
+    "teacher_reasoning": "Thought: The user is asking about Accounts. I need to provide a clear, step-by-step guide.",
+    "model_source": "DeepSeek-V3"
+  },
+  {
+    "instruction": "How do I enable two-factor authentication?",
+    "input": "",
+    "output": "To resolve your issue regarding Security, please follow these steps...",
+    "teacher_reasoning": "Thought: The user is asking about Security. I need to provide a clear, step-by-step guide.",
+    "model_source": "DeepSeek-V3"
+  },
+  {
+    "instruction": "I see a transaction I didn't make. What now?",
+    "input": "",
+    "output": "To resolve your issue regarding Security, please follow these steps...",
+    "teacher_reasoning": "Thought: The user is asking about Security. I need to provide a clear, step-by-step guide.",
+    "model_source": "DeepSeek-V3"
+  },
+  {
+    "instruction": "Is mobile banking safe?",
+    "input": "",
+    "output": "To resolve your issue regarding Security, please follow these steps...",
+    "teacher_reasoning": "Thought: The user is asking about Security. I need to provide a clear, step-by-step guide.",
+    "model_source": "DeepSeek-V3"
+  },
+  {
+    "instruction": "How often should I change my banking password?",
+    "input": "",
+    "output": "To resolve your issue regarding Security, please follow these steps...",
+    "teacher_reasoning": "Thought: The user is asking about Security. I need to provide a clear, step-by-step guide.",
+    "model_source": "DeepSeek-V3"
+  },
+  {
+    "instruction": "What is a phishing scam?",
+    "input": "",
+    "output": "To resolve your issue regarding Security, please follow these steps...",
+    "teacher_reasoning": "Thought: The user is asking about Security. I need to provide a clear, step-by-step guide.",
+    "model_source": "DeepSeek-V3"
+  },
+  {
+    "instruction": "How do I freeze my debit card?",
+    "input": "",
+    "output": "To resolve your issue regarding Security, please follow these steps...",
+    "teacher_reasoning": "Thought: The user is asking about Security. I need to provide a clear, step-by-step guide.",
+    "model_source": "DeepSeek-V3"
+  },
+  {
+    "instruction": "Will the bank ever ask for my PIN?",
+    "input": "",
+    "output": "To resolve your issue regarding Security, please follow these steps...",
+    "teacher_reasoning": "Thought: The user is asking about Security. I need to provide a clear, step-by-step guide.",
+    "model_source": "DeepSeek-V3"
+  },
+  {
+    "instruction": "How can I spot a card skimmer at an ATM?",
+    "input": "",
+    "output": "To resolve your issue regarding Security, please follow these steps...",
+    "teacher_reasoning": "Thought: The user is asking about Security. I need to provide a clear, step-by-step guide.",
+    "model_source": "DeepSeek-V3"
+  },
+  {
+    "instruction": "What do I do if my identity is stolen?",
+    "input": "",
+    "output": "To resolve your issue regarding Security, please follow these steps...",
+    "teacher_reasoning": "Thought: The user is asking about Security. I need to provide a clear, step-by-step guide.",
+    "model_source": "DeepSeek-V3"
+  },
+  {
+    "instruction": "Can I set transaction limits on my card?",
+    "input": "",
+    "output": "To resolve your issue regarding Security, please follow these steps...",
+    "teacher_reasoning": "Thought: The user is asking about Security. I need to provide a clear, step-by-step guide.",
+    "model_source": "DeepSeek-V3"
+  },
+  {
+    "instruction": "What is the current interest rate for personal loans?",
+    "input": "",
+    "output": "To resolve your issue regarding Loans, please follow these steps...",
+    "teacher_reasoning": "Thought: The user is asking about Loans. I need to provide a clear, step-by-step guide.",
+    "model_source": "DeepSeek-V3"
+  },
+  {
+    "instruction": "Can I pay off my loan early?",
+    "input": "",
+    "output": "To resolve your issue regarding Loans, please follow these steps...",
+    "teacher_reasoning": "Thought: The user is asking about Loans. I need to provide a clear, step-by-step guide.",
+    "model_source": "DeepSeek-V3"
+  },
+  {
+    "instruction": "What is the difference between a fixed and variable rate loan?",
+    "input": "",
+    "output": "To resolve your issue regarding Loans, please follow these steps...",
+    "teacher_reasoning": "Thought: The user is asking about Loans. I need to provide a clear, step-by-step guide.",
+    "model_source": "DeepSeek-V3"
+  },
+  {
+    "instruction": "How do I check my loan balance?",
+    "input": "",
+    "output": "To resolve your issue regarding Loans, please follow these steps...",
+    "teacher_reasoning": "Thought: The user is asking about Loans. I need to provide a clear, step-by-step guide.",
+    "model_source": "DeepSeek-V3"
+  },
+  {
+    "instruction": "Do you offer auto loans for used cars?",
+    "input": "",
+    "output": "To resolve your issue regarding Loans, please follow these steps...",
+    "teacher_reasoning": "Thought: The user is asking about Loans. I need to provide a clear, step-by-step guide.",
+    "model_source": "DeepSeek-V3"
+  },
+  {
+    "instruction": "What is a home equity line of credit (HELOC)?",
+    "input": "",
+    "output": "To resolve your issue regarding Loans, please follow these steps...",
+    "teacher_reasoning": "Thought: The user is asking about Loans. I need to provide a clear, step-by-step guide.",
+    "model_source": "DeepSeek-V3"
+  },
+  {
+    "instruction": "How long does it take to get a loan approved?",
+    "input": "",
+    "output": "To resolve your issue regarding Loans, please follow these steps...",
+    "teacher_reasoning": "Thought: The user is asking about Loans. I need to provide a clear, step-by-step guide.",
+    "model_source": "DeepSeek-V3"
+  },
+  {
+    "instruction": "What factors affect my eligibility for a loan?",
+    "input": "",
+    "output": "To resolve your issue regarding Loans, please follow these steps...",
+    "teacher_reasoning": "Thought: The user is asking about Loans. I need to provide a clear, step-by-step guide.",
+    "model_source": "DeepSeek-V3"
+  },
+  {
+    "instruction": "Can I refinance my student loans?",
+    "input": "",
+    "output": "To resolve your issue regarding Loans, please follow these steps...",
+    "teacher_reasoning": "Thought: The user is asking about Loans. I need to provide a clear, step-by-step guide.",
+    "model_source": "DeepSeek-V3"
+  },
+  {
+    "instruction": "What is the minimum credit score for a mortgage?",
+    "input": "",
+    "output": "To resolve your issue regarding Loans, please follow these steps...",
+    "teacher_reasoning": "Thought: The user is asking about Loans. I need to provide a clear, step-by-step guide.",
+    "model_source": "DeepSeek-V3"
+  },
+  {
+    "instruction": "How do I deposit a check with my phone?",
+    "input": "",
+    "output": "To resolve your issue regarding Digital Banking, please follow these steps...",
+    "teacher_reasoning": "Thought: The user is asking about Digital Banking. I need to provide a clear, step-by-step guide.",
+    "model_source": "DeepSeek-V3"
+  },
+  {
+    "instruction": "Can I pay bills online?",
+    "input": "",
+    "output": "To resolve your issue regarding Digital Banking, please follow these steps...",
+    "teacher_reasoning": "Thought: The user is asking about Digital Banking. I need to provide a clear, step-by-step guide.",
+    "model_source": "DeepSeek-V3"
+  },
+  {
+    "instruction": "The app is crashing on my phone.",
+    "input": "",
+    "output": "To resolve your issue regarding Digital Banking, please follow these steps...",
+    "teacher_reasoning": "Thought: The user is asking about Digital Banking. I need to provide a clear, step-by-step guide.",
+    "model_source": "DeepSeek-V3"
+  },
+  {
+    "instruction": "How do I download my bank statements?",
+    "input": "",
+    "output": "To resolve your issue regarding Digital Banking, please follow these steps...",
+    "teacher_reasoning": "Thought: The user is asking about Digital Banking. I need to provide a clear, step-by-step guide.",
+    "model_source": "DeepSeek-V3"
+  },
+  {
+    "instruction": "Can I sync my account with budgeting apps?",
+    "input": "",
+    "output": "To resolve your issue regarding Digital Banking, please follow these steps...",
+    "teacher_reasoning": "Thought: The user is asking about Digital Banking. I need to provide a clear, step-by-step guide.",
+    "model_source": "DeepSeek-V3"
+  },
+  {
+    "instruction": "How do I update my contact information?",
+    "input": "",
+    "output": "To resolve your issue regarding Digital Banking, please follow these steps...",
+    "teacher_reasoning": "Thought: The user is asking about Digital Banking. I need to provide a clear, step-by-step guide.",
+    "model_source": "DeepSeek-V3"
+  },
+  {
+    "instruction": "Where can I find my routing number?",
+    "input": "",
+    "output": "To resolve your issue regarding Digital Banking, please follow these steps...",
+    "teacher_reasoning": "Thought: The user is asking about Digital Banking. I need to provide a clear, step-by-step guide.",
+    "model_source": "DeepSeek-V3"
+  },
+  {
+    "instruction": "Can I stop a payment online?",
+    "input": "",
+    "output": "To resolve your issue regarding Digital Banking, please follow these steps...",
+    "teacher_reasoning": "Thought: The user is asking about Digital Banking. I need to provide a clear, step-by-step guide.",
+    "model_source": "DeepSeek-V3"
+  },
+  {
+    "instruction": "Is there a limit to mobile deposits?",
+    "input": "",
+    "output": "To resolve your issue regarding Digital Banking, please follow these steps...",
+    "teacher_reasoning": "Thought: The user is asking about Digital Banking. I need to provide a clear, step-by-step guide.",
+    "model_source": "DeepSeek-V3"
+  },
+  {
+    "instruction": "How do I set up alerts for low balance?",
+    "input": "",
+    "output": "To resolve your issue regarding Digital Banking, please follow these steps...",
+    "teacher_reasoning": "Thought: The user is asking about Digital Banking. I need to provide a clear, step-by-step guide.",
+    "model_source": "DeepSeek-V3"
+  },
+  {
+    "instruction": "How can I avoid monthly maintenance fees?",
+    "input": "",
+    "output": "To resolve your issue regarding Fees, please follow these steps...",
+    "teacher_reasoning": "Thought: The user is asking about Fees. I need to provide a clear, step-by-step guide.",
+    "model_source": "DeepSeek-V3"
+  },
+  {
+    "instruction": "What is the fee for using another bank's ATM?",
+    "input": "",
+    "output": "To resolve your issue regarding Fees, please follow these steps...",
+    "teacher_reasoning": "Thought: The user is asking about Fees. I need to provide a clear, step-by-step guide.",
+    "model_source": "DeepSeek-V3"
+  },
+  {
+    "instruction": "Do you charge for wire transfers?",
+    "input": "",
+    "output": "To resolve your issue regarding Fees, please follow these steps...",
+    "teacher_reasoning": "Thought: The user is asking about Fees. I need to provide a clear, step-by-step guide.",
+    "model_source": "DeepSeek-V3"
+  },
+  {
+    "instruction": "Is there a fee for replacement cards?",
+    "input": "",
+    "output": "To resolve your issue regarding Fees, please follow these steps...",
+    "teacher_reasoning": "Thought: The user is asking about Fees. I need to provide a clear, step-by-step guide.",
+    "model_source": "DeepSeek-V3"
+  },
+  {
+    "instruction": "What is a foreign transaction fee?",
+    "input": "",
+    "output": "To resolve your issue regarding Fees, please follow these steps...",
+    "teacher_reasoning": "Thought: The user is asking about Fees. I need to provide a clear, step-by-step guide.",
+    "model_source": "DeepSeek-V3"
+  },
+  {
+    "instruction": "How much does a cashier's check cost?",
+    "input": "",
+    "output": "To resolve your issue regarding Fees, please follow these steps...",
+    "teacher_reasoning": "Thought: The user is asking about Fees. I need to provide a clear, step-by-step guide.",
+    "model_source": "DeepSeek-V3"
+  },
+  {
+    "instruction": "Are there fees for dormant accounts?",
+    "input": "",
+    "output": "To resolve your issue regarding Fees, please follow these steps...",
+    "teacher_reasoning": "Thought: The user is asking about Fees. I need to provide a clear, step-by-step guide.",
+    "model_source": "DeepSeek-V3"
+  },
+  {
+    "instruction": "What is the returned item fee?",
+    "input": "",
+    "output": "To resolve your issue regarding Fees, please follow these steps...",
+    "teacher_reasoning": "Thought: The user is asking about Fees. I need to provide a clear, step-by-step guide.",
+    "model_source": "DeepSeek-V3"
+  },
+  {
+    "instruction": "Do you charge for paper statements?",
+    "input": "",
+    "output": "To resolve your issue regarding Fees, please follow these steps...",
+    "teacher_reasoning": "Thought: The user is asking about Fees. I need to provide a clear, step-by-step guide.",
+    "model_source": "DeepSeek-V3"
+  },
+  {
+    "instruction": "Can I get a fee refunded?",
+    "input": "",
+    "output": "To resolve your issue regarding Fees, please follow these steps...",
+    "teacher_reasoning": "Thought: The user is asking about Fees. I need to provide a clear, step-by-step guide.",
+    "model_source": "DeepSeek-V3"
+  },
+  {
+    "instruction": "How do I increase my credit limit?",
+    "input": "",
+    "output": "To resolve your issue regarding Credit Cards, please follow these steps...",
+    "teacher_reasoning": "Thought: The user is asking about Credit Cards. I need to provide a clear, step-by-step guide.",
+    "model_source": "DeepSeek-V3"
+  },
+  {
+    "instruction": "What is the APR on my credit card?",
+    "input": "",
+    "output": "To resolve your issue regarding Credit Cards, please follow these steps...",
+    "teacher_reasoning": "Thought: The user is asking about Credit Cards. I need to provide a clear, step-by-step guide.",
+    "model_source": "DeepSeek-V3"
+  },
+  {
+    "instruction": "How do I redeem my rewards points?",
+    "input": "",
+    "output": "To resolve your issue regarding Credit Cards, please follow these steps...",
+    "teacher_reasoning": "Thought: The user is asking about Credit Cards. I need to provide a clear, step-by-step guide.",
+    "model_source": "DeepSeek-V3"
+  },
+  {
+    "instruction": "Can I add an authorized user?",
+    "input": "",
+    "output": "To resolve your issue regarding Credit Cards, please follow these steps...",
+    "teacher_reasoning": "Thought: The user is asking about Credit Cards. I need to provide a clear, step-by-step guide.",
+    "model_source": "DeepSeek-V3"
+  },
+  {
+    "instruction": "What is a balance transfer?",
+    "input": "",
+    "output": "To resolve your issue regarding Credit Cards, please follow these steps...",
+    "teacher_reasoning": "Thought: The user is asking about Credit Cards. I need to provide a clear, step-by-step guide.",
+    "model_source": "DeepSeek-V3"
+  },
+  {
+    "instruction": "Is there an annual fee for this card?",
+    "input": "",
+    "output": "To resolve your issue regarding Credit Cards, please follow these steps...",
+    "teacher_reasoning": "Thought: The user is asking about Credit Cards. I need to provide a clear, step-by-step guide.",
+    "model_source": "DeepSeek-V3"
+  },
+  {
+    "instruction": "How do I dispute a credit card charge?",
+    "input": "",
+    "output": "To resolve your issue regarding Credit Cards, please follow these steps...",
+    "teacher_reasoning": "Thought: The user is asking about Credit Cards. I need to provide a clear, step-by-step guide.",
+    "model_source": "DeepSeek-V3"
+  },
+  {
+    "instruction": "When is my credit card payment due?",
+    "input": "",
+    "output": "To resolve your issue regarding Credit Cards, please follow these steps...",
+    "teacher_reasoning": "Thought: The user is asking about Credit Cards. I need to provide a clear, step-by-step guide.",
+    "model_source": "DeepSeek-V3"
+  },
+  {
+    "instruction": "Does applying for a credit card hurt my score?",
+    "input": "",
+    "output": "To resolve your issue regarding Credit Cards, please follow these steps...",
+    "teacher_reasoning": "Thought: The user is asking about Credit Cards. I need to provide a clear, step-by-step guide.",
+    "model_source": "DeepSeek-V3"
+  },
+  {
+    "instruction": "What happens if I miss a payment?",
+    "input": "",
+    "output": "To resolve your issue regarding Credit Cards, please follow these steps...",
+    "teacher_reasoning": "Thought: The user is asking about Credit Cards. I need to provide a clear, step-by-step guide.",
+    "model_source": "DeepSeek-V3"
+  },
+  {
+    "instruction": "How do I send money to a friend?",
+    "input": "",
+    "output": "To resolve your issue regarding Transfers, please follow these steps...",
+    "teacher_reasoning": "Thought: The user is asking about Transfers. I need to provide a clear, step-by-step guide.",
+    "model_source": "DeepSeek-V3"
+  },
+  {
+    "instruction": "What is the limit for Zelle transfers?",
+    "input": "",
+    "output": "To resolve your issue regarding Transfers, please follow these steps...",
+    "teacher_reasoning": "Thought: The user is asking about Transfers. I need to provide a clear, step-by-step guide.",
+    "model_source": "DeepSeek-V3"
+  },
+  {
+    "instruction": "How long do wire transfers take?",
+    "input": "",
+    "output": "To resolve your issue regarding Transfers, please follow these steps...",
+    "teacher_reasoning": "Thought: The user is asking about Transfers. I need to provide a clear, step-by-step guide.",
+    "model_source": "DeepSeek-V3"
+  },
+  {
+    "instruction": "Can I transfer money to another bank?",
+    "input": "",
+    "output": "To resolve your issue regarding Transfers, please follow these steps...",
+    "teacher_reasoning": "Thought: The user is asking about Transfers. I need to provide a clear, step-by-step guide.",
+    "model_source": "DeepSeek-V3"
+  },
+  {
+    "instruction": "Is there a fee for internal transfers?",
+    "input": "",
+    "output": "To resolve your issue regarding Transfers, please follow these steps...",
+    "teacher_reasoning": "Thought: The user is asking about Transfers. I need to provide a clear, step-by-step guide.",
+    "model_source": "DeepSeek-V3"
+  },
+  {
+    "instruction": "How do I schedule a recurring transfer?",
+    "input": "",
+    "output": "To resolve your issue regarding Transfers, please follow these steps...",
+    "teacher_reasoning": "Thought: The user is asking about Transfers. I need to provide a clear, step-by-step guide.",
+    "model_source": "DeepSeek-V3"
+  },
+  {
+    "instruction": "Can I cancel a pending transfer?",
+    "input": "",
+    "output": "To resolve your issue regarding Transfers, please follow these steps...",
+    "teacher_reasoning": "Thought: The user is asking about Transfers. I need to provide a clear, step-by-step guide.",
+    "model_source": "DeepSeek-V3"
+  },
+  {
+    "instruction": "What is an ACH transfer?",
+    "input": "",
+    "output": "To resolve your issue regarding Transfers, please follow these steps...",
+    "teacher_reasoning": "Thought: The user is asking about Transfers. I need to provide a clear, step-by-step guide.",
+    "model_source": "DeepSeek-V3"
+  },
+  {
+    "instruction": "Do you support international transfers?",
+    "input": "",
+    "output": "To resolve your issue regarding Transfers, please follow these steps...",
+    "teacher_reasoning": "Thought: The user is asking about Transfers. I need to provide a clear, step-by-step guide.",
+    "model_source": "DeepSeek-V3"
+  },
+  {
+    "instruction": "Why is my transfer on hold?",
+    "input": "",
+    "output": "To resolve your issue regarding Transfers, please follow these steps...",
+    "teacher_reasoning": "Thought: The user is asking about Transfers. I need to provide a clear, step-by-step guide.",
+    "model_source": "DeepSeek-V3"
+  },
+  {
+    "instruction": "How do I start investing?",
+    "input": "",
+    "output": "To resolve your issue regarding Investments, please follow these steps...",
+    "teacher_reasoning": "Thought: The user is asking about Investments. I need to provide a clear, step-by-step guide.",
+    "model_source": "DeepSeek-V3"
+  },
+  {
+    "instruction": "What are the fees for trading stocks?",
+    "input": "",
+    "output": "To resolve your issue regarding Investments, please follow these steps...",
+    "teacher_reasoning": "Thought: The user is asking about Investments. I need to provide a clear, step-by-step guide.",
+    "model_source": "DeepSeek-V3"
+  },
+  {
+    "instruction": "Can I open an IRA?",
+    "input": "",
+    "output": "To resolve your issue regarding Investments, please follow these steps...",
+    "teacher_reasoning": "Thought: The user is asking about Investments. I need to provide a clear, step-by-step guide.",
+    "model_source": "DeepSeek-V3"
+  },
+  {
+    "instruction": "Do you have financial advisors?",
+    "input": "",
+    "output": "To resolve your issue regarding Investments, please follow these steps...",
+    "teacher_reasoning": "Thought: The user is asking about Investments. I need to provide a clear, step-by-step guide.",
+    "model_source": "DeepSeek-V3"
+  },
+  {
+    "instruction": "What is the minimum to open an investment account?",
+    "input": "",
+    "output": "To resolve your issue regarding Investments, please follow these steps...",
+    "teacher_reasoning": "Thought: The user is asking about Investments. I need to provide a clear, step-by-step guide.",
+    "model_source": "DeepSeek-V3"
+  },
+  {
+    "instruction": "Are my investments FDIC insured?",
+    "input": "",
+    "output": "To resolve your issue regarding Investments, please follow these steps...",
+    "teacher_reasoning": "Thought: The user is asking about Investments. I need to provide a clear, step-by-step guide.",
+    "model_source": "DeepSeek-V3"
+  },
+  {
+    "instruction": "How do I transfer an existing portfolio here?",
+    "input": "",
+    "output": "To resolve your issue regarding Investments, please follow these steps...",
+    "teacher_reasoning": "Thought: The user is asking about Investments. I need to provide a clear, step-by-step guide.",
+    "model_source": "DeepSeek-V3"
+  },
+  {
+    "instruction": "What are mutual funds?",
+    "input": "",
+    "output": "To resolve your issue regarding Investments, please follow these steps...",
+    "teacher_reasoning": "Thought: The user is asking about Investments. I need to provide a clear, step-by-step guide.",
+    "model_source": "DeepSeek-V3"
+  },
+  {
+    "instruction": "Can I buy crypto?",
+    "input": "",
+    "output": "To resolve your issue regarding Investments, please follow these steps...",
+    "teacher_reasoning": "Thought: The user is asking about Investments. I need to provide a clear, step-by-step guide.",
+    "model_source": "DeepSeek-V3"
+  },
+  {
+    "instruction": "How do I access tax documents for my investments?",
+    "input": "",
+    "output": "To resolve your issue regarding Investments, please follow these steps...",
+    "teacher_reasoning": "Thought: The user is asking about Investments. I need to provide a clear, step-by-step guide.",
+    "model_source": "DeepSeek-V3"
+  },
+  {
+    "instruction": "What are your branch hours?",
+    "input": "",
+    "output": "To resolve your issue regarding General, please follow these steps...",
+    "teacher_reasoning": "Thought: The user is asking about General. I need to provide a clear, step-by-step guide.",
+    "model_source": "DeepSeek-V3"
+  },
+  {
+    "instruction": "How do I find an ATM near me?",
+    "input": "",
+    "output": "To resolve your issue regarding General, please follow these steps...",
+    "teacher_reasoning": "Thought: The user is asking about General. I need to provide a clear, step-by-step guide.",
+    "model_source": "DeepSeek-V3"
+  },
+  {
+    "instruction": "How do I file a complaint?",
+    "input": "",
+    "output": "To resolve your issue regarding General, please follow these steps...",
+    "teacher_reasoning": "Thought: The user is asking about General. I need to provide a clear, step-by-step guide.",
+    "model_source": "DeepSeek-V3"
+  },
+  {
+    "instruction": "Is the bank open on holidays?",
+    "input": "",
+    "output": "To resolve your issue regarding General, please follow these steps...",
+    "teacher_reasoning": "Thought: The user is asking about General. I need to provide a clear, step-by-step guide.",
+    "model_source": "DeepSeek-V3"
+  },
+  {
+    "instruction": "How do I update my mailing address?",
+    "input": "",
+    "output": "To resolve your issue regarding General, please follow these steps...",
+    "teacher_reasoning": "Thought: The user is asking about General. I need to provide a clear, step-by-step guide.",
+    "model_source": "DeepSeek-V3"
+  },
+  {
+    "instruction": "Do you have a notary public?",
+    "input": "",
+    "output": "To resolve your issue regarding General, please follow these steps...",
+    "teacher_reasoning": "Thought: The user is asking about General. I need to provide a clear, step-by-step guide.",
+    "model_source": "DeepSeek-V3"
+  },
+  {
+    "instruction": "Can I open an account for a minor?",
+    "input": "",
+    "output": "To resolve your issue regarding General, please follow these steps...",
+    "teacher_reasoning": "Thought: The user is asking about General. I need to provide a clear, step-by-step guide.",
+    "model_source": "DeepSeek-V3"
+  },
+  {
+    "instruction": "What is the bank's routing number for international wires?",
+    "input": "",
+    "output": "To resolve your issue regarding General, please follow these steps...",
+    "teacher_reasoning": "Thought: The user is asking about General. I need to provide a clear, step-by-step guide.",
+    "model_source": "DeepSeek-V3"
+  },
+  {
+    "instruction": "How do I contact customer support?",
+    "input": "",
+    "output": "To resolve your issue regarding General, please follow these steps...",
+    "teacher_reasoning": "Thought: The user is asking about General. I need to provide a clear, step-by-step guide.",
+    "model_source": "DeepSeek-V3"
+  },
+  {
+    "instruction": "Do you offer safe deposit boxes?",
+    "input": "",
+    "output": "To resolve your issue regarding General, please follow these steps...",
+    "teacher_reasoning": "Thought: The user is asking about General. I need to provide a clear, step-by-step guide.",
+    "model_source": "DeepSeek-V3"
+  }
+]
