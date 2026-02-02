@@ -90,7 +90,13 @@ python src/utils/generate_dataset.py
 ```
 
 ### Phase 2: Fine-Tuning (SFT)
-Train a base model (e.g., TinyLlama) on your specific banking data:
+Train a base model on your specific banking data. Recommended SLMs for this task:
+- `TinyLlama/TinyLlama-1.1B-Chat-v1.0` (Fastest, low VRAM)
+- `Qwen/Qwen2-1.5B-Instruct` (Excellent reasoning)
+- `microsoft/Phi-3-mini-4k-instruct` (Strong performance)
+- `HuggingFaceTB/SmolLM-1.7B-Instruct` (Highly optimized)
+- `Qwen/Qwen1.5-0.5B-Chat` (Ultra-lightweight)
+
 ```bash
 python src/train.py \
     --base_model "TinyLlama/TinyLlama-1.1B-Chat-v1.0" \
@@ -99,14 +105,19 @@ python src/train.py \
 ```
 
 ### Phase 3: Benchmarking
-Compare multiple models. You can mix HF models and local GGUF files.
+Run the benchmarking suite. The standard command works across all hardware (Mac, NVIDIA GPU, or CPU):
+
 ```bash
+# Universal command (runs on any hardware)
 python src/benchmark.py \
     --models Qwen/Qwen2-1.5B-Instruct HuggingFaceTB/SmolLM-1.7B-Instruct \
-    --gguf-models models/tinyllama-1.1b.Q4_K_M.gguf \
-    --use-4bit \
     --run-name "comparison_test"
 ```
+
+**Hardware-Specific Tips:**
+- **Mac (Apple Silicon)**: Use the command above; it will automatically use `mps` (Metal). You can also benchmark local **GGUF** files by adding `--gguf-models models/your_model.gguf`.
+- **NVIDIA GPU**: Add the `--use-4bit` flag to enable memory-efficient 4-bit quantization via `bitsandbytes`.
+
 
 ### Phase 4: Evaluation & Reporting
 After benchmarking, run the evaluation to generate the visual report:
