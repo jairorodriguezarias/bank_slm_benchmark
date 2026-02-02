@@ -1,82 +1,135 @@
-# Bank SLM Benchmark
+# Bank SLM Benchmark & Distillation
 
-A comprehensive benchmarking suite for testing and specialized fine-tuning of Small Language Models (SLMs) on banking customer support tasks.
+A comprehensive suite for **Benchmarking**, **Distilling**, and **Fine-Tuning** Small Language Models (SLMs) specifically for the banking domain. This project unifies standard performance metrics with advanced knowledge distillation workflows and financial reasoning datasets.
 
-## Features
+## 🚀 Key Features
 
-- **Automated Benchmarking**: Measures latency, throughput (tokens/sec), and response quality (ROUGE-L, Semantic Similarity).
-- **Dual Dataset Support**: Focuses on a high-quality 195-query banking set (`bank_queries.json`) and supports the full 13,000+ query `Banking77` dataset for large-scale intent testing.
-- **Mac-Optimized Quantization**: Support for GGUF models via `llama-cpp-python` leveraging Metal acceleration on Apple Silicon.
-- **Visual Analysis**: Integrated plotting for Accuracy vs. Latency and Throughput comparisons.
-- **Supervised Fine-Tuning (SFT)**: Built-in support for LoRA-based fine-tuning to specialize models for banking domain knowledge.
-- **Dataset Synthesis**: Tooling to convert technical PDFs into structured instruction-output datasets for specialized training.
+### 1. Automated Benchmarking
+- **Metrics**: Latency, Throughput (tokens/sec), ROUGE-L, and Semantic Similarity (Cosine).
+- **Mac-Optimized**: Native Metal (MPS) support for PyTorch and GGUF models via `llama-cpp-python`.
+- **Visualization**: Automated PDF report generation with Accuracy vs. Latency scatter plots.
 
-## Project Structure
+### 2. Specialized Datasets
+- **Bank Queries**: 195 high-quality custom banking queries (Primary test set).
+- **FinQA**: Financial numerical reasoning over earnings reports (6,000+ records). [Original Repository](https://github.com/czyssrs/FinQA).
+- **Banking77**: Large-scale intent detection (13,000+ records).
 
-- `src/benchmark.py`: Main execution script. Supports Hugging Face models, 4-bit quantization, and GGUF models.
-- `src/evaluate.py`: Unified evaluation script. Calculates metrics (ROUGE-L, Semantic Similarity), generates plots, and updates reports.
-- `src/train.py`: SFT training script using `peft` and `trl` for efficient LoRA adaptation.
-- `src/utils/`: Directory for utility scripts (downloading datasets/models and generating synthetic data).
+### 3. Knowledge Distillation (Teacher-Student)
+- **DeepSeek Integration**: Uses **DeepSeek-V3** (via API) to generate high-quality Chain-of-Thought (CoT) reasoning.
+- **Data Synthesis**: Converts raw banking queries into rich training examples.
+- **Comparison Pipeline**: Benchmark "Student" models (e.g., Qwen2, Phi-3) against "Distilled" variants.
 
-## Workflow & Usage
+### 4. Supervised Fine-Tuning (SFT) & Dataset Generation
+- **PDF to SFT**: Converts technical banking PDFs into Q&A pairs.
+- **LoRA Training**: Efficient fine-tuning scripts for banking domain adaptation.
 
-### 1. Installation
-```bash
-# Install dependencies
-pip install -r requirements.txt
+---
 
-# For Mac users (Metal support for GGUF)
-CMAKE_ARGS="-DLLAMA_METAL=on" pip install llama-cpp-python
+## 📂 Project Structure
+
+```text
+├── data/
+│   ├── bank_queries.json            # Primary test set (195 queries)
+│   ├── finqa/                       # FinQA Dataset (numerical reasoning)
+│   ├── distilled_training_data.json # Generated Teacher CoT data
+│   ├── banking77_full.json          # Large-scale intent dataset
+│   └── raw_txt/                     # Source texts (PDF extractions)
+├── src/
+│   ├── benchmark.py                 # Main unified benchmarking script
+│   ├── generate_distillation_data.py # Generates training data from DeepSeek
+│   ├── evaluate.py                  # Calcs metrics & generates PDF reports
+│   ├── train.py                     # SFT/LoRA training script
+│   └── utils/                       # Helpers (PDF, Downloads, Dataset Gen)
+│       ├── download_banking77.py    # Banking77 dataset downloader
+│       ├── download_finqa.py        # FinQA downloader & verifier
+│       └── generate_dataset.py      # PDF to SFT pair converter
+├── models/                          # Local model storage (GGUF/HF)
+└── results/                         # CSV logs, plots, and PDF reports
 ```
 
-### 2. Dataset Synthesis (PDF to Instruction)
-Convert technical documents (PDFs) into high-quality SFT training datasets. This tool extracts text and uses a local SLM to generate complex Instruction-Output pairs.
+---
 
-1. Place your PDFs in `data/raw_pdfs/`.
-2. Run the generator (defaults to `Qwen2.5-0.5B-Instruct` for speed):
-```bash
-python src/utils/generate_dataset.py
-```
-This script performs a 2-step process:
-- **PDF to TXT**: Clean extraction skipping index/reference pages.
-- **SFT Generation**: Batch-processed, hardware-accelerated generation of training pairs saved in `data/blockchain_sft_dataset.jsonl`.
+## 🛠️ Installation
 
-### 3. Fine-Tuning a Model (SFT)
-Specialize a base model for the banking or blockchain domain using the generated dataset:
-```bash
-python src/train.py --base_model "TinyLlama/TinyLlama-1.1B-Chat-v1.0" --output_dir "models/tuned/TinyLlama-Banking"
-```
+1. **Clone and Install Dependencies**:
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-### 4. Running a Benchmark
-Execute the unified benchmark on 195 high-quality banking queries:
+2. **Download Datasets**:
+   ```bash
+   # Download the FinQA dataset
+   python src/utils/download_finqa.py
+   
+   # Download the Banking77 dataset
+   python src/utils/download_banking77.py
+   ```
+
+3. **Mac Silicon Optimization (Optional but Recommended)**:
+   ```bash
+   CMAKE_ARGS="-DLLAMA_METAL=on" pip install llama-cpp-python --upgrade --force-reinstall --no-cache-dir
+   ```
+
+4. **Environment Configuration**:
+   Create a `.env` file:
+   ```env
+   HF_TOKEN=your_huggingface_token
+   DEEPSEEK_API_KEY=your_deepseek_key
+   ```
+
+---
+
+## 📖 Usage Guide
+
+### A. Data & Distillation Workflow
+
+1. **Generate Distilled Data**:
+   ```bash
+   python src/generate_distillation_data.py
+   ```
+
+2. **Fine-Tune (Optional)**:
+   ```bash
+   python src/train.py
+   ```
+
+### B. Benchmarking
+
+Run any model (HuggingFace or GGUF) using the unified script:
+
 ```bash
-# Standard benchmark (HF models)
+# General benchmark
 python src/benchmark.py
 
-# GGUF benchmark (Mac optimized)
-python src/benchmark.py --gguf-models models/tinyllama-1.1b-chat-v1.0.Q4_K_M.gguf
-
-# Using a specific dataset (e.g. Banking77)
-python src/benchmark.py --dataset data/banking77_full.json
+# Benchmark specific models
+python src/benchmark.py --models Qwen/Qwen2-1.5B-Instruct microsoft/Phi-3-mini-4k-instruct
 ```
 
-### 5. Evaluating and Visualizing Results
-Calculate metrics (ROUGE-L, Semantic Similarity) and generate comparison charts:
+### C. Evaluation & Reporting
+
 ```bash
 python src/evaluate.py
 ```
-This updates `BENCHMARK_REPORT.md` and generates a professional `benchmark_report.pdf` in the results directory.
 
-## Analysis & Reports
+### D. Dataset Generation (PDF to SFT)
 
-The project produces a comprehensive PDF report (`benchmark_report.pdf`) and a markdown summary (`BENCHMARK_REPORT.md`) that include:
-- **Performance Tables**: Comprehensive metrics (Latency, TPS, ROUGE-L, Similarity) for all tested models.
-- **Visualizations**: Scatter plots for Accuracy vs. Latency and bar charts for Throughput and Quality scores.
+To convert raw PDFs (placed in `data/raw_pdfs/`) into a high-quality SFT dataset:
 
-This automated reporting ensures that stakeholders can quickly interpret which Small Language Model is best suited for specific banking use cases.
+```bash
+python src/utils/generate_dataset.py
+```
+*Note: This requires a local SLM (default: Qwen2.5-0.5B) to generate synthetic Q&A pairs.*
 
-## Hardware Support
-The project is optimized for:
-- **macOS**: Native acceleration via Metal (MPS) for HF models and GGUF.
-- **Linux/Windows**: Full CUDA support for NVIDIA GPUs.
-- **CPU**: Fallback mode for environment-agnostic execution.
+---
+
+## 📊 Evaluation Methodology
+
+- **ROUGE-L**: Structural overlap with reference answers.
+- **Semantic Similarity**: `all-MiniLM-L6-v2` embedding distance.
+- **Latency**: End-to-end response time (ms).
+- **Throughput**: Generation speed (tokens/second).
+
+## 🖥️ Hardware Notes
+
+- **Apple Silicon (M1/M2/M3)**: Optimized for Metal via `mps` and `llama.cpp`.
+- **CUDA**: Full support for NVIDIA GPUs.
