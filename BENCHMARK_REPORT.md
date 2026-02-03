@@ -1,9 +1,10 @@
 # Bank SLM Benchmark Report
 
-| Model                                |   Avg Latency (s) |   Avg Tokens/Sec |   Avg ROUGE-L |   Avg Semantic Similarity |   Total Tokens |
-|:-------------------------------------|------------------:|-----------------:|--------------:|--------------------------:|---------------:|
-| TinyLlama-1.1B-Chat-v1.0             |           7.93894 |          16.2998 |      0.148256 |                  0.659826 |          24439 |
-| tinyllama-1/1b-chat-v1/0/Q4/K/M/gguf |           1.94319 |          64.1966 |      0.142576 |                  0.655562 |          24337 |
-| Qwen1.5-0.5B-Chat                    |           4.17268 |          30.1424 |      0.131141 |                  0.642522 |          24465 |
+| Model                    |   Avg Latency (s) |   Avg Tokens/Sec |   Avg ROUGE-L |   Avg Semantic Similarity |   Total Tokens |
+|:-------------------------|------------------:|-----------------:|--------------:|--------------------------:|---------------:|
+| TinyLlama-1.1B-Chat-v1.0 |           7.49899 |          16.9107 |      0.146664 |                  0.656639 |          24556 |
+| Qwen2-1.5B-Instruct      |          10.5861  |          12.4337 |      0.129712 |                  0.663007 |          25541 |
+| opt-1.3b                 |           8.96123 |          10.9871 |      0.110707 |                  0.439141 |          15482 |
+| SmolLM-1.7B-Instruct     |          15.9166  |           7.568  |      0.176006 |                  0.671306 |          20231 |
 
 ![Benchmark Plots](results/latest/benchmark_plots.png)
