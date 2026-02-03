@@ -52,7 +52,15 @@ def train(base_model_name, data_path, output_dir):
     
     # Manually apply formatting
     def format_example(example):
-        return {"text": f"User: {example['query']}\nAssistant: {example['reference_answer']}"}
+        # Handle distilled data schema (instruction/output) vs original (query/reference_answer)
+        if 'instruction' in example and 'output' in example:
+            query = example['instruction']
+            answer = example['output']
+        else:
+            query = example.get('query', '')
+            answer = example.get('reference_answer', '')
+            
+        return {"text": f"User: {query}\nAssistant: {answer}"}
         
     dataset = dataset.map(format_example)
 

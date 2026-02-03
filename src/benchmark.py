@@ -183,10 +183,10 @@ def main():
         hf_models = [
             "TinyLlama/TinyLlama-1.1B-Chat-v1.0",
             "Qwen/Qwen2-1.5B-Instruct",
-            "Qwen/Qwen1.5-0.5B-Chat",
             "HuggingFaceTB/SmolLM-1.7B-Instruct",
             "facebook/opt-1.3b",
-            "facebook/opt-125m"
+            "mtgv/MobileLLaMA-1.4B-Base",
+            "google/gemma-2b-it"
         ]
         # Auto-discover local SFT models if no specific list provided
         if os.path.exists(MODELS_ROOT):

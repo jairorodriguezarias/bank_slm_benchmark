@@ -127,6 +127,14 @@ python src/benchmark.py \
     --run-name "comparison_test"
 ```
 
+**Default Models Tested:**
+- `TinyLlama/TinyLlama-1.1B-Chat-v1.0`
+- `Qwen/Qwen2-1.5B-Instruct`
+- `HuggingFaceTB/SmolLM-1.7B-Instruct`
+- `facebook/opt-1.3b`
+- `mtgv/MobileLLaMA-1.4B-Base`
+- `google/gemma-2b-it`
+
 **Hardware-Specific Tips:**
 - **Mac (Apple Silicon)**: Use the command above; it will automatically use `mps` (Metal). You can also benchmark local **GGUF** files by adding `--gguf-models models/your_model.gguf`.
 - **NVIDIA GPU**: Add the `--use-4bit` flag to enable memory-efficient 4-bit quantization via `bitsandbytes`.

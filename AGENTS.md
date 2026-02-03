@@ -4,11 +4,14 @@
 Benchmarks SLMs on a 95-query banking dataset using `transformers`, `rouge-score`, and `sentence-transformers`. **Includes a Distillation pipeline to improve SLM performance using DeepSeek-V3 as a teacher.**
 
 ## Current Status (As of Feb 02, 2026)
+- **Benchmarking Updates:**
+    - Successfully executed a full benchmark run for **TinyLlama-1.1B**, **Qwen2-1.5B**, **SmolLM-1.7B**, and **OPT-1.3B**.
+    - Updated `src/benchmark.py` to include **MobileLLaMA-1.4B** and **Gemma-2b** in the default model list for future runs.
+    - Generated a comprehensive PDF report in `results/latest/benchmark_report.pdf`.
 - **Project Unification:**
     - Merged `distillation_SLM` into this project.
-    - Added `src/utils/generate_distillation_data.py` for generating synthetic training data from DeepSeek-V3.
-    - Added `src/benchmark_distillation.py` (formerly `benchmark_comparison.py`) for specific teacher-student comparisons.
-    - Archived legacy reports to `DISTILLATION_REPORT_ARCHIVE.md`.
+    - Added `src/utils/generate_distillation_data.py` for generating synthetic training data from DeepSeek-V3/Gemini.
+    - Refactored `src/train.py` to support both original and distilled dataset schemas.
 - **Dataset Expansion:**
     - **Primary Set:** Expanded `data/bank_queries.json` from 95 to **195 high-quality queries** with detailed reference answers.
     - **Secondary Set:** Downloaded the **full Banking77 dataset** (13,069 queries) via `src/utils/download_banking77.py` and saved as `data/banking77_full.json`.
