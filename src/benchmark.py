@@ -173,10 +173,28 @@ def main():
     print(f"Results will be saved to: {run_dir}")
 
     # Load dataset
-    with open(args.dataset, 'r') as f:
-        queries = json.load(f)
+    if args.dataset.endswith(".jsonl"):
+        with open(args.dataset, 'r') as f:
+            queries = [json.loads(line) for line in f if line.strip()]
+    else:
+        with open(args.dataset, 'r') as f:
+            queries = json.load(f)
 
-    # Determine models to test
+    # Standardize queries for benchmarking
+    standardized_queries = []
+    for i, item in enumerate(queries):
+        query_text = item.get('query', item.get('prompt', item.get('instruction', '')))
+        query_id = item.get('id', item.get('query_id', str(i)))
+        category = item.get('category', 'general')
+        
+        if query_text:
+            standardized_queries.append({
+                "id": query_id,
+                "query": query_text,
+                "category": category
+            })
+    
+    queries = standardized_queries
     hf_models = args.models or []
     # If no models specified, use a default list (matching previous behavior)
     if not hf_models and not args.gguf_models:

@@ -52,9 +52,26 @@ def train(base_model_name, data_path, output_dir):
             data = json.load(f)
     
     # Convert to HuggingFace Dataset
-    dataset = Dataset.from_list(data)
+    full_dataset = Dataset.from_list(data)
     
-    # Manually apply formatting
+    # Split into train/test (90/10)
+    dataset_dict = full_dataset.train_test_split(test_size=0.1, seed=42)
+    train_dataset = dataset_dict["train"]
+    test_dataset = dataset_dict["test"]
+
+    print(f"Dataset split: {len(train_dataset)} training examples, {len(test_dataset)} test examples.")
+
+    # Save the test split for benchmarking later
+    if data_path.endswith(".jsonl"):
+        test_file_path = data_path.replace(".jsonl", "_test.jsonl")
+    else:
+        test_file_path = data_path.replace(".json", "_test.json")
+    with open(test_file_path, 'w') as f:
+        for item in test_dataset:
+            f.write(json.dumps(item) + '\n')
+    print(f"Test split saved to: {test_file_path}")
+    
+    # Apply formatting using tokenizer's chat template
     def format_example(example):
         # Handle various schemas: instruction/output, query/reference_answer, prompt/completion
         if 'instruction' in example and 'output' in example:
@@ -67,9 +84,17 @@ def train(base_model_name, data_path, output_dir):
             query = example.get('query', '')
             answer = example.get('reference_answer', '')
             
-        return {"text": f"User: {query}\nAssistant: {answer}"}
+        messages = [
+            {"role": "user", "content": query},
+            {"role": "assistant", "content": answer}
+        ]
         
-    dataset = dataset.map(format_example)
+        # Use the model's native chat template
+        formatted_text = tokenizer.apply_chat_template(messages, tokenize=False)
+        return {"text": formatted_text}
+        
+    train_dataset = train_dataset.map(format_example)
+    test_dataset = test_dataset.map(format_example)
 
     # Load Model
     device = "mps" if torch.backends.mps.is_available() else "cpu"
@@ -93,11 +118,13 @@ def train(base_model_name, data_path, output_dir):
     
     # Training Arguments
     training_args = setup_training_args(output_dir)
+    training_args.eval_strategy = "epoch"
 
     # Trainer
     trainer = SFTTrainer(
         model=model,
-        train_dataset=dataset,
+        train_dataset=train_dataset,
+        eval_dataset=test_dataset,
         peft_config=peft_config,
         processing_class=tokenizer,
         args=training_args,
@@ -112,8 +139,8 @@ def train(base_model_name, data_path, output_dir):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--base_model", type=str, default="TinyLlama/TinyLlama-1.1B-Chat-v1.0")
-    parser.add_argument("--data", type=str, default="data/bank_queries.json")
-    parser.add_argument("--output_dir", type=str, default="models/tuned/bank_assistant_adapter")
+    parser.add_argument("--data", type=str, default="data/train_final_5500.jsonl")
+    parser.add_argument("--output_dir", type=str, default="models/tuned/bank_expert_slm")
     
     args = parser.parse_args()
     

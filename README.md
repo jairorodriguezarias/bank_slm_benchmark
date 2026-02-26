@@ -7,10 +7,14 @@ A comprehensive suite for **Benchmarking**, **Distilling**, and **Fine-Tuning** 
 ## 🚀 Key Features
 
 ### 1. Unified Benchmarking Engine (`src/benchmark.py`)
+- **Multi-Format Dataset Support**: Seamlessly reads `.json` and `.jsonl` files, dynamically handling varying schema keys (e.g., `prompt`, `instruction`, `query`).
 - **Multi-Framework Support**: Seamlessly benchmark Hugging Face (HF) transformers and GGUF models.
 - **Hardware Acceleration**: Automatic detection and utilization of **Apple Silicon Metal (MPS)**, **NVIDIA CUDA**, or CPU.
 - **Quantization Support**: Test models in `float16` or `int4` (via `bitsandbytes`) to analyze the accuracy vs. performance trade-offs.
 - **Batch Processing**: Automated timestamped results management with a "latest" symlink for easy access.
+
+### 2. End-to-End Automation
+- **Pipeline Script**: Includes a `run_pipeline.sh` script for single-command execution of the entire workflow (Training -> Benchmarking -> Evaluation).
 
 ### 2. Specialized Financial Datasets
 - **Bank Queries (Primary)**: 195 hand-crafted queries covering Cards, Accounts, Security, and Loans, each with a gold-standard reference answer.
@@ -128,6 +132,8 @@ Train a base model on the final merged dataset. Recommended SLMs:
 - `Qwen/Qwen2.5-0.5B-Instruct` (Excellent reasoning/efficiency)
 - `TinyLlama/TinyLlama-1.1B-Chat-v1.0` (Fastest)
 
+**Automated Split:** The training script automatically performs a 90/10 train/test split. It trains on 90% of the data and saves the remaining 10% to `data/train_final_5500_test.jsonl` to ensure unbiased benchmarking later.
+
 ```bash
 python src/train.py \
     --base_model "Qwen/Qwen2.5-0.5B-Instruct" \
@@ -135,14 +141,22 @@ python src/train.py \
     --output_dir "models/tuned/bank_expert_slm"
 ```
 
-### Phase 3: Benchmarking
-Run the benchmarking suite. The standard command works across all hardware (Mac, NVIDIA GPU, or CPU):
+### Automated Pipeline Execution
+For the simplest end-to-end experience (Training -> Benchmarking -> Evaluation), you can use the included pipeline script. This will train the model, test it against the unseen 10% split, and generate the final PDF report:
+
+```bash
+./run_pipeline.sh
+```
+
+### Phase 3: Benchmarking (Manual)
+If you prefer to run the benchmarking suite manually, use the standard command. Ensure you point it to the *test* split generated during training:
 
 ```bash
 # Universal command (runs on any hardware)
 python src/benchmark.py \
-    --models Qwen/Qwen2-1.5B-Instruct HuggingFaceTB/SmolLM-1.7B-Instruct \
-    --run-name "comparison_test"
+    --dataset "data/train_final_5500_test.jsonl" \
+    --models "models/tuned/bank_expert_slm" \
+    --run-name "expert_model_test"
 ```
 
 **Default Models Tested:**
