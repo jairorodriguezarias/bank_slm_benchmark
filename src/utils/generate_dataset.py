@@ -1,39 +1,37 @@
 import os
 import json
 import fitz  # PyMuPDF
-import torch
 import re
-from transformers import AutoModelForCausalLM, AutoTokenizer
+import argparse
+import concurrent.futures
 from tqdm import tqdm
 from pathlib import Path
+from dotenv import load_dotenv
+from google import genai
+from google.genai import types
+
+# Load environment variables
+load_dotenv()
 
 # --- Configuration ---
-MODEL_ID = "Qwen/Qwen2.5-0.5B-Instruct"
-BATCH_SIZE = 2
-MAX_CHUNKS_PER_FILE = 50
-CHUNK_SIZE = 1500
-CHUNK_OVERLAP = 300
-SKIP_PAGES_START = 8
-SKIP_PAGES_END = 5
+DEFAULT_GEMINI_MODEL = "gemini-2.0-flash-thinking-exp-01-21"
+CHUNK_SIZE = 3000  # Approx characters per chunk for Gemini context
+CHUNK_OVERLAP = 500
+MAX_WORKERS = 10    # Parallel calls to Gemini
 
 def get_project_root():
-    """Returns the absolute path to the project root."""
     return Path(__file__).parent.parent.parent
 
-def pdf_to_txt(pdf_path, txt_path, skip_start=SKIP_PAGES_START, skip_end=SKIP_PAGES_END):
-    """Converts a PDF to a TXT file, skipping typical index and reference pages."""
+def pdf_to_txt(pdf_path, txt_path):
+    """Converts a PDF to a TXT file."""
     try:
         with fitz.open(pdf_path) as doc:
-            total_pages = len(doc)
-            start_page = min(skip_start, total_pages // 2)
-            end_page = max(0, total_pages - skip_end)
-            
             text = ""
-            for page_num in range(start_page, end_page):
-                text += doc[page_num].get_text()
+            for page in doc:
+                text += page.get_text()
             
-            # Normalize whitespace
-            text = re.sub(r'\n\s*\n', '\n\n', text)
+            # Basic cleanup
+            text = re.sub(r'\s+', ' ', text).strip()
             
             with open(txt_path, 'w', encoding='utf-8') as f:
                 f.write(text)
@@ -42,140 +40,114 @@ def pdf_to_txt(pdf_path, txt_path, skip_start=SKIP_PAGES_START, skip_end=SKIP_PA
         print(f"Error converting {pdf_path}: {e}")
         return False
 
-def get_device():
-    """Detects the best available hardware acceleration."""
-    if torch.cuda.is_available(): return "cuda"
-    if torch.backends.mps.is_available(): return "mps"
-    return "cpu"
+def get_chunks(text, size=CHUNK_SIZE, overlap=CHUNK_OVERLAP):
+    """Splits text into overlapping chunks."""
+    chunks = []
+    start = 0
+    while start < len(text):
+        end = start + size
+        chunks.append(text[start:end])
+        start += (size - overlap)
+    return chunks
 
-def load_local_slm(model_id):
-    """Loads the SLM with appropriate precision and hardware mapping."""
-    print(f"Loading SLM: {model_id}...")
-    device = get_device()
+def generate_pairs_from_chunk(client, model_name, chunk):
+    """Uses Gemini to generate multiple prompt/completion pairs from a text chunk."""
+    prompt_instruction = f"""
+    Context: {chunk}    
+    Task: Based ONLY on the context above, generate 5 diverse high-quality instruction-completion pairs.
+    Each pair must be a JSON object with "prompt" and "completion" keys.
+    The "prompt" should be a specific question or request about the context.
+    The "completion" should be a detailed, professional, and accurate response.
     
-    tokenizer = AutoTokenizer.from_pretrained(model_id, padding_side='left')
-    if tokenizer.pad_token is None:
-        tokenizer.pad_token = tokenizer.eos_token
-
-    # Use float16 for performance on GPU/MPS, float32 on CPU
-    dtype = torch.float16 if device != "cpu" else torch.float32
-    
-    model = AutoModelForCausalLM.from_pretrained(
-        model_id, 
-        torch_dtype=dtype,
-        device_map="auto",
-        low_cpu_mem_usage=True
-    )
-    return model, tokenizer
-
-def clean_text(text):
-    """Aggressively cleans text to minimize token waste."""
-    text = re.sub(r'\s+', ' ', text)
-    return text.strip()
-
-def generate_synthetic_data_batch(model, tokenizer, chunks):
-    """Generates high-quality Instruction-Output pairs for SFT."""
-    prompts = [
-        f"Context: {chunk}\n\nTask: Acting as a technical expert, create one complex Instruction-Output pair based ONLY on the context above. The instruction should be a specific question or task, and the output should be a comprehensive, professional answer.\n\nInstruction:"
-        for chunk in chunks
+    Return ONLY a JSON list of objects. No other text.
+    Example:
+    [
+      {{"prompt": "What is the primary goal of the MiCA regulation?", "completion": "The primary goal is..."}},
+      ...
     ]
-    
-    inputs = tokenizer(prompts, return_tensors="pt", padding=True, truncation=True).to(model.device)
-    
-    all_pairs = []
+    """
+
     try:
-        with torch.inference_mode():
-            outputs = model.generate(
-                **inputs,
-                max_new_tokens=350,
-                do_sample=True,
-                temperature=0.8,
-                top_p=0.95,
-                pad_token_id=tokenizer.pad_token_id,
-                eos_token_id=tokenizer.eos_token_id
+        response = client.models.generate_content(
+            model=model_name,
+            contents=prompt_instruction,
+            config=types.GenerateContentConfig(
+                temperature=0.7,
+                response_mime_type="application/json"
             )
+        )
         
-        for i in range(len(prompts)):
-            output_text = tokenizer.decode(outputs[i][inputs.input_ids.shape[1]:], skip_special_tokens=True)
-            
-            # Flexible parsing of the model output
-            if "Output:" in output_text:
-                parts = output_text.split("Output:", 1)
-                inst = parts[0].strip()
-                out = parts[1].strip()
-            else:
-                lines = [l for l in output_text.split('\n') if l.strip()]
-                if len(lines) >= 2:
-                    inst = lines[0].replace("Instruction:", "").strip()
-                    out = " ".join(lines[1:]).replace("Output:", "").strip()
-                else:
-                    continue
-                
-            if len(inst) > 15 and len(out) > 30:
-                all_pairs.append({"instruction": inst, "output": out})
+        # Parse the JSON response
+        if response.text:
+            data = json.loads(response.text)
+            if isinstance(data, list):
+                return data
+        return []
     except Exception as e:
-        print(f"Error during generation: {e}")
-    return all_pairs
+        # print(f"Gemini API Error: {e}")
+        return []
 
 def main():
+    parser = argparse.ArgumentParser(description="Generate synthetic dataset from PDFs using Gemini.")
+    parser.add_argument("--model", type=str, default=DEFAULT_GEMINI_MODEL, help="Gemini model ID")
+    parser.add_argument("--workers", type=int, default=MAX_WORKERS, help="Parallel workers")
+    parser.add_argument("--limit-pdfs", type=int, default=None, help="Limit number of PDFs to process")
+    args = parser.parse_args()
+
     root = get_project_root()
     PDF_DIR = root / "data" / "raw_pdfs"
     TXT_DIR = root / "data" / "raw_txt"
-    OUTPUT_FILE = root / "data" / "blockchain_sft_dataset.jsonl"
+    OUTPUT_FILE = root / "data" / "pdf_synthetic_dataset.jsonl"
 
     os.makedirs(TXT_DIR, exist_ok=True)
-
-    # 1. Convert PDFs to Text
-    pdf_files = [f for f in os.listdir(PDF_DIR) if f.endswith(".pdf")]
-    if not pdf_files:
-        print(f"No PDFs found in {PDF_DIR}")
+    
+    api_key = os.environ.get("GEMINI_API_KEY")
+    if not api_key:
+        print("Error: GEMINI_API_KEY not found in environment.")
         return
+    
+    client = genai.Client(api_key=api_key)
 
-    print(f"--- Step 1: Converting {len(pdf_files)} PDFs to TXT ---")
-    for pdf in tqdm(pdf_files, desc="Converting"):
+    # 1. PDF to TXT
+    pdf_files = sorted([f for f in os.listdir(PDF_DIR) if f.endswith(".pdf")])
+    if args.limit_pdfs:
+        pdf_files = pdf_files[:args.limit_pdfs]
+
+    print(f"--- Step 1: Converting {len(pdf_files)} PDFs ---")
+    all_chunks = []
+    for pdf in tqdm(pdf_files, desc="Processing PDFs"):
         txt_name = pdf.rsplit('.', 1)[0] + ".txt"
-        dest_path = TXT_DIR / txt_name
-        if not dest_path.exists():
-            pdf_to_txt(PDF_DIR / pdf, dest_path)
+        txt_path = TXT_DIR / txt_name
+        
+        if not txt_path.exists():
+            pdf_to_txt(PDF_DIR / pdf, txt_path)
+        
+        with open(txt_path, 'r', encoding='utf-8') as f:
+            text = f.read()
+            all_chunks.extend(get_chunks(text))
 
-    # 2. Load Model
-    model, tokenizer = load_local_slm(MODEL_ID)
-
-    # 3. Process Text Files and Generate SFT Data
-    txt_files = sorted([f for f in os.listdir(TXT_DIR) if f.endswith(".txt")])
+    print(f"\n--- Step 2: Generating Dataset from {len(all_chunks)} chunks ---")
+    
     total_pairs = 0
-
-    print(f"\n--- Step 2: Generating SFT Data from {len(txt_files)} files ---")
-    for idx, txt_file in enumerate(txt_files):
-        print(f"[{idx+1}/{len(txt_files)}] {txt_file}")
+    # Use ThreadPoolExecutor for parallel Gemini calls
+    with concurrent.futures.ThreadPoolExecutor(max_workers=args.workers) as executor:
+        futures = {executor.submit(generate_pairs_from_chunk, client, args.model, chunk): chunk for chunk in all_chunks}
         
-        chunks = []
-        with open(TXT_DIR / txt_file, 'r', encoding='utf-8') as f:
-            text_buffer = ""
-            while len(chunks) < MAX_CHUNKS_PER_FILE:
-                new_data = f.read(2048)
-                if not new_data: break
-                text_buffer += new_data
-                
-                while len(text_buffer) >= CHUNK_SIZE and len(chunks) < MAX_CHUNKS_PER_FILE:
-                    raw_chunk = text_buffer[:CHUNK_SIZE]
-                    chunks.append(clean_text(raw_chunk))
-                    text_buffer = text_buffer[(CHUNK_SIZE - CHUNK_OVERLAP):]
-            
-            if text_buffer and len(chunks) < MAX_CHUNKS_PER_FILE:
-                chunks.append(clean_text(text_buffer))
-        
-        for i in tqdm(range(0, len(chunks), BATCH_SIZE), desc="  Generating", leave=False):
-            batch = chunks[i:i + BATCH_SIZE]
-            pairs = generate_synthetic_data_batch(model, tokenizer, batch)
-            
-            if pairs:
-                with open(OUTPUT_FILE, 'a', encoding='utf-8') as f_out:
+        with open(OUTPUT_FILE, 'w', encoding='utf-8') as f_out:
+            for future in tqdm(concurrent.futures.as_completed(futures), total=len(all_chunks), desc="Generating"):
+                pairs = future.result()
+                if pairs:
                     for p in pairs:
-                        f_out.write(json.dumps(p) + '\n')
-                total_pairs += len(pairs)
+                        # Ensure keys are "prompt" and "completion" as requested
+                        formatted_pair = {
+                            "prompt": p.get("prompt", p.get("instruction", "")),
+                            "completion": p.get("completion", p.get("output", ""))
+                        }
+                        if formatted_pair["prompt"] and formatted_pair["completion"]:
+                            f_out.write(json.dumps(formatted_pair) + '\n')
+                            total_pairs += 1
 
-    print(f"\nSuccess! Generated {total_pairs} pairs for SFT.")
+    print(f"\nSuccess! Generated {total_pairs} pairs.")
     print(f"Dataset saved to: {OUTPUT_FILE}")
 
 if __name__ == "__main__":

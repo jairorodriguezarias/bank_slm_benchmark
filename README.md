@@ -34,15 +34,19 @@ A comprehensive suite for **Benchmarking**, **Distilling**, and **Fine-Tuning** 
 │   ├── bank_queries.json            # Primary test set (195 queries)
 │   ├── finqa/                       # FinQA Dataset (numerical reasoning)
 │   ├── distilled_training_data.json # Teacher-generated CoT training data
-│   ├── banking77_full.json          # Intent detection dataset
-│   ├── raw_pdfs/                    # Source technical documents
-│   └── blockchain_sft_dataset.jsonl # Generated dataset for SFT
+│   ├── banking77_full.json          # Intent detection dataset (13k queries)
+│   ├── raw_pdfs/                    # Source technical documents (MiCA, Data Act)
+│   ├── pdf_synthetic_dataset.jsonl  # Q&A pairs extracted from PDFs
+│   ├── new_search_dataset.jsonl     # New data from Google Search (DORA, PSD3, TFR)
+│   └── train_final_5500.jsonl       # Final merged dataset (5,500+ entries) for SFT
 ├── src/
 │   ├── benchmark.py                 # Main benchmarking entry point
 │   ├── evaluate.py                  # Scoring & PDF Report generation
 │   ├── train.py                     # LoRA Fine-tuning script
 │   └── utils/                       # Downloaders & Dataset converters
 │       ├── generate_distillation_data.py # DeepSeek Teacher simulation
+│       ├── generate_new_data.py          # Internet/Search data generator
+│       └── augment_dataset.py            # 10x Dataset Augmenter
 ├── models/                          # Local storage for GGUF & Adapters
 └── results/                         # Raw CSV logs, Plots, and PDF reports
 ```
@@ -64,15 +68,21 @@ A comprehensive suite for **Benchmarking**, **Distilling**, and **Fine-Tuning** 
 
 3. **Data Preparation**:
    ```bash
+   # Download public datasets
    python src/utils/download_finqa.py
    python src/utils/download_banking77.py
+   
+   # Generate synthetic & augmented data
+   python src/utils/generate_dataset.py       # From PDFs
+   python src/utils/generate_new_data.py      # From Internet/Search
+   python src/utils/augment_dataset.py        # 10x Augmentation
    ```
 
 4. **API Keys**:
    Create a `.env` file in the root directory:
    ```env
    HF_TOKEN=your_token
-   DEEPSEEK_API_KEY=your_key
+   GEMINI_API_KEY=your_key
    ```
 
 ---
@@ -80,11 +90,11 @@ A comprehensive suite for **Benchmarking**, **Distilling**, and **Fine-Tuning** 
 ## 📖 Detailed Usage Guide
 
 ### Phase 1: Data Preparation & Distillation
-Before training or benchmarking, you need high-quality data. This project provides two primary methods for generating synthetic training datasets:
+Before training or benchmarking, you need high-quality data. This project utilizes a multi-source data pipeline:
 
 #### 1. Knowledge Distillation (Teacher-to-Student)
-This method uses a high-capacity "Teacher" model (conceptually DeepSeek-V3) to generate high-quality responses and reasoning paths for your queries.
-- **Goal**: To teach a small model *how* to reason by showing it the step-by-step logic (Chain-of-Thought) of a larger model.
+This method uses a high-capacity "Teacher" model (DeepSeek-V3 or Gemini) to generate high-quality responses and reasoning paths.
+- **Goal**: Teach a small model *how* to reason via Chain-of-Thought (CoT).
 - **Process**: Runs through `data/bank_queries.json` and generates reasoning + final answers.
 - **Output**: `data/distilled_training_data.json`
 
@@ -92,29 +102,37 @@ This method uses a high-capacity "Teacher" model (conceptually DeepSeek-V3) to g
 python src/utils/generate_distillation_data.py
 ```
 
-#### 2. Domain Specialization (PDF-to-SFT)
-Turn technical banking documents (Directives, Annexes, Whitepapers) into structured Q&A pairs.
-- **Extraction**: Automatically converts PDFs in `data/raw_pdfs/` to text, skipping irrelevant pages like indexes.
-- **Synthetic Generation**: A local SLM (Qwen2.5-0.5B) processes chunks of the technical text to create complex, professional instruction-output pairs.
-- **Output**: `data/blockchain_sft_dataset.jsonl`
+#### 2. Domain Specialization (PDF & Internet Search)
+Turn technical banking documents and recent regulatory updates into structured Q&A pairs.
+- **PDF Extraction**: Converts `data/raw_pdfs/` (MiCA, Data Act) into structured Q&A.
+- **Internet Search**: Uses Google Search to fetch information on the latest regulations (DORA, PSD3, TFR).
+- **Scripts**: `src/utils/generate_dataset.py` and `src/utils/generate_new_data.py`.
+
+#### 3. Dataset Augmentation (`src/utils/augment_dataset.py`)
+Expand your synthetic or search-based datasets by generating 10 variations for each query.
+- **Goal**: Improve model robustness by training on different tones (Formal, Casual, Technical) and roles (Compliance Officer, End User).
+- **Output**: Multiplies your dataset size by 10x (e.g., from 500 to 5,000+ entries).
 
 ```bash
-python src/utils/generate_dataset.py
+# Example: Augmenting the search data
+python src/utils/augment_dataset.py --input data/new_search_dataset.jsonl --output data/new_search_dataset_augmented.jsonl
 ```
 
+#### 4. Final Merged Dataset
+All sources are combined into a single, high-density training file:
+- **Sources**: Banking77, PDF-derived data, Search-derived data, and their 10x augmentations.
+- **Final File**: `data/train_final_5500.jsonl` (~5,500 entries).
+
 ### Phase 2: Fine-Tuning (SFT)
-Train a base model on your specific banking data. Recommended SLMs for this task:
-- `TinyLlama/TinyLlama-1.1B-Chat-v1.0` (Fastest, low VRAM)
-- `Qwen/Qwen2-1.5B-Instruct` (Excellent reasoning)
-- `microsoft/Phi-3-mini-4k-instruct` (Strong performance)
-- `HuggingFaceTB/SmolLM-1.7B-Instruct` (Highly optimized)
-- `Qwen/Qwen1.5-0.5B-Chat` (Ultra-lightweight)
+Train a base model on the final merged dataset. Recommended SLMs:
+- `Qwen/Qwen2.5-0.5B-Instruct` (Excellent reasoning/efficiency)
+- `TinyLlama/TinyLlama-1.1B-Chat-v1.0` (Fastest)
 
 ```bash
 python src/train.py \
-    --base_model "TinyLlama/TinyLlama-1.1B-Chat-v1.0" \
-    --data "data/distilled_training_data.json" \
-    --output_dir "models/tuned/bank_distilled_adapter"
+    --base_model "Qwen/Qwen2.5-0.5B-Instruct" \
+    --data "data/train_final_5500.jsonl" \
+    --output_dir "models/tuned/bank_expert_slm"
 ```
 
 ### Phase 3: Benchmarking

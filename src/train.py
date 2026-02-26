@@ -44,18 +44,25 @@ def train(base_model_name, data_path, output_dir):
     tokenizer.padding_side = "right" # Fix for fp16
 
     # Load Dataset
-    with open(data_path, 'r') as f:
-        data = json.load(f)
+    if data_path.endswith(".jsonl"):
+        with open(data_path, 'r') as f:
+            data = [json.loads(line) for line in f if line.strip()]
+    else:
+        with open(data_path, 'r') as f:
+            data = json.load(f)
     
     # Convert to HuggingFace Dataset
     dataset = Dataset.from_list(data)
     
     # Manually apply formatting
     def format_example(example):
-        # Handle distilled data schema (instruction/output) vs original (query/reference_answer)
+        # Handle various schemas: instruction/output, query/reference_answer, prompt/completion
         if 'instruction' in example and 'output' in example:
             query = example['instruction']
             answer = example['output']
+        elif 'prompt' in example and 'completion' in example:
+            query = example['prompt']
+            answer = example['completion']
         else:
             query = example.get('query', '')
             answer = example.get('reference_answer', '')
