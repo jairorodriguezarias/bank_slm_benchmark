@@ -141,6 +141,22 @@ python src/train.py \
     --output_dir "models/tuned/bank_expert_slm"
 ```
 
+### Phase 3: Preference Tuning (DPO)
+After SFT, you can align the model to prefer high-quality answers over poor ones using Direct Preference Optimization (DPO).
+
+1. **Generate Preference Data**: Use Gemini to generate 'rejected' (bad) answers for your dataset.
+```bash
+export GEMINI_API_KEY="your_api_key"
+python src/utils/generate_dpo_data.py --limit 0
+```
+2. **Run DPO Trainer**: Train your SFT model on the new `dpo_dataset.jsonl`.
+```bash
+python src/dpo_train.py \
+    --base_model "models/tuned/bank_expert_slm" \
+    --data "data/dpo_dataset.jsonl" \
+    --output_dir "models/tuned/bank_expert_dpo"
+```
+
 ### Automated Pipeline Execution
 For the simplest end-to-end experience (Training -> Benchmarking -> Evaluation), you can use the included pipeline script. This will train the model, test it against the unseen 10% split, and generate the final PDF report:
 
@@ -148,7 +164,7 @@ For the simplest end-to-end experience (Training -> Benchmarking -> Evaluation),
 ./run_pipeline.sh
 ```
 
-### Phase 3: Benchmarking (Manual)
+### Phase 4: Benchmarking (Manual)
 If you prefer to run the benchmarking suite manually, use the standard command. Ensure you point it to the *test* split generated during training:
 
 ```bash
