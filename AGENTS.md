@@ -11,9 +11,7 @@ Benchmarks SLMs on a 95-query banking dataset using `transformers`, `rouge-score
     - Updated `run_pipeline.sh` to dynamically detect DPO data, run preference tuning, and benchmark SFT vs DPO models side-by-side.
 - **Data Pipeline Unification:**
     - Consolidated various data sources (PDFs, Search, Banking77) into a single, high-density training file: `data/train_final_5500.jsonl`.
-    - Added an automated 90/10 train/test split within `src/train.py`, which automatically saves the test set to `data/train_final_5500_test.jsonl` for unbiased benchmarking.
-- **Benchmarking Updates:**
-    - Updated `src/benchmark.py` to seamlessly read `.jsonl` files and dynamically handle varying schema keys (e.g., `prompt`, `instruction`, `query`).
+- Added an automated 90/10 train/test split within `src/sft_train.py`, which automatically saves the test set to `data/train_final_5500_test.jsonl` for unbiased benchmarking.
     - Successfully executed full benchmark runs.
     - Updated `src/benchmark.py` to include **MobileLLaMA-1.4B** and **Gemma-2b** in the default model list for future runs.
     - Generated a comprehensive PDF report in `results/latest/benchmark_report.pdf`.
@@ -21,7 +19,7 @@ Benchmarks SLMs on a 95-query banking dataset using `transformers`, `rouge-score
     - Created `run_pipeline.sh` to provide a single-command execution for the entire workflow (Training -> DPO -> Benchmarking -> Evaluation).
     - Merged `distillation_SLM` into this project.
     - Added `src/utils/generate_distillation_data.py` for generating synthetic training data from DeepSeek-V3/Gemini.
-    - Refactored `src/train.py` to support both original and distilled dataset schemas.
+    - Refactored `src/sft_train.py` to support both original and distilled dataset schemas.
 - **Dataset Expansion:**
     - **Primary Set:** Expanded `data/bank_queries.json` from 95 to **195 high-quality queries** with detailed reference answers.
     - **Secondary Set:** Downloaded the **full Banking77 dataset** (13,069 queries) via `src/utils/download_banking77.py` and saved as `data/banking77_full.json`.
@@ -37,7 +35,7 @@ Benchmarks SLMs on a 95-query banking dataset using `transformers`, `rouge-score
 ## Key Files
 - `src/benchmark.py`: Main unified benchmark script for all models (HF, GGUF).
 - `src/evaluate.py`: Scoring and reporting (ROUGE, Similarity, PDF generation).
-- `src/train.py`: SFT/LoRA training script for model fine-tuning.
+- `src/sft_train.py`: SFT/LoRA training script for model fine-tuning.
 - `src/dpo_train.py`: Direct Preference Optimization (DPO) script for alignment.
 - `run_pipeline.sh`: Shell script to execute the end-to-end process (SFT -> DPO -> Eval).
 - `src/utils/generate_distillation_data.py`: Generates distilled training data from Teacher models.

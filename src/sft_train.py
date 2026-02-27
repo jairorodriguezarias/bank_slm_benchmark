@@ -34,7 +34,7 @@ def setup_training_args(output_dir):
 def format_instruction(sample):
     return f"User: {sample['query']}\nAssistant: {sample['reference_answer']}"
 
-def train(base_model_name, data_path, output_dir):
+def train(base_model_name, data_path, output_dir, limit=None):
     print(f"Loading Base Model: {base_model_name}")
     
     # Load Tokenizer
@@ -53,6 +53,10 @@ def train(base_model_name, data_path, output_dir):
     
     # Convert to HuggingFace Dataset
     full_dataset = Dataset.from_list(data)
+    
+    if limit is not None:
+        print(f"Limiting dataset to {limit} examples for quick testing")
+        full_dataset = full_dataset.select(range(min(limit, len(full_dataset))))
     
     # Split into train/test (90/10)
     dataset_dict = full_dataset.train_test_split(test_size=0.1, seed=42)
@@ -141,6 +145,7 @@ if __name__ == "__main__":
     parser.add_argument("--base_model", type=str, default="TinyLlama/TinyLlama-1.1B-Chat-v1.0")
     parser.add_argument("--data", type=str, default="data/train_final_5500.jsonl")
     parser.add_argument("--output_dir", type=str, default="models/tuned/bank_expert_slm")
+    parser.add_argument("--limit", type=int, default=None, help="Limit number of dataset examples for quick tests")
     
     args = parser.parse_args()
     
@@ -149,4 +154,4 @@ if __name__ == "__main__":
     data_path = os.path.join(base_dir, args.data)
     output_dir = os.path.join(base_dir, args.output_dir)
     
-    train(args.base_model, data_path, output_dir)
+    train(args.base_model, data_path, output_dir, args.limit)

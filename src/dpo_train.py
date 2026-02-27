@@ -25,7 +25,7 @@ def setup_dpo_training_args(output_dir):
     config.max_length = 256
     return config
 
-def train_dpo(base_model_name, data_path, output_dir):
+def train_dpo(base_model_name, data_path, output_dir, limit=None):
     print(f"Loading Base SFT Model for DPO: {base_model_name}")
     
     # 1. Load Tokenizer
@@ -47,6 +47,10 @@ def train_dpo(base_model_name, data_path, output_dir):
             data = json.load(f)
             
     full_dataset = Dataset.from_list(data)
+
+    if limit is not None:
+        print(f"Limiting dataset to {limit} examples for quick testing")
+        full_dataset = full_dataset.select(range(min(limit, len(full_dataset))))
 
     # Convert the raw chosen/rejected data into Tokenizer Chat Template formats
     def format_dpo(example):
@@ -93,7 +97,7 @@ def train_dpo(base_model_name, data_path, output_dir):
     # 5. Initialize the DPO Trainer
     trainer = DPOTrainer(
         model=model,
-        ref_model=ref_model,
+        ref_model=None, # TRL handles reference automatically for PEFT
         args=training_args,
         train_dataset=formatted_dataset,
         processing_class=tokenizer,
@@ -112,6 +116,7 @@ if __name__ == "__main__":
     parser.add_argument("--base_model", type=str, default="models/tuned/bank_expert_slm")
     parser.add_argument("--data", type=str, default="data/dpo_dataset.jsonl")
     parser.add_argument("--output_dir", type=str, default="models/tuned/bank_expert_dpo")
+    parser.add_argument("--limit", type=int, default=None, help="Limit number of dataset examples for quick tests")
     
     args = parser.parse_args()
     
@@ -123,4 +128,4 @@ if __name__ == "__main__":
     data_path = os.path.join(project_root, args.data) if not os.path.isabs(args.data) else args.data
     output_dir = os.path.join(project_root, args.output_dir) if not os.path.isabs(args.output_dir) else args.output_dir
     
-    train_dpo(base_model_path, data_path, output_dir)
+    train_dpo(base_model_path, data_path, output_dir, args.limit)
