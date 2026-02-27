@@ -156,7 +156,9 @@ python src/dpo_train.py \
 ```
 
 ### Automated Pipeline Execution
-For the simplest end-to-end experience (Training -> Benchmarking -> Evaluation), you can use the included pipeline script. This will train the model, test it against the unseen 10% split, and generate the final PDF report:
+For the simplest end-to-end experience (Training -> Benchmarking -> Evaluation), you can use the included pipeline script. This will train the model, apply preference tuning (DPO) if data is available, test all models against the unseen 10% split, and generate the final PDF report. 
+
+**Resilience (Checkpoints):** The pipeline now features a checkpointing system. It saves progress in a `.checkpoints/` directory. If a step fails or is interrupted, re-running `./run_pipeline.sh` will automatically skip completed steps. To start fresh, simply delete the `.checkpoints/` folder.
 
 ```bash
 ./run_pipeline.sh
