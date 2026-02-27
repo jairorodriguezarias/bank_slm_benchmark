@@ -4,6 +4,11 @@
 Benchmarks SLMs on a 95-query banking dataset using `transformers`, `rouge-score`, and `sentence-transformers`. **Includes a Distillation pipeline to improve SLM performance using DeepSeek-V3 as a teacher.**
 
 ## Current Status (As of Feb 26, 2026)
+- **Preference Tuning (DPO) Integration:**
+    - Added Direct Preference Optimization (DPO) to the training pipeline to align SLMs with desired response formats.
+    - Created `src/utils/generate_dpo_data.py` to synthetically generate "rejected" answers using the Gemini API.
+    - Implemented `src/dpo_train.py` using `trl` to perform DPO tuning on top of SFT models.
+    - Updated `run_pipeline.sh` to dynamically detect DPO data, run preference tuning, and benchmark SFT vs DPO models side-by-side.
 - **Data Pipeline Unification:**
     - Consolidated various data sources (PDFs, Search, Banking77) into a single, high-density training file: `data/train_final_5500.jsonl`.
     - Added an automated 90/10 train/test split within `src/train.py`, which automatically saves the test set to `data/train_final_5500_test.jsonl` for unbiased benchmarking.
@@ -13,7 +18,7 @@ Benchmarks SLMs on a 95-query banking dataset using `transformers`, `rouge-score
     - Updated `src/benchmark.py` to include **MobileLLaMA-1.4B** and **Gemma-2b** in the default model list for future runs.
     - Generated a comprehensive PDF report in `results/latest/benchmark_report.pdf`.
 - **Project Unification:**
-    - Created `run_pipeline.sh` to provide a single-command execution for the entire workflow (Training -> Benchmarking -> Evaluation).
+    - Created `run_pipeline.sh` to provide a single-command execution for the entire workflow (Training -> DPO -> Benchmarking -> Evaluation).
     - Merged `distillation_SLM` into this project.
     - Added `src/utils/generate_distillation_data.py` for generating synthetic training data from DeepSeek-V3/Gemini.
     - Refactored `src/train.py` to support both original and distilled dataset schemas.
@@ -32,20 +37,23 @@ Benchmarks SLMs on a 95-query banking dataset using `transformers`, `rouge-score
 ## Key Files
 - `src/benchmark.py`: Main unified benchmark script for all models (HF, GGUF).
 - `src/evaluate.py`: Scoring and reporting (ROUGE, Similarity, PDF generation).
-- `src/utils/generate_distillation_data.py`: Generates distilled training data from Teacher models.
 - `src/train.py`: SFT/LoRA training script for model fine-tuning.
-- `run_pipeline.sh`: Shell script to execute the end-to-end process.
+- `src/dpo_train.py`: Direct Preference Optimization (DPO) script for alignment.
+- `run_pipeline.sh`: Shell script to execute the end-to-end process (SFT -> DPO -> Eval).
+- `src/utils/generate_distillation_data.py`: Generates distilled training data from Teacher models.
+- `src/utils/generate_dpo_data.py`: Synthesizes 'rejected' answers via Gemini for DPO training.
 - `src/utils/`: Contains data downloaders and dataset generators.
 
 ## Technical Decisions
 - **Unified Dataset:** Standardized all training on `train_final_5500.jsonl` to ensure consistency and prevent data leakage during benchmarking.
+- **Preference Tuning over PPO:** Chose Direct Preference Optimization (DPO) over RLHF/PPO as it does not require a separate reward model, making it feasible for local SLM workflows.
 - **Consolidation:** Merged legacy scripts (`benchmark_gguf.py`, `visualize_results.py`, `evaluate_models.py`) into unified `src/benchmark.py` and `src/evaluate.py` to reduce complexity.
 - **Evaluation Workflow:** Separated inference from scoring to allow re-evaluation without expensive re-generation.
 - **GGUF Support:** Chose `llama-cpp-python` for Mac optimization (Metal) as `bitsandbytes` 4-bit loading is CUDA-only.
 
 ## Next Steps
-1. **API Integration:** Wrap the top-performing model (TinyLlama GGUF or SFT) in a FastAPI service.
-2. **Distillation Fine-Tuning:** Use `data/distilled_training_data.json` to fine-tune a raw Qwen2/Phi-3 model and evaluate if it matches the "Distilled" variants.
+1. **API Integration:** Wrap the top-performing model (TinyLlama GGUF or SFT/DPO) in a FastAPI service.
+2. **DPO Tuning Execution:** Run `src/utils/generate_dpo_data.py` to generate the preference dataset, and execute the full pipeline to evaluate SFT vs DPO outputs.
 3. **Dataset Refinement:** Increase the number of reference answers per query to improve ROUGE reliability.
 4. **Automated CI/CD:** Integrate evaluation into a single command or workflow for continuous benchmarking.
 
