@@ -63,7 +63,12 @@ def train_dpo(base_model_name, data_path, output_dir, limit=None):
     formatted_dataset = full_dataset.map(format_dpo)
 
     # 3. Load Models
-    device = "mps" if torch.backends.mps.is_available() else "cpu"
+    if torch.cuda.is_available():
+        device = "cuda"
+    elif torch.backends.mps.is_available():
+        device = "mps"
+    else:
+        device = "cpu"
     print(f"Using device: {device}")
     
     # We load the model we want to train

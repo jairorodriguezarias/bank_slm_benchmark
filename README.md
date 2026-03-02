@@ -189,10 +189,12 @@ python src/benchmark.py \
 
 
 ### Phase 4: Evaluation & Reporting
-After benchmarking, run the evaluation to generate the visual report:
+After benchmarking, run the evaluation to generate the visual report. You must pass the dataset used during benchmarking to load the correct reference answers:
 ```bash
-python src/evaluate.py
+python src/evaluate.py --dataset "data/train_final_5500_test.jsonl"
 ```
+*Note: The evaluation script automatically parses different JSON schemas (`prompt/completion`, `instruction/output`, `query/reference_answer`) to find the gold-standard answers.*
+
 This will produce:
 - **`results/latest/all_models_benchmark.csv`**: Raw metrics.
 - **`results/latest/benchmark_report.pdf`**: A professional report with charts.

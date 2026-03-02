@@ -12,7 +12,7 @@ from tqdm import tqdm
 from fpdf import FPDF
 from fpdf.enums import XPos, YPos
 
-def evaluate_results(run_dir=None):
+def evaluate_results(run_dir=None, dataset_path=None):
     base_results_dir = os.path.join(os.path.dirname(__file__), '..', 'results')
     
     if run_dir:
@@ -27,15 +27,38 @@ def evaluate_results(run_dir=None):
     print(f"Evaluating results in: {target_dir}")
 
     # Load queries for reference
-    # We try to find which dataset was used. For now, default to the main one.
-    queries_file = os.path.join(os.path.dirname(__file__), '..', 'data', 'bank_queries.json')
-    # If it looks like a banking77 run, use that
-    if 'banking77' in target_dir.lower():
-        queries_file = os.path.join(os.path.dirname(__file__), '..', 'data', 'banking77_full.json')
+    if dataset_path:
+        queries_file = dataset_path
+    else:
+        queries_file = os.path.join(os.path.dirname(__file__), '..', 'data', 'bank_queries.json')
+        if 'banking77' in target_dir.lower():
+            queries_file = os.path.join(os.path.dirname(__file__), '..', 'data', 'banking77_full.json')
     
-    with open(queries_file, 'r') as f:
-        queries_data = json.load(f)
-    queries_dict = {q['query']: q['reference_answer'] for q in queries_data}
+    queries_data = []
+    if queries_file.endswith(".jsonl"):
+        with open(queries_file, 'r') as f:
+            for line in f:
+                if line.strip():
+                    queries_data.append(json.loads(line))
+    else:
+        with open(queries_file, 'r') as f:
+            queries_data = json.load(f)
+
+    queries_dict = {}
+    for q in queries_data:
+        # Handle various schemas
+        if 'instruction' in q and 'output' in q:
+            query = q['instruction']
+            answer = q['output']
+        elif 'prompt' in q and 'completion' in q:
+            query = q['prompt']
+            answer = q['completion']
+        else:
+            query = q.get('query', '')
+            answer = q.get('reference_answer', '')
+        
+        if query:
+            queries_dict[query] = answer
     
     scorer = rouge_scorer.RougeScorer(['rougeL'], use_stemmer=True)
     model = SentenceTransformer('all-MiniLM-L6-v2')
@@ -181,9 +204,10 @@ def update_report_md(df, target_dir):
 def main():
     parser = argparse.ArgumentParser(description='Unified Evaluation & Reporting')
     parser.add_argument('--run-dir', type=str, help='Run directory to evaluate')
+    parser.add_argument('--dataset', type=str, help='Dataset path used for evaluation to load reference answers')
     args = parser.parse_args()
 
-    summary_df, target_dir = evaluate_results(args.run_dir)
+    summary_df, target_dir = evaluate_results(args.run_dir, args.dataset)
     if not summary_df.empty:
         plot_path = generate_visualizations(summary_df, target_dir)
         update_report_md(summary_df, target_dir)

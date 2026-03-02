@@ -61,7 +61,7 @@ fi
 # STEP 4: Evaluation Report
 if [ ! -f "$CHECKPOINT_DIR/step4_evaluate.done" ]; then
     echo -e "\n[4/4] Generating Evaluation Report..."
-    ./venv/bin/python src/evaluate.py
+    ./venv/bin/python src/evaluate.py --dataset "data/train_final_5500_test.jsonl"
     touch "$CHECKPOINT_DIR/step4_evaluate.done"
 else
     echo -e "\n[4/4] Skipping Evaluation Report - Checkpoint found."

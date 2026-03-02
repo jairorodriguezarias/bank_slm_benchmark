@@ -101,7 +101,12 @@ def train(base_model_name, data_path, output_dir, limit=None):
     test_dataset = test_dataset.map(format_example)
 
     # Load Model
-    device = "mps" if torch.backends.mps.is_available() else "cpu"
+    if torch.cuda.is_available():
+        device = "cuda"
+    elif torch.backends.mps.is_available():
+        device = "mps"
+    else:
+        device = "cpu"
     print(f"Using device: {device}")
     
     model = AutoModelForCausalLM.from_pretrained(
