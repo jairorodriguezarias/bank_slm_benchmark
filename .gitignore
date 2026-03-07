@@ -13,6 +13,7 @@ __pycache__/
 # Models (Weights & Checkpoints)
 models/
 checkpoint-*/
+.checkpoints/
 
 # Data & Results
 results/

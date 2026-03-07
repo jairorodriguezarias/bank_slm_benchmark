@@ -1,3 +1,15 @@
+"""
+Unified Benchmarking Engine
+
+This script evaluates the raw performance of Small Language Models (Base, SFT, and DPO stages)
+by asking them a set of hidden financial test questions and measuring their speed and outputs.
+
+Key Features:
+- Multi-Framework: Supports standard Hugging Face models, local LoRA adapters, and GGUF files.
+- Hardware Agnostic: Automatically detects and uses Mac Apple Silicon (MPS), NVIDIA (CUDA), or CPU.
+- Quantization: Supports 4-bit loading (BitsAndBytes) for massive memory savings during inference.
+- Output: Records latency, tokens per second, and saves raw responses to CSV for later grading.
+"""
 import json
 import time
 import torch

@@ -1,18 +1,17 @@
 """
-Direct Preference Optimization (DPO) Training Script
+Odds Ratio Preference Optimization (ORPO) Training Script
 
-This script takes an already fine-tuned SFT model and applies preference learning to teach
-it how to reason (Chain-of-Thought) and behave correctly, using chosen vs. rejected examples.
+ORPO is a novel fine-tuning technique that combines Supervised Fine-Tuning (SFT) 
+and Preference Alignment (like DPO) into a single, unified training step.
 
-Why use LoRA in DPO?
-1. The "Two Model" Crisis: DPO mathematically requires two models loaded in memory simultaneously:
-   - The Training Model (actively learning)
-   - The Reference Model (a frozen copy to ensure the model doesn't forget how to speak)
-2. Memory Impossible: Loading two full copies of a model plus training states is impossible
-   on standard hardware.
-3. The LoRA Solution: Instead of copying the whole model, we load the base model ONCE and freeze it
-   (acting as the Reference Model). We then inject tiny LoRA adapters. The framework only trains
-   these adapters (acting as the Training Model). This trick makes DPO possible on consumer hardware.
+Why use ORPO instead of SFT + DPO?
+1. Efficiency: It skips the need for a separate SFT phase. You go straight from the 
+   base model to the final preference-aligned model.
+2. Memory: Unlike DPO, ORPO does NOT require a frozen "Reference Model" to be loaded 
+   in memory. It achieves alignment by modifying the odds ratio of chosen vs. rejected 
+   generations directly during the adaptation phase.
+3. LoRA is still used here to ensure the training fits comfortably on consumer hardware
+   (Mac/Single GPU) by only training adapter weights.
 """
 import os
 import json
@@ -20,17 +19,17 @@ import argparse
 import torch
 from datasets import Dataset
 from transformers import AutoModelForCausalLM, AutoTokenizer
-from peft import LoraConfig, get_peft_model
-from trl import DPOTrainer, DPOConfig
+from peft import LoraConfig
+from trl import ORPOTrainer, ORPOConfig
 
-def setup_dpo_training_args(output_dir):
-    config = DPOConfig(
+def setup_orpo_training_args(output_dir):
+    config = ORPOConfig(
         output_dir=output_dir,
-        beta=0.1,  # Controls deviation from the reference model (lower = closer to ref)
-        learning_rate=5e-5, # Slightly lower learning rate for DPO
-        per_device_train_batch_size=1, # Very small batch size to fit in memory
+        beta=0.1,  # The odds ratio weight (similar to DPO's beta, controls preference strength)
+        learning_rate=5e-5, # Standard learning rate for preference tuning
+        per_device_train_batch_size=1,
         gradient_accumulation_steps=8,
-        num_train_epochs=1, # DPO requires very few epochs
+        num_train_epochs=2, # Slightly more epochs than DPO since it also acts as SFT
         save_strategy="epoch",
         fp16=False,
         bf16=False,
@@ -41,8 +40,8 @@ def setup_dpo_training_args(output_dir):
     config.max_length = 256
     return config
 
-def train_dpo(base_model_name, data_path, output_dir, limit=None):
-    print(f"Loading Base SFT Model for DPO: {base_model_name}")
+def train_orpo(base_model_name, data_path, output_dir, limit=None):
+    print(f"Loading Base Model for ORPO: {base_model_name}")
     
     # 1. Load Tokenizer
     tokenizer = AutoTokenizer.from_pretrained(base_model_name, trust_remote_code=True)
@@ -50,8 +49,8 @@ def train_dpo(base_model_name, data_path, output_dir, limit=None):
         tokenizer.pad_token = tokenizer.eos_token
     tokenizer.padding_side = "right"
 
-    # 2. Load DPO Preference Dataset
-    print(f"Loading DPO data from: {data_path}")
+    # 2. Load Preference Dataset (Chosen vs Rejected)
+    print(f"Loading ORPO data from: {data_path}")
     data = []
     if data_path.endswith(".jsonl"):
         with open(data_path, 'r') as f:
@@ -68,17 +67,25 @@ def train_dpo(base_model_name, data_path, output_dir, limit=None):
         print(f"Limiting dataset to {limit} examples for quick testing")
         full_dataset = full_dataset.select(range(min(limit, len(full_dataset))))
 
-    # Convert the raw chosen/rejected data into Tokenizer Chat Template formats
-    def format_dpo(example):
+    # Convert the raw data into Tokenizer Chat Template formats expected by ORPO
+    # ORPO expects 'prompt', 'chosen', and 'rejected' columns, just like DPO
+    def format_orpo(example):
         return {
             "prompt": tokenizer.apply_chat_template([{"role": "user", "content": example["prompt"]}], tokenize=False, add_generation_prompt=True),
             "chosen": example["chosen"] + tokenizer.eos_token,
             "rejected": example["rejected"] + tokenizer.eos_token,
         }
         
-    formatted_dataset = full_dataset.map(format_dpo)
+    formatted_dataset = full_dataset.map(format_orpo)
 
-    # 3. Load Models
+    # Split into train/test (90/10)
+    dataset_dict = formatted_dataset.train_test_split(test_size=0.1, seed=42)
+    train_dataset = dataset_dict["train"]
+    test_dataset = dataset_dict["test"]
+
+    print(f"Dataset split: {len(train_dataset)} training examples, {len(test_dataset)} test examples.")
+
+    # 3. Load Model (Notice we DO NOT load a reference model for ORPO)
     if torch.cuda.is_available():
         device = "cuda"
     elif torch.backends.mps.is_available():
@@ -87,22 +94,13 @@ def train_dpo(base_model_name, data_path, output_dir, limit=None):
         device = "cpu"
     print(f"Using device: {device}")
     
-    # We load the model we want to train
     model = AutoModelForCausalLM.from_pretrained(
         base_model_name,
         device_map=device,
         trust_remote_code=True
     )
-    
-    # We load a second copy of the exact same model to act as a "reference" 
-    # The reference model ensures the training doesn't deviate too far into gibberish
-    ref_model = AutoModelForCausalLM.from_pretrained(
-        base_model_name,
-        device_map=device,
-        trust_remote_code=True
-    )
 
-    # 4. LoRA Config (crucial for consumer hardware)
+    # 4. LoRA Config
     peft_config = LoraConfig(
         r=16,
         lora_alpha=32,
@@ -112,31 +110,32 @@ def train_dpo(base_model_name, data_path, output_dir, limit=None):
         target_modules=["q_proj", "v_proj"]
     )
     
-    # Setup Training Arguments
-    training_args = setup_dpo_training_args(output_dir)
+    # 5. Setup Training Arguments & Trainer
+    training_args = setup_orpo_training_args(output_dir)
+    training_args.eval_strategy = "epoch"
 
-    # 5. Initialize the DPO Trainer
-    trainer = DPOTrainer(
+    trainer = ORPOTrainer(
         model=model,
-        ref_model=None, # TRL handles reference automatically for PEFT
         args=training_args,
-        train_dataset=formatted_dataset,
+        train_dataset=train_dataset,
+        eval_dataset=test_dataset,
         processing_class=tokenizer,
         peft_config=peft_config,
     )
 
-    print("Starting DPO Preference Tuning...")
+    print("Starting ORPO Unified Training...")
     trainer.train()
     
-    print(f"Saving DPO model to {output_dir}")
+    print(f"Saving ORPO model to {output_dir}")
     trainer.save_model(output_dir)
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    # The default base model should be the one you JUST finished SFT on
-    parser.add_argument("--base_model", type=str, default="models/tuned/bank_expert_slm")
-    parser.add_argument("--data", type=str, default="data/dpo_dataset.jsonl")
-    parser.add_argument("--output_dir", type=str, default="models/tuned/bank_expert_dpo")
+    # Note: Unlike DPO, the base model for ORPO is the RAW, pre-trained model (e.g., TinyLlama)
+    # You do NOT need to run SFT first.
+    parser.add_argument("--base_model", type=str, default="TinyLlama/TinyLlama-1.1B-Chat-v1.0")
+    parser.add_argument("--data", type=str, default="data/dpo_dataset.jsonl") 
+    parser.add_argument("--output_dir", type=str, default="models/tuned/bank_expert_orpo")
     parser.add_argument("--limit", type=int, default=None, help="Limit number of dataset examples for quick tests")
     
     args = parser.parse_args()
@@ -149,4 +148,4 @@ if __name__ == "__main__":
     data_path = os.path.join(project_root, args.data) if not os.path.isabs(args.data) else args.data
     output_dir = os.path.join(project_root, args.output_dir) if not os.path.isabs(args.output_dir) else args.output_dir
     
-    train_dpo(base_model_path, data_path, output_dir, args.limit)
+    train_orpo(base_model_path, data_path, output_dir, args.limit)

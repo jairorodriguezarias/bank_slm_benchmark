@@ -1,3 +1,19 @@
+"""
+Evaluation and Reporting Engine
+
+This script acts as the "Grader" for the models benchmarked by `benchmark.py`. It compares
+the AI-generated answers against "Gold Standard" human reference answers.
+
+Key Metrics Evaluated:
+1. ROUGE-L Score: Measures word-for-word overlap and structural similarity to the reference.
+2. Semantic Similarity: Uses an embedding model (`all-MiniLM-L6-v2`) to measure if the AI
+   captured the correct *meaning* and *intent*, even if it used different vocabulary.
+
+Outputs:
+- Calculates average scores and updates the raw CSVs.
+- Automatically generates a professional PDF report (`benchmark_report.pdf`) with data visualizations.
+- Updates the main `BENCHMARK_REPORT.md` file.
+"""
 import pandas as pd
 import json
 import os

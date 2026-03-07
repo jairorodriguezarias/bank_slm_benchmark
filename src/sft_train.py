@@ -1,3 +1,18 @@
+"""
+Supervised Fine-Tuning (SFT) Script for Small Language Models
+
+This script takes a base model (e.g., Qwen, TinyLlama) and fine-tunes it on domain-specific
+banking data using LoRA (Low-Rank Adaptation).
+
+Why use LoRA in SFT?
+1. Memory Efficiency: Standard fine-tuning updates all model weights (1B+ parameters),
+   which requires massive GPU clusters. LoRA freezes the main model and only trains tiny
+   "adapter" layers inserted into the attention blocks.
+2. Hardware Accessibility: By using LoRA, we can train these models on consumer hardware
+   like a standard Mac (using MPS) or a single gaming GPU, instead of needing expensive
+   cloud servers.
+3. Speed: Updating fewer parameters means training finishes in minutes/hours rather than days.
+"""
 import json
 import os
 import argparse
