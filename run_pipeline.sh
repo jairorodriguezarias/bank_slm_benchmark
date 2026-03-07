@@ -14,7 +14,7 @@ echo "==========================================="
 if [ ! -f "$CHECKPOINT_DIR/step1_sft.done" ]; then
     echo -e "\n[1/4] Starting Training (SFT)..."
     echo "This will automatically perform a 90/10 split on data/train_final_5500.jsonl"
-    ./venv/bin/python src/sft_train.py \
+    ./venv/bin/python src/1_sft_train.py \
         --base_model "TinyLlama/TinyLlama-1.1B-Chat-v1.0" \
         --data "data/train_final_5500.jsonl" \
         --output_dir "models/tuned/bank_expert_tinyllama_slm" \
@@ -29,7 +29,7 @@ if [ -f "data/dpo_dataset.jsonl" ]; then
     if [ ! -f "$CHECKPOINT_DIR/step2_dpo.done" ]; then
         echo -e "\n[2/4] Starting Preference Tuning (DPO)..."
         echo "Found DPO dataset. Running Direct Preference Optimization."
-        ./venv/bin/python src/dpo_train.py \
+        ./venv/bin/python src/2_dpo_train.py \
             --base_model "models/tuned/bank_expert_tinyllama_slm" \
             --data "data/dpo_dataset.jsonl" \
             --output_dir "models/tuned/bank_expert_tinyllama_dpo" \
@@ -49,7 +49,7 @@ fi
 if [ ! -f "$CHECKPOINT_DIR/step3_benchmark.done" ]; then
     echo -e "\n[3/4] Starting Benchmarking..."
     echo "Evaluating the model(s) on the 10% unseen test split..."
-    ./venv/bin/python src/benchmark.py \
+    ./venv/bin/python src/100_benchmark.py \
         --dataset "data/train_final_5500_test.jsonl" \
         --models $MODELS_TO_BENCHMARK \
         --run-name "tinyllama_expert_test"
@@ -61,7 +61,7 @@ fi
 # STEP 4: Evaluation Report
 if [ ! -f "$CHECKPOINT_DIR/step4_evaluate.done" ]; then
     echo -e "\n[4/4] Generating Evaluation Report..."
-    ./venv/bin/python src/evaluate.py --dataset "data/train_final_5500_test.jsonl"
+    ./venv/bin/python src/99_evaluate.py --dataset "data/train_final_5500_test.jsonl"
     touch "$CHECKPOINT_DIR/step4_evaluate.done"
 else
     echo -e "\n[4/4] Skipping Evaluation Report - Checkpoint found."
