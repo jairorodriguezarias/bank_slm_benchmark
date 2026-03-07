@@ -42,9 +42,12 @@ A comprehensive suite for **Benchmarking**, **Distilling**, and **Fine-Tuning** 
 │   ├── new_search_dataset.jsonl     # New data from Google Search (DORA, PSD3, TFR)
 │   └── train_final_5500.jsonl       # Final merged dataset (5,500+ entries) for SFT
 ├── src/
-│   ├── benchmark.py                 # Main benchmarking entry point
-│   ├── evaluate.py                  # Scoring & PDF Report generation
-│   ├── sft_train.py                 # LoRA Fine-tuning script
+│   ├── 1_sft_train.py               # Supervised Fine-Tuning (SFT) script
+│   ├── 2_dpo_train.py               # Direct Preference Optimization (DPO) script
+│   ├── 3_orpo_train.py              # Odds Ratio Preference Optimization (ORPO) script
+│   ├── 4_benchmark.py               # Main benchmarking entry point
+│   ├── 5_evaluate.py                # Scoring & PDF Report generation
+│   ├── 6_multi_lora_merge.py        # Utility to merge multiple domain-specific LoRAs
 │   └── utils/                       # Downloaders & Dataset converters
 │       ├── generate_distillation_data.py # DeepSeek Teacher simulation
 │       ├── generate_new_data.py          # Internet/Search data generator
@@ -133,7 +136,7 @@ Train a base model on the final merged dataset. Recommended SLMs:
 **Automated Split:** The training script automatically performs a 90/10 train/test split. It trains on 90% of the data and saves the remaining 10% to `data/train_final_5500_test.jsonl` to ensure unbiased benchmarking later.
 
 ```bash
-python src/sft_train.py \
+python src/1_sft_train.py \
     --base_model "Qwen/Qwen2.5-0.5B-Instruct" \
     --data "data/train_final_5500.jsonl" \
     --output_dir "models/tuned/bank_expert_slm"
@@ -149,10 +152,31 @@ python src/utils/generate_dpo_data.py --limit 0
 ```
 2. **Run DPO Trainer**: Train your SFT model on the new `dpo_dataset.jsonl`.
 ```bash
-python src/dpo_train.py \
+python src/2_dpo_train.py \
     --base_model "models/tuned/bank_expert_slm" \
     --data "data/dpo_dataset.jsonl" \
     --output_dir "models/tuned/bank_expert_dpo"
+```
+
+### Phase 3.5: Advanced Fine-Tuning Techniques (Optional)
+
+**Option A: ORPO (Odds Ratio Preference Optimization)**
+If you want to skip doing SFT and DPO separately, you can use ORPO. It trains on the base model directly using the preference dataset, acting as both SFT and alignment in a single step.
+```bash
+python src/3_orpo_train.py \
+    --base_model "TinyLlama/TinyLlama-1.1B-Chat-v1.0" \
+    --data "data/dpo_dataset.jsonl" \
+    --output_dir "models/tuned/bank_expert_orpo"
+```
+
+**Option B: Multi-LoRA Merging**
+If you have trained two separate adapters on different datasets (e.g., one for traditional banking, one for blockchain) to prevent catastrophic forgetting, you can merge them into a single "Frankenstein" expert.
+```bash
+python src/6_multi_lora_merge.py \
+    --adapter1 "models/tuned/banking_lora" \
+    --adapter2 "models/tuned/blockchain_lora" \
+    --output_dir "models/tuned/merged_financial_expert" \
+    --ratio 0.5
 ```
 
 ### Automated Pipeline Execution
@@ -169,7 +193,7 @@ If you prefer to run the benchmarking suite manually, use the standard command. 
 
 ```bash
 # Universal command (runs on any hardware)
-python src/benchmark.py \
+python src/4_benchmark.py \
     --dataset "data/train_final_5500_test.jsonl" \
     --models "models/tuned/bank_expert_slm" \
     --run-name "expert_model_test"
@@ -188,10 +212,10 @@ python src/benchmark.py \
 - **NVIDIA GPU**: Add the `--use-4bit` flag to enable memory-efficient 4-bit quantization via `bitsandbytes`.
 
 
-### Phase 4: Evaluation & Reporting
+### Phase 5: Evaluation & Reporting
 After benchmarking, run the evaluation to generate the visual report. You must pass the dataset used during benchmarking to load the correct reference answers:
 ```bash
-python src/evaluate.py --dataset "data/train_final_5500_test.jsonl"
+python src/5_evaluate.py --dataset "data/train_final_5500_test.jsonl"
 ```
 *Note: The evaluation script automatically parses different JSON schemas (`prompt/completion`, `instruction/output`, `query/reference_answer`) to find the gold-standard answers.*
 
