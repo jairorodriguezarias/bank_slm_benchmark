@@ -45,9 +45,9 @@ A comprehensive suite for **Benchmarking**, **Distilling**, and **Fine-Tuning** 
 │   ├── 1_sft_train.py               # Supervised Fine-Tuning (SFT) script
 │   ├── 2_dpo_train.py               # Direct Preference Optimization (DPO) script
 │   ├── 3_orpo_train.py              # Odds Ratio Preference Optimization (ORPO) script
-│   ├── 4_benchmark.py               # Main benchmarking entry point
-│   ├── 5_evaluate.py                # Scoring & PDF Report generation
 │   ├── 6_multi_lora_merge.py        # Utility to merge multiple domain-specific LoRAs
+│   ├── 99_evaluate.py               # Scoring & PDF Report generation
+│   ├── 100_benchmark.py             # Main benchmarking entry point
 │   └── utils/                       # Downloaders & Dataset converters
 │       ├── generate_distillation_data.py # DeepSeek Teacher simulation
 │       ├── generate_new_data.py          # Internet/Search data generator
@@ -193,7 +193,7 @@ If you prefer to run the benchmarking suite manually, use the standard command. 
 
 ```bash
 # Universal command (runs on any hardware)
-python src/4_benchmark.py \
+python src/100_benchmark.py \
     --dataset "data/train_final_5500_test.jsonl" \
     --models "models/tuned/bank_expert_slm" \
     --run-name "expert_model_test"
@@ -215,7 +215,7 @@ python src/4_benchmark.py \
 ### Phase 5: Evaluation & Reporting
 After benchmarking, run the evaluation to generate the visual report. You must pass the dataset used during benchmarking to load the correct reference answers:
 ```bash
-python src/5_evaluate.py --dataset "data/train_final_5500_test.jsonl"
+python src/99_evaluate.py --dataset "data/train_final_5500_test.jsonl"
 ```
 *Note: The evaluation script automatically parses different JSON schemas (`prompt/completion`, `instruction/output`, `query/reference_answer`) to find the gold-standard answers.*
 
