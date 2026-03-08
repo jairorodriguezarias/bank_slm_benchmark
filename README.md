@@ -32,6 +32,49 @@ A comprehensive suite for **Benchmarking**, **Distilling**, and **Fine-Tuning** 
 
 ---
 
+## 🏗️ Pipeline Architecture Flow
+
+```mermaid
+graph TD
+    %% Data Sources
+    subgraph Data Synthesis
+        PDF[Raw PDFs] -->|generate_dataset.py| S1[Synthetic Q&A]
+        WEB[Web/Search] -->|generate_new_data.py| S2[Augmented Data]
+        API[DeepSeek/Gemini] -->|generate_distillation_data.py| S3[CoT Distilled Reasoning]
+        S1 & S2 & S3 -->|Merge & Clean| DB[(train_final_5500.jsonl)]
+    end
+
+    %% Training Pipeline
+    subgraph MLOps Training Pipeline
+        DB -->|10% Split| TEST[(test_split.jsonl)]
+        DB -->|90% Split| SFT[1_sft_train.py <br> Supervised Fine-Tuning]
+        
+        SFT -->|LoRA Adapter A| DPO[2_dpo_train.py <br> Preference Tuning]
+        DB -->|Direct Alignment| ORPO[3_orpo_train.py <br> Unified SFT+DPO]
+        
+        DPO -->|Aligned Adapter| MERGE[6_multi_lora_merge.py <br> TIES Merging]
+        ORPO -->|Unified Adapter| MERGE
+    end
+
+    %% Zero Shot Injection
+    subgraph Zero-Shot Knowledge Injection
+        PDF_RAW[New Regulation PDF] --> D2L[8_doc_to_lora_injection.py <br> Sakana AI Hypernetwork]
+        D2L -.->|Instant LoRA Weights| MERGE
+    end
+
+    %% Benchmarking
+    subgraph Evaluation Engine
+        MERGE --> BENCH[100_benchmark.py <br> HF/GGUF/4-bit Inference]
+        TEST --> BENCH
+        
+        BENCH -->|Raw CSV Responses| EVAL[99_evaluate.py]
+        EVAL -->|SentenceTransformers| METRICS[Cosine Similarity & ROUGE-L]
+        METRICS --> PDF_REP[benchmark_report.pdf]
+    end
+```
+
+---
+
 ## 📂 Project Structure
 
 ```text
