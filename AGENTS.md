@@ -4,9 +4,18 @@
 Benchmarks SLMs on a 95-query banking dataset using `transformers`, `rouge-score`, and `sentence-transformers`. **Includes a Distillation pipeline to improve SLM performance using DeepSeek-V3 as a teacher.**
 
 ## Current Status (As of March 8, 2026)
-- **Academic Thesis Generation:**
-    - Generated a massively detailed PhD-level LaTeX document (`ACADEMIC/bank_slm_benchmark_ACADEMIC.tex`) using the `phd-document-writer` skill.
-    - Mathematically detailed the entire pipeline, including LoRA logic, DPO vs ORPO, TIES merging for Catastrophic Forgetting, and Hardware-Agnostic benchmarking via ROUGE-L and Cosine Similarity.
+- **Zero-Shot Knowledge Injection (Doc-to-LoRA):**
+    - Implemented `src/8_doc_to_lora_injection.py` utilizing Sakana AI's Hypernetwork methodology.
+    - Enables near-instant model adaptation by predicting LoRA weights directly from raw documents, bypassing backpropagation.
+    - Integrated automatic checkpoint downloading from HuggingFace and a disk cleanup utility for large (~5GB) model binaries.
+    - *Note:* This component is engineered for NVIDIA/Colab environments due to `triton` hardware requirements.
+- **Academic Thesis Completion:**
+    - Finalized a comprehensive PhD-level LaTeX document (`ACADEMIC/bank_slm_benchmark_ACADEMIC.tex`).
+    - Added a novel chapter on "Zero-Shot Knowledge Injection," detailing the transition from batch SFT to real-time weight prediction.
+    - Formalized mathematical paradigms for LoRA, DPO, ORPO, and TIES-merging.
+- **Pipeline Parameterization:**
+    - Refactored `run_pipeline.sh` to extract all hardcoded configurations into top-level variables (`BASE_MODEL`, `MODEL_PREFIX`, `DATASET`).
+    - Standardized end-to-end automation to allow seamless switching between SLM architectures (e.g., TinyLlama, Qwen, Gemma).
 - **Preference Tuning (DPO) Integration:**
     - Added Direct Preference Optimization (DPO) to the training pipeline to align SLMs with desired response formats.
     - Created `src/utils/generate_dpo_data.py` to synthetically generate "rejected" answers using the Gemini API.
@@ -38,6 +47,7 @@ Benchmarks SLMs on a 95-query banking dataset using `transformers`, `rouge-score
 ## Key Files
 - `src/benchmark.py`: Main unified benchmark script for all models (HF, GGUF).
 - `src/evaluate.py`: Scoring and reporting (ROUGE, Similarity, PDF generation).
+- `src/8_doc_to_lora_injection.py`: Zero-shot weight injection via Doc-to-LoRA hypernetworks.
 - `src/sft_train.py`: SFT/LoRA training script for model fine-tuning.
 - `src/dpo_train.py`: Direct Preference Optimization (DPO) script for alignment.
 - `run_pipeline.sh`: Shell script to execute the end-to-end process (SFT -> DPO -> Eval).
@@ -46,6 +56,7 @@ Benchmarks SLMs on a 95-query banking dataset using `transformers`, `rouge-score
 - `src/utils/`: Contains data downloaders and dataset generators.
 
 ## Technical Decisions
+- **Zero-Shot Adaptation:** Chose Doc-to-LoRA hypernetworks over RAG or standard SFT for real-time document internalization, allowing the model to project factual knowledge into weights without iterative training.
 - **Unified Dataset:** Standardized all training on `train_final_5500.jsonl` to ensure consistency and prevent data leakage during benchmarking.
 - **Preference Tuning over PPO:** Chose Direct Preference Optimization (DPO) over RLHF/PPO as it does not require a separate reward model, making it feasible for local SLM workflows.
 - **Consolidation:** Merged legacy scripts (`benchmark_gguf.py`, `visualize_results.py`, `evaluate_models.py`) into unified `src/benchmark.py` and `src/evaluate.py` to reduce complexity.
@@ -60,6 +71,7 @@ Benchmarks SLMs on a 95-query banking dataset using `transformers`, `rouge-score
 
 ## How to Continue
 - Run `./run_pipeline.sh` to execute the full training, benchmarking, and evaluation workflow.
+- Run `./venv/bin/python src/8_doc_to_lora_injection.py` on a GPU-enabled environment (e.g., Colab) to test zero-shot injection.
 - Run `./venv/bin/python src/benchmark.py` to execute standard benchmarks manually.
 - Run `./venv/bin/python src/utils/generate_distillation_data.py` to generate new training data.
 - Run `./venv/bin/python src/evaluate.py` to refresh reports.
