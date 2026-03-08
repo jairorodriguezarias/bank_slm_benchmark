@@ -83,6 +83,8 @@ graph TD
 ## 📂 Project Structure
 
 ```text
+├── ACADEMIC/                        # Generated PhD-level thesis documentation
+│   └── bank_slm_benchmark_ACADEMIC.tex
 ├── data/
 │   ├── bank_queries.json            # Primary test set (195 queries)
 │   ├── finqa/                       # FinQA Dataset (numerical reasoning)
@@ -92,12 +94,14 @@ graph TD
 │   ├── pdf_synthetic_dataset.jsonl  # Q&A pairs extracted from PDFs
 │   ├── new_search_dataset.jsonl     # New data from Google Search (DORA, PSD3, TFR)
 │   └── train_final_5500.jsonl       # Final merged dataset (5,500+ entries) for SFT
+├── doc-to-lora/                     # Sakana AI Zero-Shot Injection Repository (ignored)
 ├── src/
 │   ├── 1_sft_train.py               # Supervised Fine-Tuning (SFT) script
 │   ├── 2_dpo_train.py               # Direct Preference Optimization (DPO) script
 │   ├── 3_orpo_train.py              # Odds Ratio Preference Optimization (ORPO) script
 │   ├── 6_multi_lora_merge.py        # Utility to merge multiple domain-specific LoRAs
 │   ├── 7_hyperparameter_sweep.py    # LoRA hyperparameter testing utility
+│   ├── 8_doc_to_lora_injection.py   # Zero-shot knowledge injection script (D2L)
 │   ├── 99_evaluate.py               # Scoring & PDF Report generation
 │   ├── 100_benchmark.py             # Main benchmarking entry point
 │   └── utils/                       # Downloaders & Dataset converters
