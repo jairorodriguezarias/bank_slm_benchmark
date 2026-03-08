@@ -3,7 +3,10 @@
 ## Project Overview
 Benchmarks SLMs on a 95-query banking dataset using `transformers`, `rouge-score`, and `sentence-transformers`. **Includes a Distillation pipeline to improve SLM performance using DeepSeek-V3 as a teacher.**
 
-## Current Status (As of Feb 26, 2026)
+## Current Status (As of March 8, 2026)
+- **Academic Thesis Generation:**
+    - Generated a massively detailed PhD-level LaTeX document (`ACADEMIC/bank_slm_benchmark_ACADEMIC.tex`) using the `phd-document-writer` skill.
+    - Mathematically detailed the entire pipeline, including LoRA logic, DPO vs ORPO, TIES merging for Catastrophic Forgetting, and Hardware-Agnostic benchmarking via ROUGE-L and Cosine Similarity.
 - **Preference Tuning (DPO) Integration:**
     - Added Direct Preference Optimization (DPO) to the training pipeline to align SLMs with desired response formats.
     - Created `src/utils/generate_dpo_data.py` to synthetically generate "rejected" answers using the Gemini API.

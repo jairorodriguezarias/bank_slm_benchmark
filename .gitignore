@@ -24,3 +24,4 @@ results/
 # OS
 .DS_Store
 Thumbs.db
+\n# Gemini CLI Academic Tools\nACADEMIC/\nphd-document-writer/\nphd-document-writer.skill\ntemp_prompt.txt\n
