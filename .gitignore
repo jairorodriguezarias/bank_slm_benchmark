@@ -19,9 +19,16 @@ checkpoint-*/
 results/
 !results/history.json
 !results/.gitkeep
-# BENCHMARK_REPORT.md (Removed from ignore to track summary)
 
 # OS
 .DS_Store
 Thumbs.db
-\n# Gemini CLI Academic Tools\nACADEMIC/\nphd-document-writer/\nphd-document-writer.skill\ntemp_prompt.txt\n
+
+# Gemini CLI Academic Tools
+ACADEMIC/
+phd-document-writer/
+phd-document-writer.skill
+temp_prompt.txt
+
+# External Libraries
+doc-to-lora/

@@ -300,7 +300,49 @@ The dimensionality of rank $r$ introduces a direct trade-off between Information
 \end{itemize}
 
 % ========================================== 
-% CHAPTER 5: PREFERENCE ALIGNMENT (DPO & ORPO)
+% CHAPTER 5: ZERO-SHOT KNOWLEDGE INJECTION (DOC-TO-LORA)
+% ========================================== 
+\chapter{Zero-Shot Knowledge Injection via Hypernetwork-Driven LoRA}
+\label{chap:doc_to_lora}
+
+\section{The Temporal Latency of Gradient Descent}
+
+While Supervised Fine-Tuning (SFT) utilizing Low-Rank Adaptation (LoRA) significantly reduces the VRAM constraints associated with domain adaptation, it remains fundamentally bounded by the temporal latency of gradient descent. When novel, highly disruptive financial regulations are published, the operational requirement to parse, format, and backpropagate these documents into a model's parameterized memory can span hours or days. This latency is structurally incompatible with real-time RegTech compliance environments. 
+
+To resolve this critical bottleneck, the architecture integrates a cutting-edge zero-shot injection paradigm known as Doc-to-LoRA (D2L) \cite{sakana2024doctolora}, implemented within \texttt{src/8\_doc\_to\_lora\_injection.py}.
+
+\section{Hypernetwork-Driven Weight Prediction}
+
+The D2L methodology abandons traditional iterative loss minimization entirely. Instead, it employs a highly parameterized meta-model known as a \textit{Hypernetwork}. Let $H_\phi$ represent the Hypernetwork, parameterized by weights $\phi$. The objective of $H_\phi$ is not to generate text, but rather to directly predict the optimal LoRA adapter matrices $\Delta\Phi$ given a raw text document $D$.
+
+We formulate this predictive mapping mathematically as:
+\begin{equation}
+    (A, B) = H_\phi(D),
+\end{equation}
+where $A \in \R^{r \times k}$ and $B \in \R^{d \times r}$ represent the rank-decomposition matrices required to adapt the base transformer $\Phi_0$ to the specific semantic topology of document $D$.
+
+Consequently, the localized model weights for a specific context become instantaneously computable:
+\begin{equation}
+    \Phi_{D} = \Phi_0 + B A = \Phi_0 + H_\phi(D).
+\end{equation}
+
+\section{Architectural Implementation and Constraints}
+
+The script \texttt{src/8\_doc\_to\_lora\_injection.py} instantiates a \texttt{ModulatedPretrainedModel}, establishing a real-time, zero-shot injection pipeline. 
+
+\subsection{Execution Topology}
+The pipeline executes a strict comparative benchmark to isolate the effects of the hallucinated baseline versus the injected state:
+\begin{enumerate}
+    \item \textbf{Context Internalization:} The raw, unstructured regulatory document (e.g., MiCA regulations) is ingested by $H_\phi$. The Hypernetwork computes the $(A, B)$ tensors and dynamically mounts them onto the base model's Query and Value projection layers within $\mathcal{O}(1)$ seconds.
+    \item \textbf{Injected Inference:} The model $\Phi_{D}$ processes the user query $x$, leveraging the structurally injected knowledge to generate a highly accurate, grounded response.
+    \item \textbf{Baseline Rollback:} The adapter matrices are immediately decoupled (\texttt{model.reset()}), reverting the weights to the generalized state $\Phi_0$. A secondary inference pass demonstrates the baseline model's intrinsic hallucination probability on the identical query.
+\end{enumerate}
+
+\subsection{Structural Binding Constraints}
+It is critical to note that the Hypernetwork $H_\phi$ is fundamentally and architecturally bound to the exact dimension vectors of its target base model. The current instantiation requires the \texttt{google/gemma-2-2b-it} topology. The Hypernetwork cannot mathematically project accurate LoRA weights into alternate architectures (such as TinyLlama or Qwen) without executing a complete retraining of the $H_\phi$ parameters over thousands of GPU hours. 
+
+% ========================================== 
+% CHAPTER 6: PREFERENCE ALIGNMENT (DPO & ORPO)
 % ========================================== 
 \chapter{Advanced Preference Optimization Frameworks}
 \label{chap:preference_optimization}
@@ -341,7 +383,7 @@ The unified loss function defined in \texttt{src/3_orpo_train.py} is structured 
 By actively minimizing the probability of generating the rejected sequence directly alongside optimizing the true sequence, ORPO circumvents the memory allocation for a Reference Model entirely.
 
 % ========================================== 
-% CHAPTER 6: KNOWLEDGE INTERFERENCE & MERGING
+% CHAPTER 7: KNOWLEDGE INTERFERENCE & MERGING
 % ========================================== 
 \chapter{Mitigating Catastrophic Forgetting via Multi-LoRA Vector Space Merging}
 \label{chap:lora_merging}
@@ -370,7 +412,7 @@ Linear interpolation assumes perfect orthogonal compatibility. In reality, adapt
 By mathematically enforcing sign-agreement (and optionally applying DARE dropping \texttt{dare_ties}), the framework synthesizes an omni-domain financial expert SLM, permanently mitigating Catastrophic Forgetting.
 
 % ========================================== 
-% CHAPTER 7: BENCHMARKING & EVALUATION
+% CHAPTER 8: BENCHMARKING & EVALUATION
 % ========================================== 
 \chapter{The Unified Benchmarking and Evaluation Framework}
 \label{chap:benchmarking}
@@ -413,7 +455,7 @@ The Semantic Similarity ($SS$) is calculated as the Cosine Similarity between th
 \end{equation}
 
 % ========================================== 
-% CHAPTER 8: CONCLUSION
+% CHAPTER 9: CONCLUSION
 % ========================================== 
 \chapter{Conclusion and Architectural Significance}
 \label{chap:conclusion}
@@ -462,6 +504,11 @@ arXiv preprint arXiv:2403.07691.
 Yadav, P., Tam, D., Leszczynski, L., Hou, W., Dietz, L., \& Bansal, M. (2023).
 \textit{TIES-Merging: Resolving Interference When Merging Models}.
 Advances in Neural Information Processing Systems, 36.
+
+\bibitem{sakana2024doctolora}
+Sakana AI. (2024).
+\textit{Doc-to-LoRA: Zero-Shot Knowledge Injection via Hypernetworks}.
+GitHub Repository: \url{https://github.com/SakanaAI/doc-to-lora}.
 
 \end{thebibliography}
 
