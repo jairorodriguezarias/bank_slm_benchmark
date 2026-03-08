@@ -6,13 +6,13 @@ set -e
 # =================================================
 # Change these variables to run the pipeline on a different model or dataset!
 
-BASE_MODEL="google/gemma-2-2b-it"
+BASE_MODEL="TinyLlama/TinyLlama-1.1B-Chat-v1.0"
 # Example alternatives:
-# BASE_MODEL="TinyLlama/TinyLlama-1.1B-Chat-v1.0"
+# BASE_MODEL="google/gemma-2-2b-it"
 # BASE_MODEL="Qwen/Qwen2.5-0.5B-Instruct"
 # BASE_MODEL="HuggingFaceTB/SmolLM-1.7B-Instruct"
 
-MODEL_PREFIX="gemma-2b" # Used for folder naming (e.g., bank_expert_gemma-2b_slm)
+MODEL_PREFIX="tinyllama" # Used for folder naming (e.g., bank_expert_tinyllama_slm)
 DATASET="data/train_final_5500.jsonl"
 TEST_DATASET="data/train_final_5500_test.jsonl"
 LIMIT=10 # Set to a small number (e.g., 10) for quick testing. Change to 0 or remove the flag for a full run.

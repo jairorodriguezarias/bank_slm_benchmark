@@ -109,6 +109,7 @@ graph TD
 │       ├── generate_new_data.py          # Internet/Search data generator
 │       └── augment_dataset.py            # 10x Dataset Augmenter
 ├── models/                          # Local storage for GGUF & Adapters
+├── plots/                           # Generated benchmark and category charts
 └── results/                         # Raw CSV logs, Plots, and PDF reports
 ```
 
@@ -186,6 +187,7 @@ All sources are combined into a single, high-density training file:
 
 ### Phase 2: Fine-Tuning (SFT)
 Train a base model on the final merged dataset. Recommended SLMs:
+- `google/gemma-2-2b-it` (New Default - High accuracy & D2L compatibility)
 - `Qwen/Qwen2.5-0.5B-Instruct` (Excellent reasoning/efficiency)
 - `TinyLlama/TinyLlama-1.1B-Chat-v1.0` (Fastest)
 
@@ -193,7 +195,7 @@ Train a base model on the final merged dataset. Recommended SLMs:
 
 ```bash
 python src/1_sft_train.py \
-    --base_model "Qwen/Qwen2.5-0.5B-Instruct" \
+    --base_model "google/gemma-2-2b-it" \
     --data "data/train_final_5500.jsonl" \
     --output_dir "models/tuned/bank_expert_slm"
 ```
@@ -220,7 +222,7 @@ python src/2_dpo_train.py \
 If you want to skip doing SFT and DPO separately, you can use ORPO. It trains on the base model directly using the preference dataset, acting as both SFT and alignment in a single step.
 ```bash
 python src/3_orpo_train.py \
-    --base_model "TinyLlama/TinyLlama-1.1B-Chat-v1.0" \
+    --base_model "google/gemma-2-2b-it" \
     --data "data/dpo_dataset.jsonl" \
     --output_dir "models/tuned/bank_expert_orpo"
 ```
@@ -239,7 +241,7 @@ python src/6_multi_lora_merge.py \
 Not sure which LoRA Rank (`r`) or Alpha to use? Use the sweep script to train multiple versions of a model with different configurations and compare their training efficiency.
 ```bash
 python src/7_hyperparameter_sweep.py \
-    --base_model "TinyLlama/TinyLlama-1.1B-Chat-v1.0" \
+    --base_model "google/gemma-2-2b-it" \
     --data "data/train_final_5500.jsonl" \
     --limit 100
 ```
@@ -267,7 +269,7 @@ This project is fully compatible with Google Colab (T4 GPU). Since the repositor
    %cd "/content/drive/My Drive/01 - To Do/bank_slm_benchmark"
    ```
 2. **Install Dependencies**: `!pip install -r requirements.txt`
-3. **Run Training**: `!python src/1_sft_train.py --base_model "Qwen/Qwen2.5-0.5B-Instruct"`
+3. **Run Training**: `!python src/1_sft_train.py --base_model "google/gemma-2-2b-it"`
 
 *Note: For Doc-to-LoRA on Colab, ensure you run the installation commands provided in Option D.*
 
@@ -295,12 +297,11 @@ python src/100_benchmark.py \
 ```
 
 **Default Models Tested:**
-- `TinyLlama/TinyLlama-1.1B-Chat-v1.0`
+- `google/gemma-2-2b-it` (Standard Default)
 - `Qwen/Qwen2-1.5B-Instruct`
 - `HuggingFaceTB/SmolLM-1.7B-Instruct`
 - `facebook/opt-1.3b`
 - `mtgv/MobileLLaMA-1.4B-Base`
-- `google/gemma-2b-it`
 
 **Hardware-Specific Tips:**
 - **Mac (Apple Silicon)**: Use the command above; it will automatically use `mps` (Metal). You can also benchmark local **GGUF** files by adding `--gguf-models models/your_model.gguf`.
@@ -315,7 +316,8 @@ python src/99_evaluate.py --dataset "data/train_final_5500_test.jsonl"
 *Note: The evaluation script automatically parses different JSON schemas (`prompt/completion`, `instruction/output`, `query/reference_answer`) to find the gold-standard answers.*
 
 This will produce:
-- **`results/latest/all_models_benchmark.csv`**: Raw metrics.
+- **`results/latest/all_models_benchmark.csv`**: Raw metrics including **Pass Rate (%)**.
+- **`results/latest/benchmark_plots.png`**: Enhanced visualizations including **Category Heatmaps**.
 - **`results/latest/benchmark_report.pdf`**: A professional report with charts.
 - **`BENCHMARK_REPORT.md`**: A quick-view summary of the latest run.
 
@@ -324,9 +326,11 @@ This will produce:
 ## 📊 Evaluation Metrics
 
 We use a multi-dimensional scoring system to evaluate SLMs:
-- **ROUGE-L**: Measures longest common subsequence between model output and reference.
+- **Pass Rate (%)**: Percentage of answers with Semantic Similarity > 0.7.
 - **Semantic Similarity**: Uses `all-MiniLM-L6-v2` embeddings to calculate cosine similarity (captures meaning even if words differ).
-- **Latency (ms)**: Time taken to generate the first token + subsequent ones.
+- **Category Analysis**: Heatmap breakdown of performance across banking domains (Security, Loans, etc.).
+- **ROUGE-L**: Measures longest common subsequence between model output and reference.
+- **Latency (ms)**: Time taken to generate the response.
 - **Throughput (Tokens/sec)**: Generation speed, critical for real-time customer support.
 
 ---
